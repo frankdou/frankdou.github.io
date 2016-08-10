@@ -65,6 +65,9 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: next
 
+# avatar
+avatar: /images/avatar.png
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
@@ -80,11 +83,6 @@ google_analytics: UA-82199115-1
 
 # 多说分享服务
 duoshuo_share: true
-
-# Local Search
-search:
-  path: search.xml
-  field: post
 
 # RSS
 feed:

@@ -1,5 +1,6 @@
 ---
 title: {{ title }}
 date: {{ date }}
-tags:
+categories: {{ category }}
 ---
+<blockquote class="blockquote-center"></blockquote>
