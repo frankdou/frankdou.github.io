@@ -90,3 +90,13 @@ feed:
   path: atom.xml
   limit: 20
   hub:
+
+# 单页面文章数量控制
+index_generator:
+  per_page: 5
+
+# 归档数量控制
+archive_generator:
+  per_page: 20
+  yearly: true
+  monthly: true

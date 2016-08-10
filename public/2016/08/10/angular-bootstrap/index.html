@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="angular," />
 
 
 
@@ -86,22 +86,16 @@
 
 
 
-<meta name="description" content="angular bootstrap
-
-12345678910111213141516171819202122(function() &amp;#123;    var myApplication = angular.module(&quot;myApplication&quot;, []);    fetchData().then(bootstrapApplication);    function fetchData()">
+<meta name="description" content="angular bootstrap">
 <meta property="og:type" content="article">
 <meta property="og:title" content="angular-bootstrap">
 <meta property="og:url" content="http://yoursite.com/2016/08/10/angular-bootstrap/index.html">
 <meta property="og:site_name" content="Frankdou">
-<meta property="og:description" content="angular bootstrap
-
-12345678910111213141516171819202122(function() &amp;#123;    var myApplication = angular.module(&quot;myApplication&quot;, []);    fetchData().then(bootstrapApplication);    function fetchData()">
-<meta property="og:updated_time" content="2016-08-10T10:10:28.000Z">
+<meta property="og:description" content="angular bootstrap">
+<meta property="og:updated_time" content="2016-08-10T15:16:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="angular-bootstrap">
-<meta name="twitter:description" content="angular bootstrap
-
-12345678910111213141516171819202122(function() &amp;#123;    var myApplication = angular.module(&quot;myApplication&quot;, []);    fetchData().then(bootstrapApplication);    function fetchData()">
+<meta name="twitter:description" content="angular bootstrap">
 
 
 
@@ -215,6 +209,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
 
       
     </ul>
@@ -279,8 +283,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/angular/" itemprop="url" rel="index">
-                    <span itemprop="name">angular</span>
+                  <a href="/categories/js/" itemprop="url" rel="index">
+                    <span itemprop="name">js</span>
                   </a>
                 </span>
 
@@ -328,8 +332,7 @@
       
 
       
-        <blockquote class="blockquote-center">angular bootstrap</blockquote>
-
+        <p><blockquote class="blockquote-center">angular bootstrap</blockquote><br><a id="more"></a></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> myApplication = angular.module(<span class="string">"myApplication"</span>, []);</div><div class="line"></div><div class="line">    fetchData().then(bootstrapApplication);</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">fetchData</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> initInjector = angular.injector([<span class="string">"ng"</span>]);</div><div class="line">        <span class="keyword">var</span> $http = initInjector.get(<span class="string">"$http"</span>);</div><div class="line"></div><div class="line">        <span class="keyword">return</span> $http.get(<span class="string">"/path/to/data.json"</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</div><div class="line">            myApplication.constant(<span class="string">"config"</span>, response.data);</div><div class="line">        &#125;, <span class="function"><span class="keyword">function</span>(<span class="params">errorResponse</span>) </span>&#123;</div><div class="line">            <span class="comment">// Handle error case</span></div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">bootstrapApplication</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        angular.element(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            angular.bootstrap(<span class="built_in">document</span>, [<span class="string">"myApplication"</span>]);</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line">&#125;());</div></pre></td></tr></table></figure>
 
       
@@ -350,6 +353,12 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/angular/" rel="tag">#angular</a>
+          
+        </div>
       
 
       
@@ -457,7 +466,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">19</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -465,12 +474,19 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
           
 
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>

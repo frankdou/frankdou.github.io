@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="git," />
 
 
 
@@ -86,28 +86,16 @@
 
 
 
-<meta name="description" content="通过ssh方式操作git
-
-需要在~/.ssh文件夹下操作1.ssh-keygen -t rsa -f coding -C ‘coding.net’
-t代表type，f代表文件名，C代表注释
-2.配置~/.ssh/config文件123456789101112131415##############GIHUB##############Host github.com    HostName git">
+<meta name="description" content="通过ssh方式操作git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git+ssh">
 <meta property="og:url" content="http://yoursite.com/2016/08/10/git-ssh/index.html">
 <meta property="og:site_name" content="Frankdou">
-<meta property="og:description" content="通过ssh方式操作git
-
-需要在~/.ssh文件夹下操作1.ssh-keygen -t rsa -f coding -C ‘coding.net’
-t代表type，f代表文件名，C代表注释
-2.配置~/.ssh/config文件123456789101112131415##############GIHUB##############Host github.com    HostName git">
-<meta property="og:updated_time" content="2016-08-10T10:11:51.000Z">
+<meta property="og:description" content="通过ssh方式操作git">
+<meta property="og:updated_time" content="2016-08-10T14:40:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git+ssh">
-<meta name="twitter:description" content="通过ssh方式操作git
-
-需要在~/.ssh文件夹下操作1.ssh-keygen -t rsa -f coding -C ‘coding.net’
-t代表type，f代表文件名，C代表注释
-2.配置~/.ssh/config文件123456789101112131415##############GIHUB##############Host github.com    HostName git">
+<meta name="twitter:description" content="通过ssh方式操作git">
 
 
 
@@ -218,6 +206,16 @@ t代表type，f代表文件名，C代表注释
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
           </a>
         </li>
       
@@ -334,8 +332,7 @@ t代表type，f代表文件名，C代表注释
       
 
       
-        <blockquote class="blockquote-center">通过ssh方式操作git</blockquote>
-
+        <p><blockquote class="blockquote-center">通过ssh方式操作git</blockquote><br><a id="more"></a></p>
 <h3 id="需要在-ssh文件夹下操作"><a href="#需要在-ssh文件夹下操作" class="headerlink" title="需要在~/.ssh文件夹下操作"></a><strong>需要在<code>~/.ssh</code>文件夹下操作</strong></h3><p>1.ssh-keygen -t rsa -f coding -C ‘coding.net’</p>
 <p>t代表type，f代表文件名，C代表注释</p>
 <p>2.配置~/.ssh/config文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">###########</span></div><div class="line"><span class="comment">###GIHUB###</span></div><div class="line"><span class="comment">###########</span></div><div class="line">Host github.com</div><div class="line">    HostName github.com</div><div class="line">    User xxxx@xxx.com</div><div class="line">    IdentityFile ~/.ssh/github</div><div class="line"></div><div class="line"><span class="comment">###########</span></div><div class="line"><span class="comment">###CODING##</span></div><div class="line"><span class="comment">###########</span></div><div class="line">Host git.coding.net</div><div class="line">    HostName git.coding.net</div><div class="line">    User xxx@xxx.com</div><div class="line">    IdentityFile ~/.ssh/coding</div></pre></td></tr></table></figure></p>
@@ -359,6 +356,12 @@ t代表type，f代表文件名，C代表注释
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/git/" rel="tag">#git</a>
+          
+        </div>
       
 
       
@@ -462,7 +465,7 @@ t代表type，f代表文件名，C代表注释
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">19</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -470,12 +473,19 @@ t代表type，f代表文件名，C代表注释
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
           
 
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>

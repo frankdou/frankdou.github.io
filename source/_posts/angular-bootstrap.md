@@ -1,9 +1,12 @@
 ---
 title: angular-bootstrap
 date: 2016-08-10 18:09:29
-categories: angular
+categories: js
+tags:
+  - angular
 ---
 <blockquote class="blockquote-center">angular bootstrap</blockquote>
+<!-- more -->
 
 ```javascript
 (function() {

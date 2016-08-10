@@ -2,8 +2,11 @@
 title: git+ssh
 date: 2016-08-10 17:23:11
 categories: git
+tags:
+  - git
 ---
 <blockquote class="blockquote-center">通过ssh方式操作git</blockquote>
+<!-- more -->
 
 ### **需要在`~/.ssh`文件夹下操作**
 
