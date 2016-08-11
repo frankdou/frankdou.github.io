@@ -58,3 +58,5 @@ git tag -l | xargs git tag -d
 ```
 git checkout --track origin/dev.sp1
 ```
+
+### [git-tips](https://github.com/521xueweihan/git-tips)
