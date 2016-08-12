@@ -11,7 +11,7 @@ tags:
 ### 整体配置
 > Preference > Settings > user
 
-```json
+```javascript
 {
     "color_scheme": "Packages/Theme - Spacegray/base16-ocean.light.tmTheme",
     "theme": "Spacegray Light.sublime-theme",

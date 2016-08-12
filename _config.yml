@@ -100,3 +100,7 @@ archive_generator:
   per_page: 20
   yearly: true
   monthly: true
+
+social:
+  GitHub: https://github.com/frankdou
+  Weibo: http://weibo.com/1081785300/profile
