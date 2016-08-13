@@ -249,11 +249,28 @@
     <link href="http://yoursite.com/2016/08/10/new-mac-setup/"/>
     <id>http://yoursite.com/2016/08/10/new-mac-setup/</id>
     <published>2016-08-10T15:52:19.000Z</published>
-    <updated>2016-08-11T14:21:56.000Z</updated>
+    <updated>2016-08-13T13:46:35.000Z</updated>
     
     <content type="html"><![CDATA[<p><blockquote class="blockquote-center">新mac的配置记录</blockquote><br><a id="more"></a></p>
-<h3 id="homebrew"><a href="#homebrew" class="headerlink" title="homebrew"></a>homebrew</h3><h3 id="相关组件"><a href="#相关组件" class="headerlink" title="相关组件"></a>相关组件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install autojump git git-extras tree youtube-dl mongodb redis caskroom/cask/brew-cask</div></pre></td></tr></table></figure>
-<h3 id="cask预览插件"><a href="#cask预览插件" class="headerlink" title="cask预览插件"></a><a href="https://github.com/sindresorhus/quick-look-plugins" target="_blank" rel="external">cask预览插件</a></h3><h3 id="nvm"><a href="#nvm" class="headerlink" title="nvm"></a><a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm</a></h3><h3 id="node以及相关模块"><a href="#node以及相关模块" class="headerlink" title="node以及相关模块"></a>node以及相关模块</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm i nrm -g &amp; nrm use taobao</div><div class="line">npm i gulp serve slap phantomjs -g</div></pre></td></tr></table></figure>
+<h3 id="软件列表"><a href="#软件列表" class="headerlink" title="软件列表"></a>软件列表</h3><ul>
+<li>Iterm2</li>
+<li>ClipMenu</li>
+<li>CheatSheet</li>
+<li>MPlayerX</li>
+<li>FoxMail</li>
+<li>Mou</li>
+<li>Cakebrew</li>
+<li>Dash</li>
+<li>The Unarchiver</li>
+<li>Xcode</li>
+<li>Chrome</li>
+<li>有道词典</li>
+<li>iHosts</li>
+<li>Astrill</li>
+<li>Lantern</li>
+</ul>
+<h3 id="homebrew"><a href="#homebrew" class="headerlink" title="homebrew"></a>homebrew</h3><h3 id="相关组件"><a href="#相关组件" class="headerlink" title="相关组件"></a>相关组件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">brew install autojump git git-extras tree youtube-dl mongodb redis caskroom/cask/brew-cask</div><div class="line">brew cask install launchrocket</div></pre></td></tr></table></figure>
+<h3 id="cask预览插件"><a href="#cask预览插件" class="headerlink" title="cask预览插件"></a><a href="https://github.com/sindresorhus/quick-look-plugins" target="_blank" rel="external">cask预览插件</a></h3><h3 id="nvm"><a href="#nvm" class="headerlink" title="nvm"></a><a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm</a></h3><h3 id="node以及相关模块"><a href="#node以及相关模块" class="headerlink" title="node以及相关模块"></a>node以及相关模块</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm i nrm -g &amp; nrm use taobao</div><div class="line">npm i gulp serve slap phantomjs -g</div></pre></td></tr></table></figure>
 ]]></content>
     
     <summary type="html">
