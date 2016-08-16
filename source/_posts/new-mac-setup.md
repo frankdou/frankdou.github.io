@@ -29,7 +29,8 @@ tags:
 ### 相关组件
 ```bash
 brew install autojump git git-extras tree youtube-dl mongodb redis caskroom/cask/brew-cask
-brew cask install launchrocket
+brew cask install launchrocket > 控制面板启动关闭服务（比如数据库）
+brew tap homebrew/services  > brew命令行启动关闭服务（比如数据库）
 
 ```
 
