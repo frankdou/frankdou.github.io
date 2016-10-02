@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/08/10/git-ssh/index.html">
 <meta property="og:site_name" content="FrankDou">
 <meta property="og:description" content="通过ssh方式操作git">
-<meta property="og:updated_time" content="2016-09-01T05:23:33.000Z">
+<meta property="og:updated_time" content="2016-10-02T10:06:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git+ssh">
 <meta name="twitter:description" content="通过ssh方式操作git">
@@ -333,14 +333,11 @@
 
       
         <p><blockquote class="blockquote-center">通过ssh方式操作git</blockquote><br><a id="more"></a></p>
-<p><strong>需要在<code>~/.ssh</code>文件夹下操作</strong></p>
-<h3 id="ssh-keygen-t-rsa-f-coding-C-‘coding-net’"><a href="#ssh-keygen-t-rsa-f-coding-C-‘coding-net’" class="headerlink" title="ssh-keygen -t rsa -f coding -C ‘coding.net’"></a>ssh-keygen -t rsa -f coding -C ‘coding.net’</h3><p>t代表type，f代表文件名，C代表注释</p>
-<h3 id="配置-ssh-config文件"><a href="#配置-ssh-config文件" class="headerlink" title="配置~/.ssh/config文件"></a>配置~/.ssh/config文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">###########</span></div><div class="line"><span class="comment">###GIHUB###</span></div><div class="line"><span class="comment">###########</span></div><div class="line">Host github.com</div><div class="line">    HostName github.com</div><div class="line">    User xxxx@xxx.com</div><div class="line">    IdentityFile ~/.ssh/github</div><div class="line"></div><div class="line"><span class="comment">###########</span></div><div class="line"><span class="comment">###CODING##</span></div><div class="line"><span class="comment">###########</span></div><div class="line">Host git.coding.net</div><div class="line">    HostName git.coding.net</div><div class="line">    User xxx@xxx.com</div><div class="line">    IdentityFile ~/.ssh/coding</div></pre></td></tr></table></figure>
-<h3 id="添加公共key到相关网站"><a href="#添加公共key到相关网站" class="headerlink" title="添加公共key到相关网站"></a>添加公共key到相关网站</h3><h3 id="添加SSH-key到ssh-agent"><a href="#添加SSH-key到ssh-agent" class="headerlink" title="添加SSH key到ssh-agent"></a>添加SSH key到ssh-agent</h3><p><code>windows需要先执行相关命令，确保agent是可用的</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">eval &quot;$(ssh-agent -s)&quot;</div></pre></td></tr></table></figure></p>
-<p>添加private key到ssh-agent<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-add github</div></pre></td></tr></table></figure></p>
-<h3 id="测试是否成功"><a href="#测试是否成功" class="headerlink" title="测试是否成功"></a>测试是否成功</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -T git@github.com</div></pre></td></tr></table></figure>
-<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><p>windows下相关git的使用最好通过git-bash这个终端来使用</p>
-<h4 id="windows-git"><a href="#windows-git" class="headerlink" title="windows-git"></a><a href="https://git-for-windows.github.io/" target="_blank" rel="external">windows-git</a></h4><h4 id="github官方ssh设置指南"><a href="#github官方ssh设置指南" class="headerlink" title="github官方ssh设置指南"></a><a href="https://help.github.com/articles/generating-an-ssh-key/#platform-windows" target="_blank" rel="external">github官方ssh设置指南</a></h4>
+<h3 id="需要在-ssh文件夹下操作"><a href="#需要在-ssh文件夹下操作" class="headerlink" title="需要在~/.ssh文件夹下操作"></a><strong>需要在<code>~/.ssh</code>文件夹下操作</strong></h3><p>1.ssh-keygen -t rsa -f coding -C ‘coding.net’</p>
+<p>t代表type，f代表文件名，C代表注释</p>
+<p>2.配置~/.ssh/config文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">###########</span></div><div class="line"><span class="comment">###GIHUB###</span></div><div class="line"><span class="comment">###########</span></div><div class="line">Host github.com</div><div class="line">    HostName github.com</div><div class="line">    User xxxx@xxx.com</div><div class="line">    IdentityFile ~/.ssh/github</div><div class="line"></div><div class="line"><span class="comment">###########</span></div><div class="line"><span class="comment">###CODING##</span></div><div class="line"><span class="comment">###########</span></div><div class="line">Host git.coding.net</div><div class="line">    HostName git.coding.net</div><div class="line">    User xxx@xxx.com</div><div class="line">    IdentityFile ~/.ssh/coding</div></pre></td></tr></table></figure></p>
+<p>3.添加公共key到相关网站</p>
+
       
     </div>
 
@@ -468,7 +465,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -532,7 +529,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#ssh-keygen-t-rsa-f-coding-C-‘coding-net’"><span class="nav-number">1.</span> <span class="nav-text">ssh-keygen -t rsa -f coding -C ‘coding.net’</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-ssh-config文件"><span class="nav-number">2.</span> <span class="nav-text">配置~/.ssh/config文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加公共key到相关网站"><span class="nav-number">3.</span> <span class="nav-text">添加公共key到相关网站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加SSH-key到ssh-agent"><span class="nav-number">4.</span> <span class="nav-text">添加SSH key到ssh-agent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试是否成功"><span class="nav-number">5.</span> <span class="nav-text">测试是否成功</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips"><span class="nav-number">6.</span> <span class="nav-text">Tips</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#windows-git"><span class="nav-number">6.1.</span> <span class="nav-text">windows-git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#github官方ssh设置指南"><span class="nav-number">6.2.</span> <span class="nav-text">github官方ssh设置指南</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#需要在-ssh文件夹下操作"><span class="nav-number">1.</span> <span class="nav-text">需要在~/.ssh文件夹下操作</span></a></li></ol></div>
             
           </div>
         </section>

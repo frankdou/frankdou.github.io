@@ -56,25 +56,3 @@ jenv versions
 
 7.安装maven，tomcat
 8.Eclipse market安装svn
-
-
-
-### 手动编译
-1.config > covert to maven project
-2.maven > update projects
-3.refresh
-4.clean
-5.update projects
-6.refresh
-7.run as > run on server
-
-
-### 终极办法（半手动编译）
-1.Terminal
-```
-mvn clean install -Dmaven.test.skip=true
-```
-
-2.Eclipse
-手动servers > publish
-

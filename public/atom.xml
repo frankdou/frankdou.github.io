@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-08-16T09:02:35.000Z</updated>
+  <updated>2016-10-02T13:23:56.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,50 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>mac-java-tips</title>
+    <link href="http://yoursite.com/2016/10/02/java-tips/"/>
+    <id>http://yoursite.com/2016/10/02/java-tips/</id>
+    <published>2016-10-02T11:58:35.000Z</published>
+    <updated>2016-10-02T13:23:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><blockquote class="blockquote-center">mac-java-tips</blockquote><br><a id="more"></a></p>
+<h3 id="停掉java进程"><a href="#停掉java进程" class="headerlink" title="停掉java进程"></a>停掉java进程</h3><p>1.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">jps</div><div class="line"></div><div class="line">kill -9 xxxx</div></pre></td></tr></table></figure></p>
+<p>2.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">killall java</div></pre></td></tr></table></figure></p>
+<p>3.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ps aux | grep java </div><div class="line">kill -9 xxx</div></pre></td></tr></table></figure></p>
+<h3 id="增加tomcat内存"><a href="#增加tomcat内存" class="headerlink" title="增加tomcat内存"></a>增加tomcat内存</h3><p>文件<code>/usr/local/Cellar/tomcat/8.5.4/bin/catalina</code><br>修改下面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">JAVA_OPTS=&quot;$JAVA_OPTS $JSSE_OPTS&quot;</div></pre></td></tr></table></figure></p>
+<p>至<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">JAVA_OPTS=&quot;$JAVA_OPTS $JSSE_OPTS -server -Xms2048m -Xmx2048m -XX:PermSize=512M -XX:MaxPermSize=512m&quot;</div></pre></td></tr></table></figure></p>
+<h3 id="增加maven内存"><a href="#增加maven内存" class="headerlink" title="增加maven内存"></a>增加maven内存</h3><p>文件<code>~/.zshrc</code>,添加如下内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># maven memory</div><div class="line">export MAVEN_OPTS=&quot;-Xms2048m -Xmx2048m&quot;</div></pre></td></tr></table></figure></p>
+<h3 id="eclipse-手动编译"><a href="#eclipse-手动编译" class="headerlink" title="eclipse 手动编译"></a>eclipse 手动编译</h3><p>1.config &gt; covert to maven project<br>2.maven &gt; update projects<br>3.refresh<br>4.clean<br>5.update projects<br>6.refresh<br>7.run as &gt; run on server</p>
+<h3 id="半手动编译"><a href="#半手动编译" class="headerlink" title="半手动编译"></a>半手动编译</h3><ol>
+<li><p>Terminal</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn clean install -Dmaven.test.skip=true</div></pre></td></tr></table></figure>
+</li>
+<li><p>Eclipse<br>手动servers &gt; publish</p>
+</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;mac-java-tips&lt;/blockquote&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="mac" scheme="http://yoursite.com/categories/mac/"/>
+    
+    
+      <category term="mac" scheme="http://yoursite.com/tags/mac/"/>
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ES6笔记</title>
     <link href="http://yoursite.com/2016/08/15/es6%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2016/08/15/es6笔记/</id>
     <published>2016-08-15T03:17:46.000Z</published>
-    <updated>2016-08-16T09:02:35.000Z</updated>
+    <updated>2016-10-02T10:06:55.000Z</updated>
     
     <content type="html"><![CDATA[<p><blockquote class="blockquote-center">ES6学习笔记</blockquote><br><a id="more"></a><br><a href="https://egghead.io/lessons/arrow-function?course=learn-es6-ecmascript-2015" target="_blank" rel="external">教程出处</a></p>
 <h3 id="Arrow-Function"><a href="#Arrow-Function" class="headerlink" title="Arrow Function"></a>Arrow Function</h3><blockquote>
@@ -159,13 +198,14 @@
     <link href="http://yoursite.com/2016/08/11/%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2016/08/11/命令行笔记/</id>
     <published>2016-08-10T17:31:32.000Z</published>
-    <updated>2016-08-11T14:21:56.000Z</updated>
+    <updated>2016-10-02T11:56:22.000Z</updated>
     
     <content type="html"><![CDATA[<p><blockquote class="blockquote-center">命令行笔记</blockquote><br><a id="more"></a></p>
 <h3 id="kill-process"><a href="#kill-process" class="headerlink" title="kill process"></a>kill process</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ps aux | grep xx</div><div class="line">kill <span class="number">-9</span> xxx</div></pre></td></tr></table></figure>
 <h3 id="输出最后，一般用来看log"><a href="#输出最后，一般用来看log" class="headerlink" title="输出最后，一般用来看log"></a>输出最后，一般用来看log</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tail xxx.xx</div></pre></td></tr></table></figure>
 <h3 id="输出树形结构"><a href="#输出树形结构" class="headerlink" title="输出树形结构"></a>输出树形结构</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tree -L x (x为层级)</div></pre></td></tr></table></figure>
 <h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service xxxx start (xxxx一般指nginx，mongodb等)</div></pre></td></tr></table></figure>
+<h3 id="ssh免密码登录"><a href="#ssh免密码登录" class="headerlink" title="ssh免密码登录"></a>ssh免密码登录</h3><p>添加公匙到<code>.ssh/authorized_keys</code>，或<code>/home/admin/.ssh/authorized_keys</code>(管理权限)</p>
 ]]></content>
     
     <summary type="html">
@@ -453,7 +493,7 @@
     <link href="http://yoursite.com/2016/08/10/mac%E6%90%AD%E5%BB%BAjava%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
     <id>http://yoursite.com/2016/08/10/mac搭建java开发环境/</id>
     <published>2016-08-10T14:57:32.000Z</published>
-    <updated>2016-08-11T14:21:56.000Z</updated>
+    <updated>2016-10-02T13:23:54.000Z</updated>
     
     <content type="html"><![CDATA[<p><blockquote class="blockquote-center">mac搭建java开发环境</blockquote><br><a id="more"></a></p>
 <h3 id="基本步骤"><a href="#基本步骤" class="headerlink" title="基本步骤"></a>基本步骤</h3><p>1.安装java（默认最新版）</p>
@@ -469,9 +509,6 @@
 <p>6.显示java版本</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">jenv versions</div><div class="line">  system</div><div class="line">  oracle64-1.6.0.39</div><div class="line">* oracle64-1.7.0.11</div></pre></td></tr></table></figure>
 <p>7.安装maven，tomcat<br>8.Eclipse market安装svn</p>
-<h3 id="手动编译"><a href="#手动编译" class="headerlink" title="手动编译"></a>手动编译</h3><p>1.config &gt; covert to maven project<br>2.maven &gt; update projects<br>3.refresh<br>4.clean<br>5.update projects<br>6.refresh<br>7.run as &gt; run on server</p>
-<h3 id="终极办法（半手动编译）"><a href="#终极办法（半手动编译）" class="headerlink" title="终极办法（半手动编译）"></a>终极办法（半手动编译）</h3><p>1.Terminal<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn clean install -Dmaven.test.skip=true</div></pre></td></tr></table></figure></p>
-<p>2.Eclipse<br>手动servers &gt; publish</p>
 ]]></content>
     
     <summary type="html">
@@ -619,33 +656,6 @@
     <summary type="html">
     
       &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;git设置，操作命令&lt;/blockquote&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="git" scheme="http://yoursite.com/categories/git/"/>
-    
-    
-      <category term="git" scheme="http://yoursite.com/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>git+ssh</title>
-    <link href="http://yoursite.com/2016/08/10/git-ssh/"/>
-    <id>http://yoursite.com/2016/08/10/git-ssh/</id>
-    <published>2016-08-10T09:23:11.000Z</published>
-    <updated>2016-08-11T14:21:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><blockquote class="blockquote-center">通过ssh方式操作git</blockquote><br><a id="more"></a></p>
-<h3 id="需要在-ssh文件夹下操作"><a href="#需要在-ssh文件夹下操作" class="headerlink" title="需要在~/.ssh文件夹下操作"></a><strong>需要在<code>~/.ssh</code>文件夹下操作</strong></h3><p>1.ssh-keygen -t rsa -f coding -C ‘coding.net’</p>
-<p>t代表type，f代表文件名，C代表注释</p>
-<p>2.配置~/.ssh/config文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">###########</span></div><div class="line"><span class="comment">###GIHUB###</span></div><div class="line"><span class="comment">###########</span></div><div class="line">Host github.com</div><div class="line">    HostName github.com</div><div class="line">    User xxxx@xxx.com</div><div class="line">    IdentityFile ~/.ssh/github</div><div class="line"></div><div class="line"><span class="comment">###########</span></div><div class="line"><span class="comment">###CODING##</span></div><div class="line"><span class="comment">###########</span></div><div class="line">Host git.coding.net</div><div class="line">    HostName git.coding.net</div><div class="line">    User xxx@xxx.com</div><div class="line">    IdentityFile ~/.ssh/coding</div></pre></td></tr></table></figure></p>
-<p>3.添加公共key到相关网站</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;通过ssh方式操作git&lt;/blockquote&gt;&lt;br&gt;
     
     </summary>
     
