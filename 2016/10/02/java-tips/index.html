@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="mac,java," />
 
 
 
@@ -86,12 +86,16 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="FrankDou">
-<meta property="og:url" content="http://yoursite.com/categories/angular/index.html">
+<meta name="description" content="mac-java-tips">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mac-java-tips">
+<meta property="og:url" content="http://yoursite.com/2016/10/02/java-tips/index.html">
 <meta property="og:site_name" content="FrankDou">
+<meta property="og:description" content="mac-java-tips">
+<meta property="og:updated_time" content="2016-10-02T13:23:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="FrankDou">
+<meta name="twitter:title" content="mac-java-tips">
+<meta name="twitter:description" content="mac-java-tips">
 
 
 
@@ -112,9 +116,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/angular/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/10/02/java-tips/"/>
 
-  <title> 分类: angular | FrankDou </title>
+  <title> mac-java-tips | FrankDou </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -144,7 +148,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -232,47 +236,192 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        angular
-        <small>分类</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                mac-java-tips
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-02T19:58:35+08:00" content="2016-10-02">
+              2016-10-02
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/mac/" itemprop="url" rel="index">
+                    <span itemprop="name">mac</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/02/java-tips/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/02/java-tips/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/10/02/java-tips/" class="leancloud_visitors" data-flag-title="mac-java-tips">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <p><blockquote class="blockquote-center">mac-java-tips</blockquote><br><a id="more"></a></p>
+<h3 id="停掉java进程"><a href="#停掉java进程" class="headerlink" title="停掉java进程"></a>停掉java进程</h3><p>1.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">jps</div><div class="line"></div><div class="line">kill -9 xxxx</div></pre></td></tr></table></figure></p>
+<p>2.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">killall java</div></pre></td></tr></table></figure></p>
+<p>3.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ps aux | grep java </div><div class="line">kill -9 xxx</div></pre></td></tr></table></figure></p>
+<h3 id="增加tomcat内存"><a href="#增加tomcat内存" class="headerlink" title="增加tomcat内存"></a>增加tomcat内存</h3><p>文件<code>/usr/local/Cellar/tomcat/8.5.4/bin/catalina</code><br>修改下面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">JAVA_OPTS=&quot;$JAVA_OPTS $JSSE_OPTS&quot;</div></pre></td></tr></table></figure></p>
+<p>至<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">JAVA_OPTS=&quot;$JAVA_OPTS $JSSE_OPTS -server -Xms2048m -Xmx2048m -XX:PermSize=512M -XX:MaxPermSize=512m&quot;</div></pre></td></tr></table></figure></p>
+<h3 id="增加maven内存"><a href="#增加maven内存" class="headerlink" title="增加maven内存"></a>增加maven内存</h3><p>文件<code>~/.zshrc</code>,添加如下内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># maven memory</div><div class="line">export MAVEN_OPTS=&quot;-Xms2048m -Xmx2048m&quot;</div></pre></td></tr></table></figure></p>
+<h3 id="eclipse-手动编译"><a href="#eclipse-手动编译" class="headerlink" title="eclipse 手动编译"></a>eclipse 手动编译</h3><p>1.config &gt; covert to maven project<br>2.maven &gt; update projects<br>3.refresh<br>4.clean<br>5.update projects<br>6.refresh<br>7.run as &gt; run on server</p>
+<h3 id="半手动编译"><a href="#半手动编译" class="headerlink" title="半手动编译"></a>半手动编译</h3><ol>
+<li><p>Terminal</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn clean install -Dmaven.test.skip=true</div></pre></td></tr></table></figure>
+</li>
+<li><p>Eclipse<br>手动servers &gt; publish</p>
+</li>
+</ol>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/08/11/angular-filters/" itemprop="url">
-              
-                <span itemprop="name">angular filters</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-08-11T01:17:23+08:00"
-              content="2016-08-11" >
-          08-11
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/mac/" rel="tag">#mac</a>
+          
+            <a href="/tags/java/" rel="tag">#java</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/15/es6笔记/" rel="next" title="ES6笔记">
+                <i class="fa fa-chevron-left"></i> ES6笔记
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/10/02/java-tips/"
+     data-title="mac-java-tips"
+     data-content=""
+     data-url="http://yoursite.com/2016/10/02/java-tips/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
 
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
 
 
           </div>
@@ -280,6 +429,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/10/02/java-tips/"
+           data-title="mac-java-tips" data-url="http://yoursite.com/2016/10/02/java-tips/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -299,8 +456,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -368,6 +534,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#停掉java进程"><span class="nav-number">1.</span> <span class="nav-text">停掉java进程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增加tomcat内存"><span class="nav-number">2.</span> <span class="nav-text">增加tomcat内存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增加maven内存"><span class="nav-number">3.</span> <span class="nav-text">增加maven内存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eclipse-手动编译"><span class="nav-number">4.</span> <span class="nav-text">eclipse 手动编译</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#半手动编译"><span class="nav-number">5.</span> <span class="nav-text">半手动编译</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -471,6 +648,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
