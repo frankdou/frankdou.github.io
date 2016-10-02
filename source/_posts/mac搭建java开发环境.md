@@ -55,4 +55,3 @@ jenv versions
 ```
 
 7.安装maven，tomcat
-8.Eclipse market安装svn

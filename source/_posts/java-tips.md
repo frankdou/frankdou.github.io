@@ -8,7 +8,36 @@ tags:
 ---
 <blockquote class="blockquote-center">mac-java-tips</blockquote>
 <!-- more -->
+### 获得tomcat路径
+运行
+```
+catalina --help
+```
+会得到，如下提示
+```
+Using CATALINA_BASE:   /usr/local/Cellar/tomcat/8.5.4/libexec
+Using CATALINA_HOME:   /usr/local/Cellar/tomcat/8.5.4/libexec
+Using CATALINA_TMPDIR: /usr/local/Cellar/tomcat/8.5.4/libexec/temp
+....
+```
 
+### 如何运行
+#### 绑定host
+```
+127.0.0.1 dev.xxxx.com http://dev.xxxx.com
+```
+#### 产生war包
+```
+mvn clean -U package
+```
+#### 拷贝war包到tomcat
+```
+cp xxxx.war /usr/local/Cellar/tomcat/8.5.4/libexec/webapps
+```
+#### run tomcat
+```
+catalina run
+```
 
 ### 停掉java进程
 1.
@@ -49,19 +78,18 @@ export MAVEN_OPTS="-Xms2048m -Xmx2048m"
 ```
 
 ### eclipse 手动编译
-1.config > covert to maven project
-2.maven > update projects
-3.refresh
-4.clean
-5.update projects
-6.refresh
-7.run as > run on server
+1. config > covert to maven project
+2. maven > update projects
+3. refresh
+4. clean
+5. update projects
+6. refresh
+7. run as > run on server
 
 ### 半手动编译
-1. Terminal
+1. terminal
 ```
 mvn clean install -Dmaven.test.skip=true
 ```
-
 2. Eclipse
 手动servers > publish

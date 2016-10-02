@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/10/02/java-tips/index.html">
 <meta property="og:site_name" content="FrankDou">
 <meta property="og:description" content="mac-java-tips">
-<meta property="og:updated_time" content="2016-10-02T13:23:56.000Z">
+<meta property="og:updated_time" content="2016-10-02T14:27:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mac-java-tips">
 <meta name="twitter:description" content="mac-java-tips">
@@ -333,15 +333,29 @@
 
       
         <p><blockquote class="blockquote-center">mac-java-tips</blockquote><br><a id="more"></a></p>
+<h3 id="获得tomcat路径"><a href="#获得tomcat路径" class="headerlink" title="获得tomcat路径"></a>获得tomcat路径</h3><p>运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">catalina --help</div></pre></td></tr></table></figure></p>
+<p>会得到，如下提示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Using CATALINA_BASE:   /usr/local/Cellar/tomcat/8.5.4/libexec</div><div class="line">Using CATALINA_HOME:   /usr/local/Cellar/tomcat/8.5.4/libexec</div><div class="line">Using CATALINA_TMPDIR: /usr/local/Cellar/tomcat/8.5.4/libexec/temp</div><div class="line">....</div></pre></td></tr></table></figure></p>
+<h3 id="如何运行"><a href="#如何运行" class="headerlink" title="如何运行"></a>如何运行</h3><h4 id="绑定host"><a href="#绑定host" class="headerlink" title="绑定host"></a>绑定host</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">127.0.0.1 dev.xxxx.com http://dev.xxxx.com</div></pre></td></tr></table></figure>
+<h4 id="产生war包"><a href="#产生war包" class="headerlink" title="产生war包"></a>产生war包</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn clean -U package</div></pre></td></tr></table></figure>
+<h4 id="拷贝war包到tomcat"><a href="#拷贝war包到tomcat" class="headerlink" title="拷贝war包到tomcat"></a>拷贝war包到tomcat</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cp xxxx.war /usr/local/Cellar/tomcat/8.5.4/libexec/webapps</div></pre></td></tr></table></figure>
+<h4 id="run-tomcat"><a href="#run-tomcat" class="headerlink" title="run tomcat"></a>run tomcat</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">catalina run</div></pre></td></tr></table></figure>
 <h3 id="停掉java进程"><a href="#停掉java进程" class="headerlink" title="停掉java进程"></a>停掉java进程</h3><p>1.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">jps</div><div class="line"></div><div class="line">kill -9 xxxx</div></pre></td></tr></table></figure></p>
 <p>2.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">killall java</div></pre></td></tr></table></figure></p>
 <p>3.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ps aux | grep java </div><div class="line">kill -9 xxx</div></pre></td></tr></table></figure></p>
 <h3 id="增加tomcat内存"><a href="#增加tomcat内存" class="headerlink" title="增加tomcat内存"></a>增加tomcat内存</h3><p>文件<code>/usr/local/Cellar/tomcat/8.5.4/bin/catalina</code><br>修改下面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">JAVA_OPTS=&quot;$JAVA_OPTS $JSSE_OPTS&quot;</div></pre></td></tr></table></figure></p>
 <p>至<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">JAVA_OPTS=&quot;$JAVA_OPTS $JSSE_OPTS -server -Xms2048m -Xmx2048m -XX:PermSize=512M -XX:MaxPermSize=512m&quot;</div></pre></td></tr></table></figure></p>
 <h3 id="增加maven内存"><a href="#增加maven内存" class="headerlink" title="增加maven内存"></a>增加maven内存</h3><p>文件<code>~/.zshrc</code>,添加如下内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># maven memory</div><div class="line">export MAVEN_OPTS=&quot;-Xms2048m -Xmx2048m&quot;</div></pre></td></tr></table></figure></p>
-<h3 id="eclipse-手动编译"><a href="#eclipse-手动编译" class="headerlink" title="eclipse 手动编译"></a>eclipse 手动编译</h3><p>1.config &gt; covert to maven project<br>2.maven &gt; update projects<br>3.refresh<br>4.clean<br>5.update projects<br>6.refresh<br>7.run as &gt; run on server</p>
+<h3 id="eclipse-手动编译"><a href="#eclipse-手动编译" class="headerlink" title="eclipse 手动编译"></a>eclipse 手动编译</h3><ol>
+<li>config &gt; covert to maven project</li>
+<li>maven &gt; update projects</li>
+<li>refresh</li>
+<li>clean</li>
+<li>update projects</li>
+<li>refresh</li>
+<li>run as &gt; run on server</li>
+</ol>
 <h3 id="半手动编译"><a href="#半手动编译" class="headerlink" title="半手动编译"></a>半手动编译</h3><ol>
-<li><p>Terminal</p>
+<li><p>terminal</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn clean install -Dmaven.test.skip=true</div></pre></td></tr></table></figure>
 </li>
 <li><p>Eclipse<br>手动servers &gt; publish</p>
@@ -481,7 +495,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -545,7 +559,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#停掉java进程"><span class="nav-number">1.</span> <span class="nav-text">停掉java进程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增加tomcat内存"><span class="nav-number">2.</span> <span class="nav-text">增加tomcat内存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增加maven内存"><span class="nav-number">3.</span> <span class="nav-text">增加maven内存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eclipse-手动编译"><span class="nav-number">4.</span> <span class="nav-text">eclipse 手动编译</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#半手动编译"><span class="nav-number">5.</span> <span class="nav-text">半手动编译</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#获得tomcat路径"><span class="nav-number">1.</span> <span class="nav-text">获得tomcat路径</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何运行"><span class="nav-number">2.</span> <span class="nav-text">如何运行</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#绑定host"><span class="nav-number">2.1.</span> <span class="nav-text">绑定host</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#产生war包"><span class="nav-number">2.2.</span> <span class="nav-text">产生war包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拷贝war包到tomcat"><span class="nav-number">2.3.</span> <span class="nav-text">拷贝war包到tomcat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#run-tomcat"><span class="nav-number">2.4.</span> <span class="nav-text">run tomcat</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#停掉java进程"><span class="nav-number">3.</span> <span class="nav-text">停掉java进程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增加tomcat内存"><span class="nav-number">4.</span> <span class="nav-text">增加tomcat内存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增加maven内存"><span class="nav-number">5.</span> <span class="nav-text">增加maven内存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eclipse-手动编译"><span class="nav-number">6.</span> <span class="nav-text">eclipse 手动编译</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#半手动编译"><span class="nav-number">7.</span> <span class="nav-text">半手动编译</span></a></li></ol></div>
             
           </div>
         </section>
