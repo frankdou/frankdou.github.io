@@ -86,16 +86,16 @@
 
 
 
-<meta name="description" content="mac-java-tips">
+<meta name="description" content="java单页开发">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mac-java-tips">
-<meta property="og:url" content="http://yoursite.com/2016/10/02/java-tips/index.html">
+<meta property="og:title" content="java-with-spa">
+<meta property="og:url" content="http://yoursite.com/2016/10/02/java单页开发/index.html">
 <meta property="og:site_name" content="FrankDou">
-<meta property="og:description" content="mac-java-tips">
-<meta property="og:updated_time" content="2016-10-02T14:27:37.000Z">
+<meta property="og:description" content="java单页开发">
+<meta property="og:updated_time" content="2016-10-02T15:04:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mac-java-tips">
-<meta name="twitter:description" content="mac-java-tips">
+<meta name="twitter:title" content="java-with-spa">
+<meta name="twitter:description" content="java单页开发">
 
 
 
@@ -116,9 +116,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/10/02/java-tips/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/10/02/java单页开发/"/>
 
-  <title> mac-java-tips | FrankDou </title>
+  <title> java-with-spa | FrankDou </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -257,7 +257,7 @@
             
             
               
-                mac-java-tips
+                java-with-spa
               
             
           </h1>
@@ -269,7 +269,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-02T19:58:35+08:00" content="2016-10-02">
+            <time itemprop="dateCreated" datetime="2016-10-02T22:31:38+08:00" content="2016-10-02">
               2016-10-02
             </time>
           </span>
@@ -299,8 +299,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/10/02/java-tips/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/02/java-tips/" itemprop="commentsCount"></span>
+                <a href="/2016/10/02/java单页开发/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/02/java单页开发/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -310,7 +310,7 @@
 
           
           
-             <span id="/2016/10/02/java-tips/" class="leancloud_visitors" data-flag-title="mac-java-tips">
+             <span id="/2016/10/02/java单页开发/" class="leancloud_visitors" data-flag-title="java-with-spa">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -332,35 +332,24 @@
       
 
       
-        <p><blockquote class="blockquote-center">mac-java-tips</blockquote><br><a id="more"></a></p>
-<h3 id="获得tomcat路径"><a href="#获得tomcat路径" class="headerlink" title="获得tomcat路径"></a>获得tomcat路径</h3><p>运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">catalina --help</div></pre></td></tr></table></figure></p>
-<p>会得到，如下提示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Using CATALINA_BASE:   /usr/local/Cellar/tomcat/8.5.4/libexec</div><div class="line">Using CATALINA_HOME:   /usr/local/Cellar/tomcat/8.5.4/libexec</div><div class="line">Using CATALINA_TMPDIR: /usr/local/Cellar/tomcat/8.5.4/libexec/temp</div><div class="line">....</div></pre></td></tr></table></figure></p>
-<h3 id="如何运行"><a href="#如何运行" class="headerlink" title="如何运行"></a>如何运行</h3><h4 id="绑定host"><a href="#绑定host" class="headerlink" title="绑定host"></a>绑定host</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">127.0.0.1 dev.xxxx.com http://dev.xxxx.com</div></pre></td></tr></table></figure>
-<h4 id="产生war包"><a href="#产生war包" class="headerlink" title="产生war包"></a>产生war包</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn clean -U package</div></pre></td></tr></table></figure>
-<h4 id="拷贝war包到tomcat"><a href="#拷贝war包到tomcat" class="headerlink" title="拷贝war包到tomcat"></a>拷贝war包到tomcat</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cp xxxx.war /usr/local/Cellar/tomcat/8.5.4/libexec/webapps</div></pre></td></tr></table></figure>
-<h4 id="run-tomcat"><a href="#run-tomcat" class="headerlink" title="run tomcat"></a>run tomcat</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">catalina run</div></pre></td></tr></table></figure>
-<h3 id="停掉java进程"><a href="#停掉java进程" class="headerlink" title="停掉java进程"></a>停掉java进程</h3><p>1.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">jps</div><div class="line"></div><div class="line">kill -9 xxxx</div></pre></td></tr></table></figure></p>
-<p>2.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">killall java</div></pre></td></tr></table></figure></p>
-<p>3.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ps aux | grep java </div><div class="line">kill -9 xxx</div></pre></td></tr></table></figure></p>
-<h3 id="增加tomcat内存"><a href="#增加tomcat内存" class="headerlink" title="增加tomcat内存"></a>增加tomcat内存</h3><p>文件<code>/usr/local/Cellar/tomcat/8.5.4/bin/catalina</code><br>修改下面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">JAVA_OPTS=&quot;$JAVA_OPTS $JSSE_OPTS&quot;</div></pre></td></tr></table></figure></p>
-<p>至<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">JAVA_OPTS=&quot;$JAVA_OPTS $JSSE_OPTS -server -Xms2048m -Xmx2048m -XX:PermSize=512M -XX:MaxPermSize=512m&quot;</div></pre></td></tr></table></figure></p>
-<h3 id="增加maven内存"><a href="#增加maven内存" class="headerlink" title="增加maven内存"></a>增加maven内存</h3><p>文件<code>~/.zshrc</code>,添加如下内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># maven memory</div><div class="line">export MAVEN_OPTS=&quot;-Xms2048m -Xmx2048m&quot;</div></pre></td></tr></table></figure></p>
-<h3 id="eclipse-手动编译"><a href="#eclipse-手动编译" class="headerlink" title="eclipse 手动编译"></a>eclipse 手动编译</h3><ol>
-<li>config &gt; covert to maven project</li>
-<li>maven &gt; update projects</li>
-<li>refresh</li>
-<li>clean</li>
-<li>update projects</li>
-<li>refresh</li>
-<li>run as &gt; run on server</li>
-</ol>
-<h3 id="半手动编译"><a href="#半手动编译" class="headerlink" title="半手动编译"></a>半手动编译</h3><ol>
-<li><p>terminal</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn clean install -Dmaven.test.skip=true</div></pre></td></tr></table></figure>
-</li>
-<li><p>Eclipse<br>手动servers &gt; publish</p>
-</li>
-</ol>
+        <p><blockquote class="blockquote-center">java单页开发</blockquote><br><a id="more"></a><br>通常，有两种方式：</p>
+<h2 id="偏前端方式"><a href="#偏前端方式" class="headerlink" title="偏前端方式"></a>偏前端方式</h2><ul>
+<li>前后端纯粹的分开，nginx给前端静态资源起服务，api反向代理，避免跨域问题。登录状态，前端根据http的异常来判断。页面所有的跳转都由前端来进行控制。</li>
+<li>后端专注api层面，通过http状态码，抛出错误异常给前端。</li>
+</ul>
+<p>nginx配置大致如下:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line"></div><div class="line">    listen  80;</div><div class="line"></div><div class="line">    server_name www.xxx.com;</div><div class="line"></div><div class="line">    root /xxxxxx/dist/;</div><div class="line"></div><div class="line">    location / &#123;</div><div class="line">        try_files <span class="variable">$uri</span> <span class="variable">$uri</span>.html;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    location /api &#123;</div><div class="line">        proxy_pass http://xx.xxx.xx.xx:8080;</div><div class="line">        proxy_set_header Host <span class="variable">$http_host</span>;</div><div class="line">        proxy_set_header X-Real-IP <span class="variable">$remote_addr</span>;</div><div class="line">        proxy_set_header X-Forwarded-For <span class="variable">$proxy_add_x_forwarded_for</span>;</div><div class="line">        proxy_intercept_errors on;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    location ~.*(js|css|png|gif|jpg|mp3|ogg|ttf|woff|woff2|html)$ &#123;</div><div class="line">        expires 30d;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="偏后端方式"><a href="#偏后端方式" class="headerlink" title="偏后端方式"></a>偏后端方式</h2><ul>
+<li>前端服务由tomcat起, 用户初始的登录状态由后端判断并跳转</li>
+<li>后期因为都是ajax，需要前端重定向。</li>
+</ul>
+<p>这种方式下，前端”编译”、刷新频繁，但都为静态文件，不需要java的重新编译，为方便开发，需做以下设置：</p>
+<h3 id="设置要被检测变化的前端源码地址"><a href="#设置要被检测变化的前端源码地址" class="headerlink" title="设置要被检测变化的前端源码地址"></a>设置要被检测变化的前端源码地址</h3><p><code>/usr/local/Cellar/tomcat/8.5.4/libexec/conf/Catalina/localhost/host-manager.xml</code> </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">Context</span> <span class="attr">reloadable</span>=<span class="string">"true"</span> <span class="attr">antiResourceLocking</span>=<span class="string">"false"</span> <span class="attr">privileged</span>=<span class="string">"true"</span> <span class="attr">useHttpOnly</span>=<span class="string">"true"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">WatchedResource</span>&gt;</span>前端dist文件夹地址<span class="tag">&lt;/<span class="name">WatchedResource</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">Context</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="添加如下代码，设置为开发模式，并设定检查周期"><a href="#添加如下代码，设置为开发模式，并设定检查周期" class="headerlink" title="添加如下代码，设置为开发模式，并设定检查周期"></a>添加如下代码，设置为开发模式，并设定检查周期</h3><p><code>/usr/local/Cellar/tomcat/8.5.4/libexec/conf/web.xml</code></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">init-param</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>development<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>true<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">init-param</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">init-param</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>checkInterval<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>1<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">init-param</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="添加如下代码，允许软连接"><a href="#添加如下代码，允许软连接" class="headerlink" title="添加如下代码，允许软连接"></a>添加如下代码，允许软连接</h3><p><code>/usr/local/Cellar/tomcat/8.5.4/libexec/conf/context.xml</code> </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">Resources</span> <span class="attr">allowLinking</span>=<span class="string">"true"</span> /&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="删除tomcat-gt-war包里的静态资源，并设置软链到自己的前端源码地址"><a href="#删除tomcat-gt-war包里的静态资源，并设置软链到自己的前端源码地址" class="headerlink" title="删除tomcat &gt; war包里的静态资源，并设置软链到自己的前端源码地址"></a>删除tomcat &gt; war包里的静态资源，并设置软链到自己的前端源码地址</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm -rf war包静态资源地址 &amp;&amp; ln <span class="_">-s</span> 前端源码地址 war包静态资源地址</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -394,17 +383,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/15/es6笔记/" rel="next" title="ES6笔记">
-                <i class="fa fa-chevron-left"></i> ES6笔记
+              <a href="/2016/10/02/java-with-spa/" rel="next" title="java-with-spa">
+                <i class="fa fa-chevron-left"></i> java-with-spa
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/10/02/docker-tips/" rel="prev" title="docker-tips">
-                docker-tips <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -419,10 +404,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/10/02/java-tips/"
-     data-title="mac-java-tips"
+        <div class="ds-share flat" data-thread-key="2016/10/02/java单页开发/"
+     data-title="java-with-spa"
      data-content=""
-     data-url="http://yoursite.com/2016/10/02/java-tips/">
+     data-url="http://yoursite.com/2016/10/02/java单页开发/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -449,8 +434,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/10/02/java-tips/"
-           data-title="mac-java-tips" data-url="http://yoursite.com/2016/10/02/java-tips/">
+      <div class="ds-thread" data-thread-key="2016/10/02/java单页开发/"
+           data-title="java-with-spa" data-url="http://yoursite.com/2016/10/02/java单页开发/">
       </div>
     
   </div>
@@ -559,7 +544,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#获得tomcat路径"><span class="nav-number">1.</span> <span class="nav-text">获得tomcat路径</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何运行"><span class="nav-number">2.</span> <span class="nav-text">如何运行</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#绑定host"><span class="nav-number">2.1.</span> <span class="nav-text">绑定host</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#产生war包"><span class="nav-number">2.2.</span> <span class="nav-text">产生war包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拷贝war包到tomcat"><span class="nav-number">2.3.</span> <span class="nav-text">拷贝war包到tomcat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#run-tomcat"><span class="nav-number">2.4.</span> <span class="nav-text">run tomcat</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#停掉java进程"><span class="nav-number">3.</span> <span class="nav-text">停掉java进程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增加tomcat内存"><span class="nav-number">4.</span> <span class="nav-text">增加tomcat内存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增加maven内存"><span class="nav-number">5.</span> <span class="nav-text">增加maven内存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eclipse-手动编译"><span class="nav-number">6.</span> <span class="nav-text">eclipse 手动编译</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#半手动编译"><span class="nav-number">7.</span> <span class="nav-text">半手动编译</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#偏前端方式"><span class="nav-number">1.</span> <span class="nav-text">偏前端方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#偏后端方式"><span class="nav-number">2.</span> <span class="nav-text">偏后端方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设置要被检测变化的前端源码地址"><span class="nav-number">2.1.</span> <span class="nav-text">设置要被检测变化的前端源码地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加如下代码，设置为开发模式，并设定检查周期"><span class="nav-number">2.2.</span> <span class="nav-text">添加如下代码，设置为开发模式，并设定检查周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加如下代码，允许软连接"><span class="nav-number">2.3.</span> <span class="nav-text">添加如下代码，允许软连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除tomcat-gt-war包里的静态资源，并设置软链到自己的前端源码地址"><span class="nav-number">2.4.</span> <span class="nav-text">删除tomcat > war包里的静态资源，并设置软链到自己的前端源码地址</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
