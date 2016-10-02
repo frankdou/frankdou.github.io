@@ -59,4 +59,9 @@ git tag -l | xargs git tag -d
 git checkout --track origin/dev.sp1
 ```
 
+#### 查看所有远程branch
+```
+git branch -r
+```
+
 ### [git-tips](https://github.com/521xueweihan/git-tips)
