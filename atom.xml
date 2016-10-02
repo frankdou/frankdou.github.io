@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-02T15:04:29.000Z</updated>
+  <updated>2016-10-02T15:11:22.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,49 +20,7 @@
     <link href="http://yoursite.com/2016/10/02/java%E5%8D%95%E9%A1%B5%E5%BC%80%E5%8F%91/"/>
     <id>http://yoursite.com/2016/10/02/java单页开发/</id>
     <published>2016-10-02T14:31:38.000Z</published>
-    <updated>2016-10-02T15:04:29.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><blockquote class="blockquote-center">java单页开发</blockquote><br><a id="more"></a><br>通常，有两种方式：</p>
-<h2 id="偏前端方式"><a href="#偏前端方式" class="headerlink" title="偏前端方式"></a>偏前端方式</h2><ul>
-<li>前后端纯粹的分开，nginx给前端静态资源起服务，api反向代理，避免跨域问题。登录状态，前端根据http的异常来判断。页面所有的跳转都由前端来进行控制。</li>
-<li>后端专注api层面，通过http状态码，抛出错误异常给前端。</li>
-</ul>
-<p>nginx配置大致如下:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line"></div><div class="line">    listen  80;</div><div class="line"></div><div class="line">    server_name www.xxx.com;</div><div class="line"></div><div class="line">    root /xxxxxx/dist/;</div><div class="line"></div><div class="line">    location / &#123;</div><div class="line">        try_files <span class="variable">$uri</span> <span class="variable">$uri</span>.html;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    location /api &#123;</div><div class="line">        proxy_pass http://xx.xxx.xx.xx:8080;</div><div class="line">        proxy_set_header Host <span class="variable">$http_host</span>;</div><div class="line">        proxy_set_header X-Real-IP <span class="variable">$remote_addr</span>;</div><div class="line">        proxy_set_header X-Forwarded-For <span class="variable">$proxy_add_x_forwarded_for</span>;</div><div class="line">        proxy_intercept_errors on;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    location ~.*(js|css|png|gif|jpg|mp3|ogg|ttf|woff|woff2|html)$ &#123;</div><div class="line">        expires 30d;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="偏后端方式"><a href="#偏后端方式" class="headerlink" title="偏后端方式"></a>偏后端方式</h2><ul>
-<li>前端服务由tomcat起, 用户初始的登录状态由后端判断并跳转</li>
-<li>后期因为都是ajax，需要前端重定向。</li>
-</ul>
-<p>这种方式下，前端”编译”、刷新频繁，但都为静态文件，不需要java的重新编译，为方便开发，需做以下设置：</p>
-<h3 id="设置要被检测变化的前端源码地址"><a href="#设置要被检测变化的前端源码地址" class="headerlink" title="设置要被检测变化的前端源码地址"></a>设置要被检测变化的前端源码地址</h3><p><code>/usr/local/Cellar/tomcat/8.5.4/libexec/conf/Catalina/localhost/host-manager.xml</code> </p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">Context</span> <span class="attr">reloadable</span>=<span class="string">"true"</span> <span class="attr">antiResourceLocking</span>=<span class="string">"false"</span> <span class="attr">privileged</span>=<span class="string">"true"</span> <span class="attr">useHttpOnly</span>=<span class="string">"true"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">WatchedResource</span>&gt;</span>前端dist文件夹地址<span class="tag">&lt;/<span class="name">WatchedResource</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">Context</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="添加如下代码，设置为开发模式，并设定检查周期"><a href="#添加如下代码，设置为开发模式，并设定检查周期" class="headerlink" title="添加如下代码，设置为开发模式，并设定检查周期"></a>添加如下代码，设置为开发模式，并设定检查周期</h3><p><code>/usr/local/Cellar/tomcat/8.5.4/libexec/conf/web.xml</code></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">init-param</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>development<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>true<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">init-param</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">init-param</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>checkInterval<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>1<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">init-param</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="添加如下代码，允许软连接"><a href="#添加如下代码，允许软连接" class="headerlink" title="添加如下代码，允许软连接"></a>添加如下代码，允许软连接</h3><p><code>/usr/local/Cellar/tomcat/8.5.4/libexec/conf/context.xml</code> </p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">Resources</span> <span class="attr">allowLinking</span>=<span class="string">"true"</span> /&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="删除tomcat-gt-war包里的静态资源，并设置软链到自己的前端源码地址"><a href="#删除tomcat-gt-war包里的静态资源，并设置软链到自己的前端源码地址" class="headerlink" title="删除tomcat &gt; war包里的静态资源，并设置软链到自己的前端源码地址"></a>删除tomcat &gt; war包里的静态资源，并设置软链到自己的前端源码地址</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm -rf war包静态资源地址 &amp;&amp; ln <span class="_">-s</span> 前端源码地址 war包静态资源地址</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;java单页开发&lt;/blockquote&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="mac" scheme="http://yoursite.com/categories/mac/"/>
-    
-    
-      <category term="mac" scheme="http://yoursite.com/tags/mac/"/>
-    
-      <category term="java" scheme="http://yoursite.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>java-with-spa</title>
-    <link href="http://yoursite.com/2016/10/02/java-with-spa/"/>
-    <id>http://yoursite.com/2016/10/02/java-with-spa/</id>
-    <published>2016-10-02T14:31:38.000Z</published>
-    <updated>2016-10-02T15:04:29.000Z</updated>
+    <updated>2016-10-02T15:11:22.000Z</updated>
     
     <content type="html"><![CDATA[<p><blockquote class="blockquote-center">java单页开发</blockquote><br><a id="more"></a><br>通常，有两种方式：</p>
 <h2 id="偏前端方式"><a href="#偏前端方式" class="headerlink" title="偏前端方式"></a>偏前端方式</h2><ul>
@@ -720,6 +678,30 @@
       <category term="raml" scheme="http://yoursite.com/tags/raml/"/>
     
       <category term="restfulAPI" scheme="http://yoursite.com/tags/restfulAPI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>阿拉伯浮点数字转换成中文数字</title>
+    <link href="http://yoursite.com/2016/08/10/%E9%98%BF%E6%8B%89%E4%BC%AF%E6%B5%AE%E7%82%B9%E6%95%B0%E5%AD%97%E8%BD%AC%E6%8D%A2%E6%88%90%E4%B8%AD%E6%96%87%E6%95%B0%E5%AD%97/"/>
+    <id>http://yoursite.com/2016/08/10/阿拉伯浮点数字转换成中文数字/</id>
+    <published>2016-08-10T10:14:22.000Z</published>
+    <updated>2016-08-11T14:21:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><blockquote class="blockquote-center">阿拉伯浮点数字转换成中文数字</blockquote><br><a id="more"></a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> nNum = <span class="number">5566555234.123</span>,</div><div class="line">    sNum = nNum.toString(),</div><div class="line">    aNum = sNum.split(<span class="string">'.'</span>),</div><div class="line">    sNum = &#123;</div><div class="line">        <span class="string">'0'</span>: <span class="string">'零'</span>,</div><div class="line">        <span class="string">'1'</span>: <span class="string">'一'</span>,</div><div class="line">        <span class="string">'2'</span>: <span class="string">'二'</span>,</div><div class="line">        <span class="string">'3'</span>: <span class="string">'三'</span>,</div><div class="line">        <span class="string">'4'</span>: <span class="string">'四'</span>,</div><div class="line">        <span class="string">'5'</span>: <span class="string">'五'</span>,</div><div class="line">        <span class="string">'6'</span>: <span class="string">'六'</span>,</div><div class="line">        <span class="string">'7'</span>: <span class="string">'七'</span>,</div><div class="line">        <span class="string">'8'</span>: <span class="string">'八'</span>,</div><div class="line">        <span class="string">'9'</span>: <span class="string">'九'</span>,</div><div class="line">        <span class="string">'10'</span>: <span class="string">'十'</span></div><div class="line">    &#125;,</div><div class="line">    aInterger = [<span class="string">"元"</span>, <span class="string">"十"</span>, <span class="string">"百"</span>, <span class="string">"千"</span>, <span class="string">"万"</span>, <span class="string">"十"</span>, <span class="string">"百"</span>, <span class="string">"千"</span>, <span class="string">"亿"</span>, <span class="string">"十"</span>],</div><div class="line">    aPoint = [<span class="string">'毛'</span>, <span class="string">'分'</span>, <span class="string">'里'</span>],</div><div class="line">    sTmp = <span class="string">''</span>;</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; aNum.length; i++) &#123;</div><div class="line">    <span class="keyword">var</span> nSize = aNum[i].length;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (!i) &#123;</div><div class="line">        aInterger.length = nSize;</div><div class="line">        aInterger.reverse()</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> n = <span class="number">0</span>; n &lt; nSize; n++) &#123;</div><div class="line">        sTmp += sNum[aNum[i][n]];</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (i) &#123;</div><div class="line">            sTmp += aPoint[n];</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            sTmp += aInterger[n];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(sTmp);</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;阿拉伯浮点数字转换成中文数字&lt;/blockquote&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="js" scheme="http://yoursite.com/categories/js/"/>
+    
+    
+      <category term="js-utils" scheme="http://yoursite.com/tags/js-utils/"/>
     
   </entry>
   
