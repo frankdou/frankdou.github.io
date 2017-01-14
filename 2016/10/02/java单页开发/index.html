@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/10/02/java单页开发/index.html">
 <meta property="og:site_name" content="FrankDou">
 <meta property="og:description" content="java单页开发">
-<meta property="og:updated_time" content="2016-10-02T15:11:22.000Z">
+<meta property="og:updated_time" content="2016-10-23T13:00:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java-with-spa">
 <meta name="twitter:description" content="java单页开发">
@@ -337,7 +337,7 @@
 <li>前后端纯粹的分开，nginx给前端静态资源起服务，api反向代理，避免跨域问题。登录状态，前端根据http的异常来判断。页面所有的跳转都由前端来进行控制。</li>
 <li>后端专注api层面，通过http状态码，抛出错误异常给前端。</li>
 </ul>
-<p>nginx配置大致如下:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line"></div><div class="line">    listen  80;</div><div class="line"></div><div class="line">    server_name www.xxx.com;</div><div class="line"></div><div class="line">    root /xxxxxx/dist/;</div><div class="line"></div><div class="line">    location / &#123;</div><div class="line">        try_files <span class="variable">$uri</span> <span class="variable">$uri</span>.html;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    location /api &#123;</div><div class="line">        proxy_pass http://xx.xxx.xx.xx:8080;</div><div class="line">        proxy_set_header Host <span class="variable">$http_host</span>;</div><div class="line">        proxy_set_header X-Real-IP <span class="variable">$remote_addr</span>;</div><div class="line">        proxy_set_header X-Forwarded-For <span class="variable">$proxy_add_x_forwarded_for</span>;</div><div class="line">        proxy_intercept_errors on;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    location ~.*(js|css|png|gif|jpg|mp3|ogg|ttf|woff|woff2|html)$ &#123;</div><div class="line">        expires 30d;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>nginx配置大致如下:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line"></div><div class="line">    listen  80;</div><div class="line"></div><div class="line">    server_name www.xxx.com;</div><div class="line"></div><div class="line">    root /xxxxxx/dist/;</div><div class="line"></div><div class="line">    location / &#123;</div><div class="line">        try_files <span class="variable">$uri</span> <span class="variable">$uri</span>.html;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    location /api &#123;</div><div class="line">        proxy_pass http://xx.xxx.xx.xx:8080;</div><div class="line">        proxy_set_header Host <span class="variable">$http_host</span>;</div><div class="line">        proxy_set_header X-Real-IP <span class="variable">$remote_addr</span>;</div><div class="line">        proxy_set_header X-Forwarded-For <span class="variable">$proxy_add_x_forwarded_for</span>;</div><div class="line">        proxy_intercept_errors on;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    location ~.*(js|css|png|gif|jpg|mp3|ogg|ttf|woff|woff2|html)$ &#123;</div><div class="line">        //expires 30d;</div><div class="line">        expires off;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h2 id="偏后端方式"><a href="#偏后端方式" class="headerlink" title="偏后端方式"></a>偏后端方式</h2><ul>
 <li>前端服务由tomcat起, 用户初始的登录状态由后端判断并跳转</li>
 <li>后期因为都是ajax，需要前端重定向。</li>
@@ -563,7 +563,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/08/11/命令行笔记/index.html">
 <meta property="og:site_name" content="FrankDou">
 <meta property="og:description" content="命令行笔记">
-<meta property="og:updated_time" content="2016-10-02T11:56:22.000Z">
+<meta property="og:updated_time" content="2017-01-14T10:28:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="命令行笔记">
 <meta name="twitter:description" content="命令行笔记">
@@ -333,10 +333,13 @@
 
       
         <p><blockquote class="blockquote-center">命令行笔记</blockquote><br><a id="more"></a></p>
-<h3 id="kill-process"><a href="#kill-process" class="headerlink" title="kill process"></a>kill process</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ps aux | grep xx</div><div class="line">kill <span class="number">-9</span> xxx</div></pre></td></tr></table></figure>
-<h3 id="输出最后，一般用来看log"><a href="#输出最后，一般用来看log" class="headerlink" title="输出最后，一般用来看log"></a>输出最后，一般用来看log</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tail xxx.xx</div></pre></td></tr></table></figure>
-<h3 id="输出树形结构"><a href="#输出树形结构" class="headerlink" title="输出树形结构"></a>输出树形结构</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tree -L x (x为层级)</div></pre></td></tr></table></figure>
-<h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service xxxx start (xxxx一般指nginx，mongodb等)</div></pre></td></tr></table></figure>
+<h3 id="kill-process"><a href="#kill-process" class="headerlink" title="kill process"></a>kill process</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ps aux | grep xx</div><div class="line"><span class="built_in">kill</span> -9 xxx</div></pre></td></tr></table></figure>
+<h3 id="输出最后，一般用来看log"><a href="#输出最后，一般用来看log" class="headerlink" title="输出最后，一般用来看log"></a>输出最后，一般用来看log</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tail xxx.xx</div></pre></td></tr></table></figure>
+<h3 id="输出树形结构"><a href="#输出树形结构" class="headerlink" title="输出树形结构"></a>输出树形结构</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tree -L x (x为层级)</div></pre></td></tr></table></figure>
+<h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service xxxx start (xxxx一般指nginx，mongodb等)</div></pre></td></tr></table></figure>
+<h3 id="递归给权限"><a href="#递归给权限" class="headerlink" title="递归给权限"></a>递归给权限</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo chown -R xxx workspace (xxx指用户名，workspace指文件夹)</div></pre></td></tr></table></figure>
+<h3 id="递归创建目录"><a href="#递归创建目录" class="headerlink" title="递归创建目录"></a>递归创建目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir -p tomcat/xxx/xxx</div></pre></td></tr></table></figure>
+<h3 id="写入md5"><a href="#写入md5" class="headerlink" title="写入md5"></a>写入md5</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">md5sum node-v6.9.1-linux-x64.tar.gz &gt; md5sum.txt</div></pre></td></tr></table></figure>
 <h3 id="ssh免密码登录"><a href="#ssh免密码登录" class="headerlink" title="ssh免密码登录"></a>ssh免密码登录</h3><p>添加公匙到<code>.ssh/authorized_keys</code>，或<code>/home/admin/.ssh/authorized_keys</code>(管理权限)</p>
 
       
@@ -534,7 +537,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#kill-process"><span class="nav-number">1.</span> <span class="nav-text">kill process</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出最后，一般用来看log"><span class="nav-number">2.</span> <span class="nav-text">输出最后，一般用来看log</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出树形结构"><span class="nav-number">3.</span> <span class="nav-text">输出树形结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动服务"><span class="nav-number">4.</span> <span class="nav-text">启动服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ssh免密码登录"><span class="nav-number">5.</span> <span class="nav-text">ssh免密码登录</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#kill-process"><span class="nav-number">1.</span> <span class="nav-text">kill process</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出最后，一般用来看log"><span class="nav-number">2.</span> <span class="nav-text">输出最后，一般用来看log</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出树形结构"><span class="nav-number">3.</span> <span class="nav-text">输出树形结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动服务"><span class="nav-number">4.</span> <span class="nav-text">启动服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#递归给权限"><span class="nav-number">5.</span> <span class="nav-text">递归给权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#递归创建目录"><span class="nav-number">6.</span> <span class="nav-text">递归创建目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写入md5"><span class="nav-number">7.</span> <span class="nav-text">写入md5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ssh免密码登录"><span class="nav-number">8.</span> <span class="nav-text">ssh免密码登录</span></a></li></ol></div>
             
           </div>
         </section>
@@ -553,7 +556,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
