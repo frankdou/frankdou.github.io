@@ -47,12 +47,14 @@ tags:
 #### CSS Media Query Snippets
 #### JavaScript & NodeJS Snippets
 #### Jquery Snippets
-#### jsformat
 #### tag (html format)
 #### prettyjson
 #### markdown light
 #### better-coffee
 #### css format
 #### DocBlockr
+#### Vue Syntax Highlight
+#### ES6 Syntax
+#### eslint formatter (需要修改'node_path','format_on_save'为true) 
 
 ### [支持react](https://segmentfault.com/a/1190000003698071#articleHeader7)

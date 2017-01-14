@@ -8,10 +8,12 @@ tags:
 <blockquote class="blockquote-center">新mac的配置记录</blockquote>
 <!-- more -->
 ### 软件列表
+* Mas
 * Iterm2
 * ClipMenu
 * CheatSheet
-* MPlayerX
+* cheat (命令行helper)
+* mpv
 * FoxMail
 * Mou
 * Cakebrew
@@ -29,7 +31,7 @@ tags:
 
 ### 相关组件
 ```bash
-brew install autojump git git-extras tree youtube-dl mongodb redis caskroom/cask/brew-cask
+brew install md5sha1sum autojump git git-extras tree youtube-dl mongodb redis caskroom/cask/brew-cask
 brew cask install launchrocket > 控制面板启动关闭服务（比如数据库）
 brew tap homebrew/services  > brew命令行启动关闭服务（比如数据库）
 

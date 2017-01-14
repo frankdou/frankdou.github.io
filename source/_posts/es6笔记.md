@@ -2,14 +2,14 @@
 title: ES6笔记
 date: 2016-08-15 11:17:46
 categories: js
-tags: 
+tags:
     - ES6
 ---
 <blockquote class="blockquote-center">ES6学习笔记</blockquote>
 <!-- more -->
 [教程出处](https://egghead.io/lessons/arrow-function?course=learn-es6-ecmascript-2015)
 
-### Arrow Function 
+### Arrow Function
 > 可以简化代码，避免this指向错误
 
 #### 可以省去function, return关键字， 自动return
@@ -57,7 +57,7 @@ var test = {
 }
 ```
 ### let keywords
-> 可以用在局部函数，cache内部数据，状态等
+> 可以用在局部函数，cache内部数据，状态等, 与`const`的区别在于，const为类型不可变
 
 #### 一些temp变量在用的时候声明即可，使得代码维护性更好
 ```javascript
@@ -160,7 +160,7 @@ let receive = (done = () => console.log('done')) => done();
 ```
 
 ### const
-> 可以用于一些read-only的地方，比如`const port = 8080; const API = 'xxxx';` 
+> 可以用于一些read-only的地方，比如`const port = 8080; const API = 'xxxx';`
 
 #### 不可改变value
 ```javascript
@@ -237,13 +237,13 @@ var go = function () {
 };
 
 var car1 = {
-    color, 
-    speed, 
+    color,
+    speed,
     go
 };
 
 var car2 = {
-    color, 
+    color,
     speed,
     go() {
         console.log('go');
@@ -251,7 +251,7 @@ var car2 = {
 };
 
 var car3 = {
-    color, 
+    color,
     speed,
     ['go'] : function () {
         console.log('go');
@@ -261,7 +261,7 @@ var car3 = {
 
 var rename = 'go';
 var car4 = {
-    color, 
+    color,
     speed,
     [rename] : function () {
         console.log('go');
@@ -313,6 +313,13 @@ caculate(...arr);
 
 > 6
 ```
+#### array-map
+```javascript
+let arr = [1,2,3];
+const aTmp = arr.map(item => item * 2);
+console.log(aTmp);
+> [2, 4, 6]
+```
 
 ### String Templates
 > 字符串模板操作
@@ -329,7 +336,7 @@ console.log(greeting);
 ```javascript
 var name = 'frank';
 var greeting = `
-    Hi, 
+    Hi,
         ${name}
                 blalblalbla
     Cheers
@@ -337,8 +344,8 @@ var greeting = `
 
 console.log(greeting);
 
-> 
-    Hi, 
+>
+    Hi,
         frank
                 blalblalbla
     Cheers
@@ -363,7 +370,7 @@ var tag = function (aStr, ...aVal) {
     } else {
         aVal[1] = 'sleep';
     }
-    
+
     return `${aStr[0]}${aVal[0]}${aStr[1]}${aVal[1]}`
 }
 

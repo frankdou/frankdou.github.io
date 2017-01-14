@@ -37,7 +37,8 @@ server {
     }
 
     location ~.*(js|css|png|gif|jpg|mp3|ogg|ttf|woff|woff2|html)$ {
-        expires 30d;
+        //expires 30d;
+        expires off;
     }
 }
 ```
