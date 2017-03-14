@@ -33,6 +33,20 @@ squared(2)
 #### this指向更加符合期望， 不需要设置that之类的中间变量
 
 ```javascript
+obj = {
+    a() {
+        console.log(this, 'xx');
+    },
+    b: ()=> {
+        console.log(this, 'bbb');
+    }
+};
+
+o.a() > Object {}
+o.b() > Window
+```
+
+```javascript
 var test = {
     name: 'frank',
     handler: function(msg, func) {

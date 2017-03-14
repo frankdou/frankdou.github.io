@@ -26,6 +26,7 @@ tags:
 * Astrill
 * Lantern
 * Docker
+* EasyFind
 
 ### homebrew
 

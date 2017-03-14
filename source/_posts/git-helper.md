@@ -64,4 +64,32 @@ git checkout --track origin/dev.sp1
 git branch -r
 ```
 
+#### 取消本地最新的commit
+```
+git reset HEAD~
+```
+
+### git-configs
+```
+[alias]
+    st = status
+    ci = commit
+    co = checkout
+    br = branch
+[color "branch"]
+    current = yellow bold
+    local = green bold
+    remote = cyan bold
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+[color "status"]
+    added = green bold
+    changed = yellow bold
+    untracked = red bold
+```
+
 ### [git-tips](https://github.com/521xueweihan/git-tips)
