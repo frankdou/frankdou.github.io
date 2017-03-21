@@ -71,6 +71,8 @@ git reset HEAD~
 
 ### git-configs
 ```
+[push]
+    default = current
 [alias]
     st = status
     ci = commit
@@ -88,8 +90,11 @@ git reset HEAD~
     whitespace = red reverse
 [color "status"]
     added = green bold
-    changed = yellow bold
+    changed = white bold
     untracked = red bold
+[branch]
+    autosetuprebase = always
+
 ```
 
 ### [git-tips](https://github.com/521xueweihan/git-tips)
