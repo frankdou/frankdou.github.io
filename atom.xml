@@ -298,7 +298,7 @@
     <link href="http://yoursite.com/2016/08/11/%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2016/08/11/命令行笔记/</id>
     <published>2016-08-10T17:31:32.000Z</published>
-    <updated>2017-03-21T05:37:26.000Z</updated>
+    <updated>2017-06-06T07:38:04.000Z</updated>
     
     <content type="html"><![CDATA[<p><blockquote class="blockquote-center">命令行笔记</blockquote><br><a id="more"></a></p>
 <h3 id="kill-process"><a href="#kill-process" class="headerlink" title="kill process"></a>kill process</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ps aux | grep xx</div><div class="line"><span class="built_in">kill</span> -9 xxx</div></pre></td></tr></table></figure>
@@ -309,8 +309,6 @@
 <h3 id="递归创建目录"><a href="#递归创建目录" class="headerlink" title="递归创建目录"></a>递归创建目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir -p tomcat/xxx/xxx</div></pre></td></tr></table></figure>
 <h3 id="写入md5"><a href="#写入md5" class="headerlink" title="写入md5"></a>写入md5</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">md5sum node-v6.9.1-linux-x64.tar.gz &gt; md5sum.txt</div></pre></td></tr></table></figure>
 <h3 id="ssh免密码登录"><a href="#ssh免密码登录" class="headerlink" title="ssh免密码登录"></a>ssh免密码登录</h3><p>添加公匙到<code>.ssh/authorized_keys</code>，或<code>/home/admin/.ssh/authorized_keys</code>(管理权限)</p>
-<h3 id="查看端口相关请求"><a href="#查看端口相关请求" class="headerlink" title="查看端口相关请求"></a>查看端口相关请求</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">watch <span class="_">-d</span> -n0.5 <span class="string">'sudo netstat -anpt | grep 8388'</span></div></pre></td></tr></table></figure>
-<h3 id="使用端口进行请求"><a href="#使用端口进行请求" class="headerlink" title="使用端口进行请求"></a>使用端口进行请求</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nc 100.100.100.2 8388</div></pre></td></tr></table></figure>
 ]]></content>
     
     <summary type="html">
