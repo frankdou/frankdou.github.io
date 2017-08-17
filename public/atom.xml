@@ -157,7 +157,7 @@
     <link href="http://yoursite.com/2016/08/15/es6%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2016/08/15/es6笔记/</id>
     <published>2016-08-15T03:17:46.000Z</published>
-    <updated>2017-01-19T10:07:16.000Z</updated>
+    <updated>2017-08-17T02:55:03.000Z</updated>
     
     <content type="html"><![CDATA[<p><blockquote class="blockquote-center">ES6学习笔记</blockquote><br><a id="more"></a><br><a href="https://egghead.io/lessons/arrow-function?course=learn-es6-ecmascript-2015" target="_blank" rel="external">教程出处</a></p>
 <h3 id="Arrow-Function"><a href="#Arrow-Function" class="headerlink" title="Arrow Function"></a>Arrow Function</h3><blockquote>
@@ -298,7 +298,7 @@
     <link href="http://yoursite.com/2016/08/11/%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2016/08/11/命令行笔记/</id>
     <published>2016-08-10T17:31:32.000Z</published>
-    <updated>2017-03-21T05:37:26.000Z</updated>
+    <updated>2017-08-17T02:55:03.000Z</updated>
     
     <content type="html"><![CDATA[<p><blockquote class="blockquote-center">命令行笔记</blockquote><br><a id="more"></a></p>
 <h3 id="kill-process"><a href="#kill-process" class="headerlink" title="kill process"></a>kill process</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ps aux | grep xx</div><div class="line"><span class="built_in">kill</span> -9 xxx</div></pre></td></tr></table></figure>
@@ -464,7 +464,7 @@
     <link href="http://yoursite.com/2016/08/10/new-mac-setup/"/>
     <id>http://yoursite.com/2016/08/10/new-mac-setup/</id>
     <published>2016-08-10T15:52:19.000Z</published>
-    <updated>2017-02-16T08:01:41.000Z</updated>
+    <updated>2017-08-17T02:55:03.000Z</updated>
     
     <content type="html"><![CDATA[<p><blockquote class="blockquote-center">新mac的配置记录</blockquote><br><a id="more"></a></p>
 <h3 id="软件列表"><a href="#软件列表" class="headerlink" title="软件列表"></a>软件列表</h3><ul>
