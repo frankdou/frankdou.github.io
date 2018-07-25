@@ -69,6 +69,31 @@ git branch -r
 git reset HEAD~
 ```
 
+#### 撤回某个commit提交
+```
+git revert --strategy resolve <commit>
+```
+
+#### 修改本地commit信息
+```
+git commit --amend
+```
+
+#### 删除远程仓库维护的分支
+```
+git push --delete origin xxx
+```
+
+#### 推送单个tag
+```
+git push origin v1.2
+```
+
+#### 删除所有已经不在远程仓库维护的分支
+```
+git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done
+```
+
 ### git-configs
 ```
 [push]

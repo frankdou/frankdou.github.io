@@ -5,80 +5,91 @@ categories: docker
 tags:
     - mac
     - docker
+
 ---
+
 <blockquote class="blockquote-center">docker-tips</blockquote>
 <!-- more -->
 
 ### 基本操作
+
+#### 使用Dockerfile创建镜像（.对应当前文件夹Dockerfile）
+
+```
+docker build -t hub.xxxxxx.com/xxxxx/node:8.11.1 .
+```
+
+#### 使用自定义Dockerfile创建镜像
+
+`docker build -t hub.xxxx.com/xxxxx/node:8.11.1 -f ./Dockerfile-node-cnpm .`
+
 #### 加载image
+
 ```
 docker load < ~/Downloads/desktop.tar.gz
 ```
 
 #### 创建容器,并进入
+
 ```
 docker run -ti -v ~/workspace/xxx:/root/xxx -p 3000:3000 image的名称 /bin/bash
 ```
 
+#### 进入运行中的容器
+
+```
+docker exec -ti 容器ID /bin/bash
+```
+
 #### 查看容器 list
+
 ```
 docker ps -a
 ```
 
 #### 删除容器
+
 ```
 docker rm bbc64d143406
 ```
 
 #### 删除所有容器
+
 ```
 docker rm $(docker ps -a -q)
 ```
 
-#### 执行脚本，并自动删除容器
+#### 执行脚本，exit后删除容器
 
-##### 添加start.sh（项目文件夹外）
 ```
-docker run -ti -v ~/workspace/xxxx:/root/xxxx -p 3000:3000 image的名称 bash /root/xxxx/run.sh
-```
-
-##### 添加run.sh（项目文件夹内）
-```
-npm start
+docker run -ti -rm 镜像名 sh ./run.sh
 ```
 
-##### 运行
+#### 文件夹、端口映射
+
 ```
-sh start.sh
+docker run -ti -v ~/workspace/xxxx:/root/xxxx -p 3000:3000 镜像名
+ps:
+~/workspace/xxxx,指本地文件夹，/root/xxxx为容器文件夹
+容器里应用的host应当设置为0.0.0.0
 ```
 
-停止后，会自动删除容器
+#### 基于已有容器，创建image
 
-
-### 基于已有容器，创建image
 在很多情况下，有新的依赖需要安装，我们可以基于已有的容器，安装完依赖后，创建新的image，供后续开发。
 
-#### 安装新的依赖
-进入了容器，装完新的依赖后，退出
 ```
-exit
+exit，进入了容器，安装完新的依赖后，退出
+docker ps -a，查看所有容器
+docker commit a2799a24605c 'REPOSITORY:TAG'   （a2799a24605c指容器id）， 创建新的image
+docker images，查看images
+docker push REPOSITORY:TAG 提交image
 ```
-#### 查看运行中的容器
+
+#### 基于已有镜像，创建image
+
+```docker tag hub.xxxx.com/library/node:8.0.0 test.hub.xxxxx.com/xxxxxx/node:8.0.0
+docker tag hub.xxxx.com/library/node:8.0.0 test.hub.xxxxx.com/xxxxxx/node:8.0.0
+PS：前为已有镜像，后为新的镜像
 ```
-docker ps -l
-```
-#### 创建新的image
-```
-docker commit -m 'xxxxxx' a2799a24605c 'latest-xx'   （a2799a24605c指容器id）
-```
-#### 查看images
-通过
-```
-docker images
-```
-会发现`latest-xx`
-#### 使用新的images
-修改`start.sh`, 或直接执行
-```
-docker run -ti --rm -v ~/workspace/xxxx:/root/xxxx -p 3000:3000 latest-xx bash /root/xxxx/run.sh```
-```
+

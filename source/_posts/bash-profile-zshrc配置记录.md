@@ -17,3 +17,6 @@ alias mou='open -a Mou'
 # GOPATH设置
 export GOPATH=$HOME/workspace/go_test
 export PATH=$PATH:$GOPATH/bin
+
+# taobao nodejs mirror
+export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/dist

@@ -23,10 +23,12 @@ tags:
 * Chrome
 * 有道词典
 * iHosts
-* Astrill
-* Lantern
 * Docker
 * EasyFind
+* Irvue(壁纸)
+* ihosts
+* typora(markdown editor)
+
 
 ### homebrew
 

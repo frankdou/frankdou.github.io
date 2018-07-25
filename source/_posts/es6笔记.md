@@ -73,6 +73,16 @@ var test = {
 ### let keywords
 > 可以用在局部函数，cache内部数据，状态等, 与`const`的区别在于，const为类型不可变
 
+####  let、const不会声明到全局上
+```javascript
+let a = 2;
+const c =2
+window.a;
+window.c;
+> undefined
+> undefined
+```
+
 #### 一些temp变量在用的时候声明即可，使得代码维护性更好
 ```javascript
 function varFunc() {
@@ -333,6 +343,16 @@ let arr = [1,2,3];
 const aTmp = arr.map(item => item * 2);
 console.log(aTmp);
 > [2, 4, 6]
+```
+
+#### 多个参数
+```javascript
+const test = (...args) => {
+    console.log(args);
+};
+> [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+test(1,2,3,4,5,6,7,8,9)
 ```
 
 ### String Templates
