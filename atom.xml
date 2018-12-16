@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-28T13:35:18.060Z</updated>
+  <updated>2018-12-16T10:06:23.835Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,84 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mac网络-tips.md</title>
+    <link href="http://yoursite.com/2018/12/16/mac%E7%BD%91%E7%BB%9C-tips/"/>
+    <id>http://yoursite.com/2018/12/16/mac网络-tips/</id>
+    <published>2018-12-16T09:55:13.000Z</published>
+    <updated>2018-12-16T10:06:23.835Z</updated>
+    
+    <content type="html"><![CDATA[<p><blockquote class="blockquote-center"></blockquote><br><a id="more"></a></p>
+<h4 id="查询当前wifi的mac地址"><a href="#查询当前wifi的mac地址" class="headerlink" title="查询当前wifi的mac地址"></a>查询当前wifi的mac地址</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig en0 |grep ether</span><br></pre></td></tr></table></figure>
+<h4 id="设置当前wifi的mac地址"><a href="#设置当前wifi的mac地址" class="headerlink" title="设置当前wifi的mac地址"></a>设置当前wifi的mac地址</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ifconfig en0 ether aa:bb:cc:dd:ee:ff</span><br></pre></td></tr></table></figure>
+<h4 id="查询设备所有的的mac地址"><a href="#查询设备所有的的mac地址" class="headerlink" title="查询设备所有的的mac地址"></a>查询设备所有的的mac地址</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">networksetup -listallhardwareports</span><br></pre></td></tr></table></figure>
+<h4 id="查看当前wifi所有链接"><a href="#查看当前wifi所有链接" class="headerlink" title="查看当前wifi所有链接"></a>查看当前wifi所有链接</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/System/Library/PrivateFrameworks/Apple80211.framework/Resources/airport <span class="_">-s</span></span><br></pre></td></tr></table></figure>
+<h4 id="暂停网络连接"><a href="#暂停网络连接" class="headerlink" title="暂停网络连接"></a>暂停网络连接</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /System/Library/PrivateFrameworks/Apple80211.framework/Resources/airport -z</span><br></pre></td></tr></table></figure>
+<h4 id="重新启动网络连接"><a href="#重新启动网络连接" class="headerlink" title="重新启动网络连接"></a>重新启动网络连接</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">networksetup -detectnewhardware</span><br></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;/blockquote&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="mac" scheme="http://yoursite.com/categories/mac/"/>
+    
+    
+      <category term="mac" scheme="http://yoursite.com/tags/mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue通过form表单下载文件</title>
+    <link href="http://yoursite.com/2018/12/16/vue-form%E8%A1%A8%E5%8D%95%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6/"/>
+    <id>http://yoursite.com/2018/12/16/vue-form表单下载文件/</id>
+    <published>2018-12-16T09:44:26.000Z</published>
+    <updated>2018-12-16T10:05:18.382Z</updated>
+    
+    <content type="html"><![CDATA[<p><blockquote class="blockquote-center"></blockquote><br><a id="more"></a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">@submit.prevent.native 用来防止刷新</span><br><span class="line">@keyup.enter.native 用来绑定enter事件</span><br><span class="line"></span><br><span class="line">&lt;form</span><br><span class="line">    method=<span class="string">'post'</span></span><br><span class="line">    :action=<span class="string">'xxxxxx'</span></span><br><span class="line">    @keyup.enter.native=<span class="string">'fetch'</span></span><br><span class="line">    @submit.prevent.native</span><br><span class="line">&gt;</span><br><span class="line">    &lt;!-- 动态参数 --&gt;</span><br><span class="line">    &lt;input</span><br><span class="line">        type=<span class="string">'hidden'</span></span><br><span class="line">        v-<span class="keyword">for</span>=<span class="string">'(value, key) in params'</span></span><br><span class="line">        :key=<span class="string">'key'</span></span><br><span class="line">        :name=<span class="string">'key'</span></span><br><span class="line">        :value=<span class="string">'value'</span></span><br><span class="line">    /&gt;</span><br><span class="line">    &lt;el-button</span><br><span class="line">        type=<span class="string">'primary'</span></span><br><span class="line">        native-type=<span class="string">'submit'</span></span><br><span class="line">        :disabled=<span class="string">'!exportMode'</span></span><br><span class="line">    &gt;导出&lt;<span class="regexp">/el-button&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>form&gt;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;/blockquote&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="vue" scheme="http://yoursite.com/categories/vue/"/>
+    
+    
+      <category term="js-utils" scheme="http://yoursite.com/tags/js-utils/"/>
+    
+      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux-tips</title>
+    <link href="http://yoursite.com/2018/12/16/linux-tips/"/>
+    <id>http://yoursite.com/2018/12/16/linux-tips/</id>
+    <published>2018-12-16T09:37:02.000Z</published>
+    <updated>2018-12-16T10:06:50.335Z</updated>
+    
+    <content type="html"><![CDATA[<p><blockquote class="blockquote-center">linux-tips</blockquote><br><a id="more"></a></p>
+<h4 id="被占用端口查询"><a href="#被占用端口查询" class="headerlink" title="被占用端口查询"></a>被占用端口查询</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsof -i:7001</span><br></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;linux-tips&lt;/blockquote&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
+    
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>vscode配置</title>
@@ -206,7 +284,7 @@
     <link href="http://yoursite.com/2016/10/02/docker-tips/"/>
     <id>http://yoursite.com/2016/10/02/docker-tips/</id>
     <published>2016-10-02T13:33:35.000Z</published>
-    <updated>2018-11-28T13:35:18.053Z</updated>
+    <updated>2018-12-16T09:43:52.968Z</updated>
     
     <content type="html"><![CDATA[<p><blockquote class="blockquote-center">docker-tips</blockquote><br><a id="more"></a></p>
 <h3 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h3><h4 id="使用Dockerfile创建镜像（-对应当前文件夹Dockerfile）"><a href="#使用Dockerfile创建镜像（-对应当前文件夹Dockerfile）" class="headerlink" title="使用Dockerfile创建镜像（.对应当前文件夹Dockerfile）"></a>使用Dockerfile创建镜像（.对应当前文件夹Dockerfile）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t hub.xxxxxx.com/xxxxx/node:8.11.1 .</span><br></pre></td></tr></table></figure>
@@ -371,7 +449,7 @@
     <link href="http://yoursite.com/2016/08/11/html-meta-tags/"/>
     <id>http://yoursite.com/2016/08/11/html-meta-tags/</id>
     <published>2016-08-10T17:56:27.000Z</published>
-    <updated>2018-11-28T13:35:18.055Z</updated>
+    <updated>2018-12-16T10:02:16.018Z</updated>
     
     <content type="html"><![CDATA[<p><blockquote class="blockquote-center">html meta tags</blockquote><br><a id="more"></a><br>Copied from <a href="http://code.lancepollard.com/complete-list-of-html-meta-tags/" target="_blank" rel="noopener">http://code.lancepollard.com/complete-list-of-html-meta-tags/</a></p>
 <h2 id="Basic-HTML-Meta-Tags"><a href="#Basic-HTML-Meta-Tags" class="headerlink" title="Basic HTML Meta Tags"></a>Basic HTML Meta Tags</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">'UTF-8'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'keywords'</span> <span class="attr">content</span>=<span class="string">'your, tags'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'description'</span> <span class="attr">content</span>=<span class="string">'150 words'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'subject'</span> <span class="attr">content</span>=<span class="string">'your website'</span><span class="attr">s</span> <span class="attr">subject</span>'&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'copyright'</span> <span class="attr">content</span>=<span class="string">'company name'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'language'</span> <span class="attr">content</span>=<span class="string">'ES'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'robots'</span> <span class="attr">content</span>=<span class="string">'index,follow'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'revised'</span> <span class="attr">content</span>=<span class="string">'Sunday, July 18th, 2010, 5:15 pm'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'abstract'</span> <span class="attr">content</span>=<span class="string">''</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'topic'</span> <span class="attr">content</span>=<span class="string">''</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'summary'</span> <span class="attr">content</span>=<span class="string">''</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'Classification'</span> <span class="attr">content</span>=<span class="string">'Business'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'author'</span> <span class="attr">content</span>=<span class="string">'name, email@hotmail.com'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'designer'</span> <span class="attr">content</span>=<span class="string">''</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'reply-to'</span> <span class="attr">content</span>=<span class="string">'email@hotmail.com'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'owner'</span> <span class="attr">content</span>=<span class="string">''</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'url'</span> <span class="attr">content</span>=<span class="string">'http://www.websiteaddrress.com'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'identifier-URL'</span> <span class="attr">content</span>=<span class="string">'http://www.websiteaddress.com'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'directory'</span> <span class="attr">content</span>=<span class="string">'submission'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'pagename'</span> <span class="attr">content</span>=<span class="string">'jQuery Tools, Tutorials and Resources - O'</span><span class="attr">Reilly</span> <span class="attr">Media</span>'&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'category'</span> <span class="attr">content</span>=<span class="string">''</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'coverage'</span> <span class="attr">content</span>=<span class="string">'Worldwide'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'distribution'</span> <span class="attr">content</span>=<span class="string">'Global'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'rating'</span> <span class="attr">content</span>=<span class="string">'General'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'revisit-after'</span> <span class="attr">content</span>=<span class="string">'7 days'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'subtitle'</span> <span class="attr">content</span>=<span class="string">'This is my subtitle'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'target'</span> <span class="attr">content</span>=<span class="string">'all'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'HandheldFriendly'</span> <span class="attr">content</span>=<span class="string">'True'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'MobileOptimized'</span> <span class="attr">content</span>=<span class="string">'320'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'date'</span> <span class="attr">content</span>=<span class="string">'Sep. 27, 2010'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'search_date'</span> <span class="attr">content</span>=<span class="string">'2010-09-27'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'DC.title'</span> <span class="attr">content</span>=<span class="string">'Unstoppable Robot Ninja'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'ResourceLoaderDynamicStyles'</span> <span class="attr">content</span>=<span class="string">''</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'medium'</span> <span class="attr">content</span>=<span class="string">'blog'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'syndication-source'</span> <span class="attr">content</span>=<span class="string">'https://mashable.com/2008/12/24/free-brand-monitoring-tools/'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'original-source'</span> <span class="attr">content</span>=<span class="string">'https://mashable.com/2008/12/24/free-brand-monitoring-tools/'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'verify-v1'</span> <span class="attr">content</span>=<span class="string">'dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I='</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'y_key'</span> <span class="attr">content</span>=<span class="string">'1e39c508e0d87750'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">'pageKey'</span> <span class="attr">content</span>=<span class="string">'guest-home'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">itemprop</span>=<span class="string">'name'</span> <span class="attr">content</span>=<span class="string">'jQTouch'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">'Expires'</span> <span class="attr">content</span>=<span class="string">'0'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">'Pragma'</span> <span class="attr">content</span>=<span class="string">'no-cache'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">'Cache-Control'</span> <span class="attr">content</span>=<span class="string">'no-cache'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">'imagetoolbar'</span> <span class="attr">content</span>=<span class="string">'no'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">'x-dns-prefetch-control'</span> <span class="attr">content</span>=<span class="string">'off'</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -572,103 +650,6 @@
     
     
       <category term="js-utils" scheme="http://yoursite.com/tags/js-utils/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>sublimetext配置</title>
-    <link href="http://yoursite.com/2016/08/11/sublimetext%E9%85%8D%E7%BD%AE/"/>
-    <id>http://yoursite.com/2016/08/11/sublimetext配置/</id>
-    <published>2016-08-10T16:17:42.000Z</published>
-    <updated>2018-11-28T13:35:18.059Z</updated>
-    
-    <content type="html"><![CDATA[<p><blockquote class="blockquote-center">SublimeText配置记录</blockquote><br><a id="more"></a></p>
-<h3 id="整体配置"><a href="#整体配置" class="headerlink" title="整体配置"></a>整体配置</h3><blockquote>
-<p>Preference &gt; Settings &gt; user</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"color_scheme"</span>: <span class="string">"Packages/Theme - Spacegray/base16-ocean.light.tmTheme"</span>,</span><br><span class="line">    <span class="string">"theme"</span>: <span class="string">"Spacegray Light.sublime-theme"</span>,</span><br><span class="line">    <span class="string">"ensure_newline_at_eof_on_save"</span>: <span class="literal">true</span>, <span class="comment">// save的时候底部多一行空白</span></span><br><span class="line">    <span class="string">"font_size"</span>: <span class="number">16.0</span>, <span class="comment">//字体大小</span></span><br><span class="line">    <span class="string">"font_face"</span>: <span class="string">"monaco"</span>, <span class="comment">// 字体</span></span><br><span class="line">    <span class="string">"highlight_line"</span>: <span class="literal">true</span>, <span class="comment">// 高亮选中行</span></span><br><span class="line">    <span class="string">"word_wrap"</span>: <span class="literal">true</span>, <span class="comment">// 强制换行</span></span><br><span class="line">    <span class="string">"wrap_width"</span>: <span class="number">90</span>, <span class="comment">// 行宽</span></span><br><span class="line">    <span class="string">"bold_folder_labels"</span>: <span class="literal">true</span>, <span class="comment">// 文件夹粗体</span></span><br><span class="line">    <span class="string">"highlight_modified_tabs"</span>: <span class="literal">true</span>, <span class="comment">// 高亮编辑过的文件</span></span><br><span class="line">    <span class="string">"trim_trailing_white_space_on_save"</span>: <span class="literal">true</span>, <span class="comment">// 过滤行尾空白</span></span><br><span class="line">    <span class="string">"tab_size"</span>: <span class="number">4</span>, <span class="comment">// tab长度</span></span><br><span class="line">    <span class="string">"line_padding_top"</span>: <span class="number">1</span>, <span class="comment">// 行上padding</span></span><br><span class="line">    <span class="string">"line_padding_bottom"</span>: <span class="number">1</span>, <span class="comment">// 行下padding</span></span><br><span class="line">    <span class="string">"draw_minimap_border"</span>: <span class="literal">true</span>, <span class="comment">// 缩略图边框</span></span><br><span class="line">    <span class="string">"translate_tabs_to_spaces"</span>: <span class="literal">true</span>, <span class="comment">// 转换tab到空格</span></span><br><span class="line">    <span class="string">"draw_white_space"</span>: <span class="string">"all"</span>, <span class="comment">// 显示空格</span></span><br><span class="line">    <span class="string">"ignored_packages"</span>:</span><br><span class="line">    [</span><br><span class="line">        <span class="string">"Vintage"</span></span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><h4 id="all-autocomplete"><a href="#all-autocomplete" class="headerlink" title="all autocomplete"></a>all autocomplete</h4><h4 id="GitGutter"><a href="#GitGutter" class="headerlink" title="GitGutter"></a>GitGutter</h4><h4 id="color-picker"><a href="#color-picker" class="headerlink" title="color picker"></a>color picker</h4><h4 id="FuzzyFilePath"><a href="#FuzzyFilePath" class="headerlink" title="FuzzyFilePath"></a>FuzzyFilePath</h4><h4 id="theme-spacegray"><a href="#theme-spacegray" class="headerlink" title="theme spacegray"></a>theme spacegray</h4><h4 id="emmet"><a href="#emmet" class="headerlink" title="emmet"></a>emmet</h4><h4 id="angular-Snippets"><a href="#angular-Snippets" class="headerlink" title="angular Snippets"></a>angular Snippets</h4><h4 id="CSS-Media-Query-Snippets"><a href="#CSS-Media-Query-Snippets" class="headerlink" title="CSS Media Query Snippets"></a>CSS Media Query Snippets</h4><h4 id="JavaScript-amp-NodeJS-Snippets"><a href="#JavaScript-amp-NodeJS-Snippets" class="headerlink" title="JavaScript &amp; NodeJS Snippets"></a>JavaScript &amp; NodeJS Snippets</h4><h4 id="Jquery-Snippets"><a href="#Jquery-Snippets" class="headerlink" title="Jquery Snippets"></a>Jquery Snippets</h4><h4 id="tag-html-format"><a href="#tag-html-format" class="headerlink" title="tag (html format)"></a>tag (html format)</h4><h4 id="prettyjson"><a href="#prettyjson" class="headerlink" title="prettyjson"></a>prettyjson</h4><h4 id="markdown-light"><a href="#markdown-light" class="headerlink" title="markdown light"></a>markdown light</h4><h4 id="better-coffee"><a href="#better-coffee" class="headerlink" title="better-coffee"></a>better-coffee</h4><h4 id="css-format"><a href="#css-format" class="headerlink" title="css format"></a>css format</h4><h4 id="DocBlockr"><a href="#DocBlockr" class="headerlink" title="DocBlockr"></a>DocBlockr</h4><h4 id="Vue-Syntax-Highlight"><a href="#Vue-Syntax-Highlight" class="headerlink" title="Vue Syntax Highlight"></a>Vue Syntax Highlight</h4><h4 id="ES6-Syntax"><a href="#ES6-Syntax" class="headerlink" title="ES6 Syntax"></a>ES6 Syntax</h4><h4 id="eslint-formatter-需要修改’node-path’-’format-on-save’为true"><a href="#eslint-formatter-需要修改’node-path’-’format-on-save’为true" class="headerlink" title="eslint formatter (需要修改’node_path’,’format_on_save’为true)"></a>eslint formatter (需要修改’node_path’,’format_on_save’为true)</h4><h3 id="支持react"><a href="#支持react" class="headerlink" title="支持react"></a><a href="https://segmentfault.com/a/1190000003698071#articleHeader7" target="_blank" rel="noopener">支持react</a></h3>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;SublimeText配置记录&lt;/blockquote&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="sublimetext" scheme="http://yoursite.com/categories/sublimetext/"/>
-    
-    
-      <category term="sublimetext" scheme="http://yoursite.com/tags/sublimetext/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>新mac的配置记录</title>
-    <link href="http://yoursite.com/2016/08/10/new-mac-setup/"/>
-    <id>http://yoursite.com/2016/08/10/new-mac-setup/</id>
-    <published>2016-08-10T15:52:19.000Z</published>
-    <updated>2018-11-28T13:35:18.057Z</updated>
-    
-    <content type="html"><![CDATA[<p><blockquote class="blockquote-center">新mac的配置记录</blockquote><br><a id="more"></a></p>
-<h3 id="软件列表"><a href="#软件列表" class="headerlink" title="软件列表"></a>软件列表</h3><ul>
-<li>Mas (AppStore命令行安装工具)</li>
-<li>Iterm2</li>
-<li>Clipy</li>
-<li>CheatSheet（快捷键提示工具）</li>
-<li>cheat (命令行helper)</li>
-<li>mpv</li>
-<li>The Unarchiver</li>
-<li>Xcode</li>
-<li>Chrome</li>
-<li>switchHosts</li>
-<li>Docker</li>
-<li>EasyFind</li>
-<li>Irvue(壁纸)</li>
-<li>typora(markdown editor)</li>
-</ul>
-<h3 id="homebrew"><a href="#homebrew" class="headerlink" title="homebrew"></a>homebrew</h3><h3 id="tools"><a href="#tools" class="headerlink" title="tools"></a>tools</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew install autojump git git-extras tree youtube-dl</span><br><span class="line">brew tap homebrew/services  &gt; brew命令行启动关闭服务（比如数据库）</span><br></pre></td></tr></table></figure>
-<h3 id="cask预览插件"><a href="#cask预览插件" class="headerlink" title="cask预览插件"></a><a href="https://github.com/sindresorhus/quick-look-plugins" target="_blank" rel="noopener">cask预览插件</a></h3><h3 id="nvm"><a href="#nvm" class="headerlink" title="nvm"></a><a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">nvm</a></h3><h3 id="node以及相关模块"><a href="#node以及相关模块" class="headerlink" title="node以及相关模块"></a>node以及相关模块</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i nrm -g &amp; nrm use taobao</span><br><span class="line">npm i serve -g</span><br></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;新mac的配置记录&lt;/blockquote&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="mac" scheme="http://yoursite.com/categories/mac/"/>
-    
-    
-      <category term="mac" scheme="http://yoursite.com/tags/mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>bash_profile/zshrc配置记录</title>
-    <link href="http://yoursite.com/2016/08/10/bash-profile-zshrc%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/"/>
-    <id>http://yoursite.com/2016/08/10/bash-profile-zshrc配置记录/</id>
-    <published>2016-08-10T15:40:47.000Z</published>
-    <updated>2018-11-28T13:35:18.052Z</updated>
-    
-    <content type="html"><![CDATA[<p><blockquote class="blockquote-center">bash_profile/zshrc配置记录</blockquote><br><a id="more"></a></p>
-<blockquote>
-<p>编辑~/.zshrc文件</p>
-</blockquote>
-<h1 id="alias"><a href="#alias" class="headerlink" title="alias"></a>alias</h1><p>alias sublime=’open -a “Sublime Text”‘<br>alias mou=’open -a Mou’</p>
-<h1 id="GOPATH设置"><a href="#GOPATH设置" class="headerlink" title="GOPATH设置"></a>GOPATH设置</h1><p>export GOPATH=$HOME/workspace/go_test<br>export PATH=$PATH:$GOPATH/bin</p>
-<h1 id="taobao-nodejs-mirror"><a href="#taobao-nodejs-mirror" class="headerlink" title="taobao nodejs mirror"></a>taobao nodejs mirror</h1><p>export NVM_NODEJS_ORG_MIRROR=<a href="https://npm.taobao.org/dist" target="_blank" rel="noopener">https://npm.taobao.org/dist</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;bash_profile/zshrc配置记录&lt;/blockquote&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="zsh" scheme="http://yoursite.com/categories/zsh/"/>
-    
-    
-      <category term="zsh" scheme="http://yoursite.com/tags/zsh/"/>
     
   </entry>
   
