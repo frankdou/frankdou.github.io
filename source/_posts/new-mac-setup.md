@@ -9,7 +9,8 @@ tags:
 <!-- more -->
 ### 软件列表
 * Mas (AppStore命令行安装工具)
-* Iterm2
+* Iterm2 
+    *git log可通过滚轮使用 https://stackoverflow.com/questions/14437979/iterm2-scroll-less-output-with-mouse
 * Clipy
 * CheatSheet（快捷键提示工具）
 * cheat (命令行helper)
@@ -22,10 +23,16 @@ tags:
 * EasyFind
 * Irvue(壁纸)
 * typora(markdown editor)
+* agenda
+
+### git diff工具设置
+```
+xcode-select: error: tool 'opendiff' requires Xcode
+	1.	Install Xcode
+	2.	Run sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+```
 
 ### homebrew
-
-### tools
 ```bash
 brew install autojump git git-extras tree youtube-dl
 brew tap homebrew/services  > brew命令行启动关闭服务（比如数据库）
