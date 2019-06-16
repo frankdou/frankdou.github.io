@@ -23,7 +23,8 @@ tags:
 * EasyFind
 * Irvue(壁纸)
 * typora(markdown editor)
-* agenda
+* 滴答清单
+* 幕布
 
 ### git diff工具设置
 ```

@@ -94,6 +94,14 @@ git push origin v1.2
 git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done
 ```
 
+#### 跨仓库进行cherry-pick
+```
+git remote add xxx https://example.link/repository.git
+git fetch xxx
+
+git cherry-pick xxxxx
+```
+
 ### git-configs
 ```
 [push]

@@ -23,5 +23,12 @@ tags:
 auto close tag
 eslint
 es6 snippet
-path autocomplete
 vetur
+beautify
+import-cost
+Code Runner
+Path Intellisense （路径）
+Bracket Pair Colorizer (作用域)
+Paste JSON as Code（https://marketplace.visualstudio.com/items?itemName=quicktype.quicktype）
+Document This（快速注释，https://marketplace.visualstudio.com/items?itemName=joelday.docthis）
+vscode-goto-node-modules(快速切换到node_modules，https://marketplace.visualstudio.com/items?itemName=mrluje.vscode-goto-node-modules)
