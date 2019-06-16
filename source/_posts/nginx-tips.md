@@ -7,7 +7,7 @@ tags:
 <blockquote class="blockquote-center"></blockquote>
 <!-- more -->
 
-### 全局模块查看
+### cookie代理（将cookie写入地址，从from变成to）
 ```bash
 proxy_pass
 proxy_cookie_domain from to
