@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="FrankDou">
 <meta property="og:description" content="NPM笔记">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-28T13:35:18.058Z">
+<meta property="og:updated_time" content="2019-05-10T03:41:22.597Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NPM笔记">
 <meta name="twitter:description" content="NPM笔记">
@@ -336,6 +336,8 @@
       
         <p><blockquote class="blockquote-center">NPM笔记</blockquote><br><a id="more"></a></p>
 <h3 id="全局模块查看"><a href="#全局模块查看" class="headerlink" title="全局模块查看"></a>全局模块查看</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm ls -g -depth=0</span><br></pre></td></tr></table></figure>
+<h3 id="npm-link"><a href="#npm-link" class="headerlink" title="npm link"></a>npm link</h3><p><a href="https://github.com/atian25/blog/issues/17" target="_blank" rel="noopener">ref</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 先去到模块目录，把它 link 到全局</span></span><br><span class="line"><span class="built_in">cd</span> path/to/component</span><br><span class="line">npm link</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看 npm ls -g -depth=0</span></span><br><span class="line">aaa@1.0.0 -&gt; /Users/xxx/aaa</span><br><span class="line"></span><br><span class="line"><span class="comment"># 再去项目进行link</span></span><br><span class="line"><span class="built_in">cd</span> path/to/project</span><br><span class="line">npm link aaa</span><br><span class="line"></span><br><span class="line"><span class="comment"># 解除link</span></span><br><span class="line"><span class="built_in">cd</span> path/to/component</span><br><span class="line">npm unlink</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -461,7 +463,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">32</span>
+              <span class="site-state-item-count">34</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -525,7 +527,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#全局模块查看"><span class="nav-number">1.</span> <span class="nav-text">全局模块查看</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#全局模块查看"><span class="nav-number">1.</span> <span class="nav-text">全局模块查看</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#npm-link"><span class="nav-number">2.</span> <span class="nav-text">npm link</span></a></li></ol></div>
             
           </div>
         </section>
@@ -544,7 +546,7 @@
         <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

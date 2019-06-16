@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="FrankDou">
 <meta property="og:description" content="mac技巧列表">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-28T13:35:18.056Z">
+<meta property="og:updated_time" content="2019-05-07T06:26:19.322Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mac技巧列表">
 <meta name="twitter:description" content="mac技巧列表">
@@ -335,19 +335,28 @@
 
       
         <p><blockquote class="blockquote-center">mac技巧列表</blockquote><br><a id="more"></a></p>
-<h3 id="本地有的app，appstore为未安装的状态"><a href="#本地有的app，appstore为未安装的状态" class="headerlink" title="本地有的app，appstore为未安装的状态"></a>本地有的app，appstore为未安装的状态</h3><blockquote>
-<p>1.cd ~/Library/Application\ Support/Dock<br>  2.删除.db的文件</p>
-</blockquote>
-<h3 id="磁盘验证有问题"><a href="#磁盘验证有问题" class="headerlink" title="磁盘验证有问题"></a>磁盘验证有问题</h3><blockquote>
-<ul>
+<h3 id="本地有的app，appstore为未安装的状态"><a href="#本地有的app，appstore为未安装的状态" class="headerlink" title="本地有的app，appstore为未安装的状态"></a>本地有的app，appstore为未安装的状态</h3><ol>
+<li>cd ~/Library/Application\ Support/Dock</li>
+<li>删除.db的文件</li>
+</ol>
+<h3 id="磁盘验证有问题"><a href="#磁盘验证有问题" class="headerlink" title="磁盘验证有问题"></a>磁盘验证有问题</h3><ul>
 <li>重启系统command ＋ R 修复</li>
 <li>上面办法不管用的情况下， 系统偏好 &gt; 安全与隐私 &gt; 关闭｀file Vault｀，再进行修复</li>
 </ul>
-</blockquote>
 <h3 id="重启virtualbox"><a href="#重启virtualbox" class="headerlink" title="重启virtualbox"></a>重启virtualbox</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /Library/StartupItems/VirtualBox/VirtualBox restart</span><br></pre></td></tr></table></figure>
 <h3 id="youtube-download"><a href="#youtube-download" class="headerlink" title="youtube download"></a>youtube download</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">youtube-dl --proxy http://127.0.0.1:8087 https://www.youtube.com/watch\?v\=xxxxxxxx</span><br></pre></td></tr></table></figure>
-<h3 id="SVN版本太低，且homebrew安装有错误提示，不能够link"><a href="#SVN版本太低，且homebrew安装有错误提示，不能够link" class="headerlink" title="SVN版本太低，且homebrew安装有错误提示，不能够link"></a>SVN版本太低，且homebrew安装有错误提示，不能够link</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R `whoami` /usr/local</span><br></pre></td></tr></table></figure>
 <h3 id="修改dns设置"><a href="#修改dns设置" class="headerlink" title="修改dns设置"></a>修改dns设置</h3><p>sudo vim /etc/resolve.conf</p>
+<h3 id="Mac开启关闭SIP（系统完整性保护）"><a href="#Mac开启关闭SIP（系统完整性保护）" class="headerlink" title="Mac开启关闭SIP（系统完整性保护）"></a>Mac开启关闭SIP（系统完整性保护）</h3><p>移动硬盘不显示、PD安装有问题</p>
+<ul>
+<li>在终端中输入csrutil status，查看是enabled还是disabled</li>
+<li>关闭/开启<ul>
+<li>重启MAC，按住cmd+R直到屏幕上出现苹果的标志和进度条，进入Recovery模式</li>
+<li>在屏幕最上方的工具栏找到实用工具（左数第3个），打开终端，输入：csrutil disable</li>
+<li>关掉终端，重启mac</li>
+<li>重启以后可以在终端中查看状态确认</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
@@ -474,7 +483,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">32</span>
+              <span class="site-state-item-count">34</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -538,7 +547,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#本地有的app，appstore为未安装的状态"><span class="nav-number">1.</span> <span class="nav-text">本地有的app，appstore为未安装的状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#磁盘验证有问题"><span class="nav-number">2.</span> <span class="nav-text">磁盘验证有问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重启virtualbox"><span class="nav-number">3.</span> <span class="nav-text">重启virtualbox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#youtube-download"><span class="nav-number">4.</span> <span class="nav-text">youtube download</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SVN版本太低，且homebrew安装有错误提示，不能够link"><span class="nav-number">5.</span> <span class="nav-text">SVN版本太低，且homebrew安装有错误提示，不能够link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改dns设置"><span class="nav-number">6.</span> <span class="nav-text">修改dns设置</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#本地有的app，appstore为未安装的状态"><span class="nav-number">1.</span> <span class="nav-text">本地有的app，appstore为未安装的状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#磁盘验证有问题"><span class="nav-number">2.</span> <span class="nav-text">磁盘验证有问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重启virtualbox"><span class="nav-number">3.</span> <span class="nav-text">重启virtualbox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#youtube-download"><span class="nav-number">4.</span> <span class="nav-text">youtube download</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改dns设置"><span class="nav-number">5.</span> <span class="nav-text">修改dns设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mac开启关闭SIP（系统完整性保护）"><span class="nav-number">6.</span> <span class="nav-text">Mac开启关闭SIP（系统完整性保护）</span></a></li></ol></div>
             
           </div>
         </section>
@@ -557,7 +566,7 @@
         <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
