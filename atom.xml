@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-17T07:06:44.876Z</updated>
+  <updated>2019-06-16T05:36:03.856Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="http://yoursite.com/2019/05/17/nginx-tips/"/>
     <id>http://yoursite.com/2019/05/17/nginx-tips/</id>
     <published>2019-05-17T07:06:06.000Z</published>
-    <updated>2019-05-17T07:06:44.876Z</updated>
+    <updated>2019-06-16T05:36:03.856Z</updated>
     
     <content type="html"><![CDATA[<p><blockquote class="blockquote-center"></blockquote><br><a id="more"></a></p>
-<h3 id="全局模块查看"><a href="#全局模块查看" class="headerlink" title="全局模块查看"></a>全局模块查看</h3><pre><code class="bash">proxy_pass
+<h3 id="cookie代理（将cookie写入地址，从from变成to）"><a href="#cookie代理（将cookie写入地址，从from变成to）" class="headerlink" title="cookie代理（将cookie写入地址，从from变成to）"></a>cookie代理（将cookie写入地址，从from变成to）</h3><pre><code class="bash">proxy_pass
 proxy_cookie_domain from to
 </code></pre>
 ]]></content>
@@ -187,29 +187,6 @@ proxy_cookie_domain from to
   </entry>
   
   <entry>
-    <title>CryptoJS</title>
-    <link href="http://yoursite.com/2018/04/24/aes%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/"/>
-    <id>http://yoursite.com/2018/04/24/aes对称加密/</id>
-    <published>2018-04-23T16:48:47.000Z</published>
-    <updated>2018-11-28T13:35:18.052Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> sKey = CryptoJS.enc.Utf8.parse(<span class="string">'test'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 加密</span></span><br><span class="line">encryptedStr = CryptoJS.AES.encrypt(<span class="string">'text'</span>, sKey, &#123;</span><br><span class="line">    mode: CryptoJS.mode.ECB,</span><br><span class="line">    padding: CryptoJS.pad.Pkcs7</span><br><span class="line">&#125;).ciphertext.toString()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 解密</span></span><br><span class="line">CryptoJS.AES.decrypt(</span><br><span class="line">    CryptoJS.enc.Base64.stringify(CryptoJS.enc.Hex.parse(encryptedStr)),</span><br><span class="line">    sKey,</span><br><span class="line">    &#123;</span><br><span class="line">        mode: CryptoJS.mode.ECB,</span><br><span class="line">        padding: CryptoJS.pad.Pkcs7,</span><br><span class="line">    &#125;</span><br><span class="line">).toString(CryptoJS.enc.Utf8);</span><br></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span 
-    
-    </summary>
-    
-      <category term="js" scheme="http://yoursite.com/categories/js/"/>
-    
-    
-      <category term="CryptoJS" scheme="http://yoursite.com/tags/CryptoJS/"/>
-    
-  </entry>
-  
-  <entry>
     <title>列出数组内所有可能的组合</title>
     <link href="http://yoursite.com/2018/04/24/echarts%E7%BB%8F%E9%AA%8C%E6%B1%87%E6%80%BB/"/>
     <id>http://yoursite.com/2018/04/24/echarts经验汇总/</id>
@@ -230,6 +207,29 @@ proxy_cookie_domain from to
     
     
       <category term="echarts" scheme="http://yoursite.com/tags/echarts/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CryptoJS</title>
+    <link href="http://yoursite.com/2018/04/24/aes%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/"/>
+    <id>http://yoursite.com/2018/04/24/aes对称加密/</id>
+    <published>2018-04-23T16:48:47.000Z</published>
+    <updated>2018-11-28T13:35:18.052Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> sKey = CryptoJS.enc.Utf8.parse(<span class="string">'test'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 加密</span></span><br><span class="line">encryptedStr = CryptoJS.AES.encrypt(<span class="string">'text'</span>, sKey, &#123;</span><br><span class="line">    mode: CryptoJS.mode.ECB,</span><br><span class="line">    padding: CryptoJS.pad.Pkcs7</span><br><span class="line">&#125;).ciphertext.toString()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 解密</span></span><br><span class="line">CryptoJS.AES.decrypt(</span><br><span class="line">    CryptoJS.enc.Base64.stringify(CryptoJS.enc.Hex.parse(encryptedStr)),</span><br><span class="line">    sKey,</span><br><span class="line">    &#123;</span><br><span class="line">        mode: CryptoJS.mode.ECB,</span><br><span class="line">        padding: CryptoJS.pad.Pkcs7,</span><br><span class="line">    &#125;</span><br><span class="line">).toString(CryptoJS.enc.Utf8);</span><br></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span 
+    
+    </summary>
+    
+      <category term="js" scheme="http://yoursite.com/categories/js/"/>
+    
+    
+      <category term="CryptoJS" scheme="http://yoursite.com/tags/CryptoJS/"/>
     
   </entry>
   
