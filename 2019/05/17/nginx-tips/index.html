@@ -91,7 +91,7 @@
 <meta property="og:url" content="http://yoursite.com/2019/05/17/nginx-tips/index.html">
 <meta property="og:site_name" content="FrankDou">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-16T05:36:03.856Z">
+<meta property="og:updated_time" content="2019-09-16T14:23:34.584Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nginx-tips">
 
@@ -315,6 +315,10 @@
 <h3 id="cookie代理（将cookie写入地址，从from变成to）"><a href="#cookie代理（将cookie写入地址，从from变成to）" class="headerlink" title="cookie代理（将cookie写入地址，从from变成to）"></a>cookie代理（将cookie写入地址，从from变成to）</h3><pre><code class="bash">proxy_pass
 proxy_cookie_domain from to
 </code></pre>
+<h3 id="websocket代理"><a href="#websocket代理" class="headerlink" title="websocket代理"></a>websocket代理</h3><pre><code class="bash">proxy_http_version 1.1;
+proxy_set_header Upgrade <span class="variable">$http_upgrade</span>;
+proxy_set_header Connection <span class="variable">$connection_upgrade</span>;
+</code></pre>
 
       
     </div>
@@ -347,6 +351,10 @@ proxy_cookie_domain from to
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/09/09/homebrew/" rel="prev" title="homebrew">
+                homebrew <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -431,7 +439,7 @@ proxy_cookie_domain from to
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">34</span>
+              <span class="site-state-item-count">35</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -495,7 +503,7 @@ proxy_cookie_domain from to
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#cookie代理（将cookie写入地址，从from变成to）"><span class="nav-number">1.</span> <span class="nav-text">cookie代理（将cookie写入地址，从from变成to）</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#cookie代理（将cookie写入地址，从from变成to）"><span class="nav-number">1.</span> <span class="nav-text">cookie代理（将cookie写入地址，从from变成to）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#websocket代理"><span class="nav-number">2.</span> <span class="nav-text">websocket代理</span></a></li></ol></div>
             
           </div>
         </section>

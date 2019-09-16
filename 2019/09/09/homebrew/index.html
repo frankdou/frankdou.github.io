@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="zsh,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -86,18 +86,14 @@
 
 
 
-<meta name="description" content="bash_profile/zshrc配置记录">
-<meta name="keywords" content="zsh">
 <meta property="og:type" content="article">
-<meta property="og:title" content="bash_profile&#x2F;zshrc配置记录">
-<meta property="og:url" content="http://yoursite.com/2016/08/10/bash-profile-zshrc配置记录/index.html">
+<meta property="og:title" content="homebrew">
+<meta property="og:url" content="http://yoursite.com/2019/09/09/homebrew/index.html">
 <meta property="og:site_name" content="FrankDou">
-<meta property="og:description" content="bash_profile/zshrc配置记录">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-16T14:23:34.575Z">
+<meta property="og:updated_time" content="2019-09-16T14:23:34.579Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="bash_profile&#x2F;zshrc配置记录">
-<meta name="twitter:description" content="bash_profile/zshrc配置记录">
+<meta name="twitter:title" content="homebrew">
 
 
 
@@ -118,9 +114,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/08/10/bash-profile-zshrc配置记录/">
+  <link rel="canonical" href="http://yoursite.com/2019/09/09/homebrew/">
 
-  <title> bash_profile/zshrc配置记录 | FrankDou </title>
+  <title> homebrew | FrankDou </title>
 </head>
 
 <body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -259,7 +255,7 @@
             
             
               
-                bash_profile/zshrc配置记录
+                homebrew
               
             
           </h1>
@@ -271,38 +267,19 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-10T23:40:47+08:00" content="2016-08-10">
-              2016-08-10
+            <time itemprop="dateCreated" datetime="2019-09-09T19:53:27+08:00" content="2019-09-09">
+              2019-09-09
             </time>
           </span>
 
-          
-            <span class="post-category">
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope="" itemtype="https://schema.org/Thing">
-                  <a href="/categories/zsh/" itemprop="url" rel="index">
-                    <span itemprop="name">zsh</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/08/10/bash-profile-zshrc配置记录/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/10/bash-profile-zshrc配置记录/" itemprop="commentsCount"></span>
+                <a href="/2019/09/09/homebrew/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2019/09/09/homebrew/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -312,7 +289,7 @@
 
           
           
-             <span id="/2016/08/10/bash-profile-zshrc配置记录/" class="leancloud_visitors" data-flag-title="bash_profile/zshrc配置记录">
+             <span id="/2019/09/09/homebrew/" class="leancloud_visitors" data-flag-title="homebrew">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -334,13 +311,10 @@
       
 
       
-        <p><blockquote class="blockquote-center">bash_profile/zshrc配置记录</blockquote><br><a id="more"></a></p>
-<blockquote>
-<p>编辑~/.zshrc文件</p>
-</blockquote>
-<h1 id="alias"><a href="#alias" class="headerlink" title="alias"></a>alias</h1><p>alias sublime=’open -a “Sublime Text”‘<br>alias mou=’open -a Mou’</p>
-<h1 id="GOPATH设置"><a href="#GOPATH设置" class="headerlink" title="GOPATH设置"></a>GOPATH设置</h1><p>export GOPATH=$HOME/workspace/go_test<br>export PATH=$PATH:$GOPATH/bin</p>
-<h1 id="taobao-nodejs-mirror"><a href="#taobao-nodejs-mirror" class="headerlink" title="taobao nodejs mirror"></a>taobao nodejs mirror</h1><p>export NVM_NODEJS_ORG_MIRROR=<a href="https://npm.taobao.org/dist" target="_blank" rel="noopener">https://npm.taobao.org/dist</a></p>
+        <p><blockquote class="blockquote-center"></blockquote><br><a id="more"></a></p>
+<p>Homebrew 镜像使用帮助<br>注:该镜像是 Homebrew 的 formula 索引的镜像（即 brew update 时所更新内容）。本镜像站同时提供 Homebrew 二进制预编译包的镜像，请参考 Homebrew bottles 镜像使用帮助。</p>
+<p>替换现有上游<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git -C <span class="string">"$(brew --repo)"</span> remote set-url origin https:<span class="comment">//mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git</span></span><br><span class="line"></span><br><span class="line">git -C <span class="string">"$(brew --repo homebrew/core)"</span> remote set-url origin https:<span class="comment">//mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git</span></span><br><span class="line"></span><br><span class="line">git -C <span class="string">"$(brew --repo homebrew/cask)"</span> remote set-url origin https:<span class="comment">//mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git</span></span><br><span class="line"></span><br><span class="line">brew update</span><br></pre></td></tr></table></figure></p>
+<p>复原<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git -C <span class="string">"$(brew --repo)"</span> remote set-url origin https:<span class="comment">//github.com/Homebrew/brew.git</span></span><br><span class="line"></span><br><span class="line">git -C <span class="string">"$(brew --repo homebrew/core)"</span> remote set-url origin https:<span class="comment">//github.com/Homebrew/homebrew-core.git</span></span><br><span class="line"></span><br><span class="line">git -C <span class="string">"$(brew --repo homebrew/cask)"</span> remote set-url origin https:<span class="comment">//github.com/Homebrew/homebrew-cask.git</span></span><br><span class="line"></span><br><span class="line">brew update</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -361,28 +335,18 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/zsh/" rel="tag">#zsh</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/10/ubuntu相关命令/" rel="next" title="ubuntu相关命令">
-                <i class="fa fa-chevron-left"></i> ubuntu相关命令
+              <a href="/2019/05/17/nginx-tips/" rel="next" title="nginx-tips">
+                <i class="fa fa-chevron-left"></i> nginx-tips
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/08/10/new-mac-setup/" rel="prev" title="新mac的配置记录">
-                新mac的配置记录 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -397,7 +361,7 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/08/10/bash-profile-zshrc配置记录/" data-title="bash_profile/zshrc配置记录" data-content="" data-url="http://yoursite.com/2016/08/10/bash-profile-zshrc配置记录/">
+        <div class="ds-share flat" data-thread-key="2019/09/09/homebrew/" data-title="homebrew" data-content="" data-url="http://yoursite.com/2019/09/09/homebrew/">
   <div class="ds-share-inline">
     <ul class="ds-share-icons-16">
 
@@ -424,7 +388,7 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/08/10/bash-profile-zshrc配置记录/" data-title="bash_profile/zshrc配置记录" data-url="http://yoursite.com/2016/08/10/bash-profile-zshrc配置记录/">
+      <div class="ds-thread" data-thread-key="2019/09/09/homebrew/" data-title="homebrew" data-url="http://yoursite.com/2019/09/09/homebrew/">
       </div>
     
   </div>
@@ -531,7 +495,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#alias"><span class="nav-number">1.</span> <span class="nav-text">alias</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GOPATH设置"><span class="nav-number">2.</span> <span class="nav-text">GOPATH设置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#taobao-nodejs-mirror"><span class="nav-number">3.</span> <span class="nav-text">taobao nodejs mirror</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>

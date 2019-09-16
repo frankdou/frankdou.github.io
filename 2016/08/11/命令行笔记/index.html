@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="FrankDou">
 <meta property="og:description" content="命令行笔记">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-17T09:56:16.307Z">
+<meta property="og:updated_time" content="2019-09-16T14:23:34.589Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="命令行笔记">
 <meta name="twitter:description" content="命令行笔记">
@@ -335,7 +335,7 @@
 
       
         <p><blockquote class="blockquote-center">命令行笔记</blockquote><br><a id="more"></a></p>
-<h3 id="kill-process"><a href="#kill-process" class="headerlink" title="kill process"></a>kill process</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ps aux | grep xx</span><br><span class="line"><span class="built_in">kill</span> -9 xxx</span><br></pre></td></tr></table></figure>
+<h3 id="kill-process"><a href="#kill-process" class="headerlink" title="kill process"></a>kill process</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">kill</span> -9 xxx</span><br></pre></td></tr></table></figure>
 <h3 id="输出最后，一般用来看log"><a href="#输出最后，一般用来看log" class="headerlink" title="输出最后，一般用来看log"></a>输出最后，一般用来看log</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tail xxx.xx</span><br></pre></td></tr></table></figure>
 <h3 id="输出树形结构"><a href="#输出树形结构" class="headerlink" title="输出树形结构"></a>输出树形结构</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tree -L x (x为层级)</span><br></pre></td></tr></table></figure>
 <h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service xxxx start (xxxx一般指nginx，mongodb等)</span><br></pre></td></tr></table></figure>
@@ -343,7 +343,6 @@
 <h3 id="递归创建目录"><a href="#递归创建目录" class="headerlink" title="递归创建目录"></a>递归创建目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p tomcat/xxx/xxx</span><br></pre></td></tr></table></figure>
 <h3 id="写入md5"><a href="#写入md5" class="headerlink" title="写入md5"></a>写入md5</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">md5sum node-v6.9.1-linux-x64.tar.gz &gt; md5sum.txt</span><br></pre></td></tr></table></figure>
 <h3 id="ssh免密码登录"><a href="#ssh免密码登录" class="headerlink" title="ssh免密码登录"></a>ssh免密码登录</h3><p>添加公匙到<code>.ssh/authorized_keys</code>，或<code>/home/admin/.ssh/authorized_keys</code>(管理权限)</p>
-<h3 id="查看端口相关请求"><a href="#查看端口相关请求" class="headerlink" title="查看端口相关请求"></a>查看端口相关请求</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">watch <span class="_">-d</span> -n0.5 <span class="string">'sudo netstat -anpt | grep 8388'</span></span><br></pre></td></tr></table></figure>
 <h3 id="使用端口进行请求"><a href="#使用端口进行请求" class="headerlink" title="使用端口进行请求"></a>使用端口进行请求</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc 100.100.100.2 8388</span><br></pre></td></tr></table></figure>
 <h3 id="创建文件（强制覆盖）"><a href="#创建文件（强制覆盖）" class="headerlink" title="创建文件（强制覆盖）"></a>创建文件（强制覆盖）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> &gt; xxxxx.js</span><br></pre></td></tr></table></figure>
 <h3 id="传入的参数export为环境变量"><a href="#传入的参数export为环境变量" class="headerlink" title="传入的参数export为环境变量"></a>传入的参数export为环境变量</h3><p>需要通过以下方式来执行脚本<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">. xx.sh arg1 arg2</span><br><span class="line"><span class="built_in">source</span> xx.sh arg1 arg2</span><br></pre></td></tr></table></figure></p>
@@ -473,7 +472,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">34</span>
+              <span class="site-state-item-count">35</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -537,7 +536,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#kill-process"><span class="nav-number">1.</span> <span class="nav-text">kill process</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出最后，一般用来看log"><span class="nav-number">2.</span> <span class="nav-text">输出最后，一般用来看log</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出树形结构"><span class="nav-number">3.</span> <span class="nav-text">输出树形结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动服务"><span class="nav-number">4.</span> <span class="nav-text">启动服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#递归给权限"><span class="nav-number">5.</span> <span class="nav-text">递归给权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#递归创建目录"><span class="nav-number">6.</span> <span class="nav-text">递归创建目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写入md5"><span class="nav-number">7.</span> <span class="nav-text">写入md5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ssh免密码登录"><span class="nav-number">8.</span> <span class="nav-text">ssh免密码登录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看端口相关请求"><span class="nav-number">9.</span> <span class="nav-text">查看端口相关请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用端口进行请求"><span class="nav-number">10.</span> <span class="nav-text">使用端口进行请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建文件（强制覆盖）"><span class="nav-number">11.</span> <span class="nav-text">创建文件（强制覆盖）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#传入的参数export为环境变量"><span class="nav-number">12.</span> <span class="nav-text">传入的参数export为环境变量</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#kill-process"><span class="nav-number">1.</span> <span class="nav-text">kill process</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出最后，一般用来看log"><span class="nav-number">2.</span> <span class="nav-text">输出最后，一般用来看log</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出树形结构"><span class="nav-number">3.</span> <span class="nav-text">输出树形结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动服务"><span class="nav-number">4.</span> <span class="nav-text">启动服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#递归给权限"><span class="nav-number">5.</span> <span class="nav-text">递归给权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#递归创建目录"><span class="nav-number">6.</span> <span class="nav-text">递归创建目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写入md5"><span class="nav-number">7.</span> <span class="nav-text">写入md5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ssh免密码登录"><span class="nav-number">8.</span> <span class="nav-text">ssh免密码登录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用端口进行请求"><span class="nav-number">9.</span> <span class="nav-text">使用端口进行请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建文件（强制覆盖）"><span class="nav-number">10.</span> <span class="nav-text">创建文件（强制覆盖）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#传入的参数export为环境变量"><span class="nav-number">11.</span> <span class="nav-text">传入的参数export为环境变量</span></a></li></ol></div>
             
           </div>
         </section>
