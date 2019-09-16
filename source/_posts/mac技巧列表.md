@@ -43,3 +43,7 @@ sudo vim /etc/resolve.conf
   - 在屏幕最上方的工具栏找到实用工具（左数第3个），打开终端，输入：csrutil disable
   - 关掉终端，重启mac
   - 重启以后可以在终端中查看状态确认
+
+### Bundle ID(com.google.Chrome) 查找方法：
+ * 右键『应用.app』-> 显示包内容
+ * Contents/Info.plist -> BundleIdentifier
