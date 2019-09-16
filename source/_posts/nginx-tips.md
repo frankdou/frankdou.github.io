@@ -13,3 +13,10 @@ proxy_pass
 proxy_cookie_domain from to
 ``` 
 
+### websocket代理
+```bash
+proxy_http_version 1.1;
+proxy_set_header Upgrade $http_upgrade;
+proxy_set_header Connection $connection_upgrade;
+``` 
+

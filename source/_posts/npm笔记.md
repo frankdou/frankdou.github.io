@@ -13,6 +13,20 @@ tags:
 npm ls -g -depth=0
 ```
 
+### npm模块添加Maintainers
+```bash
+npm owner add 账号名 组件名
+```
+
+### 查看模块可安装版本
+```bash
+npm view webpack versions
+```
+
+### 查看模块可安装的stable版本
+```bash
+npm view webpack version
+```
 
 ### npm link
 [ref](https://github.com/atian25/blog/issues/17)

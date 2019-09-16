@@ -25,6 +25,8 @@ tags:
 * typora(markdown editor)
 * 滴答清单
 * 幕布
+* 有道词典
+* 搜狗输入法
 
 ### git diff工具设置
 ```

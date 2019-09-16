@@ -30,5 +30,7 @@ Code Runner
 Path Intellisense （路径）
 Bracket Pair Colorizer (作用域)
 Paste JSON as Code（https://marketplace.visualstudio.com/items?itemName=quicktype.quicktype）
-Document This（快速注释，https://marketplace.visualstudio.com/items?itemName=joelday.docthis）
 vscode-goto-node-modules(快速切换到node_modules，https://marketplace.visualstudio.com/items?itemName=mrluje.vscode-goto-node-modules)
+tabnine(代码补全)
+IntelliSense for CSS class names in HTML(html提示css class)
+Quokka(运行结果预览)

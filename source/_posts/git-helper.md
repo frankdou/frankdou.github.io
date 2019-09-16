@@ -94,12 +94,32 @@ git push origin v1.2
 git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done
 ```
 
+#### 删除本地除了master以外的分支
+```
+git branch | grep -v "master" | xargs git branch -D 
+```
+
 #### 跨仓库进行cherry-pick
 ```
 git remote add xxx https://example.link/repository.git
 git fetch xxx
 
 git cherry-pick xxxxx
+```
+
+#### 统计某个分支commit之间的提交记录
+```
+git log 分支名 commitId..commitId --oneline --no-merges > commits.md
+```
+
+#### 删除本地所有tags
+```
+git tag | xargs -n1 git tag -d
+```
+
+#### 获取远程所有tags
+```
+git fetch --tags
 ```
 
 ### git-configs
