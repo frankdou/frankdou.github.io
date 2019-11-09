@@ -20,7 +20,6 @@ tags:
 [^\x00-\xff]+
 ```
 ### 插件
-auto close tag
 eslint
 es6 snippet
 vetur
@@ -34,3 +33,6 @@ vscode-goto-node-modules(快速切换到node_modules，https://marketplace.visua
 tabnine(代码补全)
 IntelliSense for CSS class names in HTML(html提示css class)
 Quokka(运行结果预览)
+Auto Rename Tag(自动重命名配对的HTML / XML标签)
+auto close tag（自动关标签）
+VSCode-Element-Helper（element-ui 标签提示）
