@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-16T14:23:34.579Z</updated>
+  <updated>2019-11-09T06:27:01.254Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Node.js笔记</title>
+    <link href="http://yoursite.com/2019/11/06/Node-js%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2019/11/06/Node-js笔记/</id>
+    <published>2019-11-06T11:46:28.000Z</published>
+    <updated>2019-11-09T06:27:01.254Z</updated>
+    
+    <content type="html"><![CDATA[<p><blockquote class="blockquote-center"></blockquote><br><a id="more"></a></p>
+<h3 id="dirname，filename，process-cwd-的区别"><a href="#dirname，filename，process-cwd-的区别" class="headerlink" title="dirname，filename，process.cwd()的区别"></a><strong>dirname，</strong>filename，process.cwd()的区别</h3><p><code>__dirname</code>: 被执行文件所在的文件夹路径<br><code>__filename</code>: 被执行文件的全路径<br><code>process.cwd()</code>: 当前命令执行的路径</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;/blockquote&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="node.js" scheme="http://yoursite.com/categories/node-js/"/>
+    
+    
+      <category term="node.js" scheme="http://yoursite.com/tags/node-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>egg.js笔记</title>
+    <link href="http://yoursite.com/2019/10/28/egg-js%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2019/10/28/egg-js笔记/</id>
+    <published>2019-10-28T10:38:30.000Z</published>
+    <updated>2019-11-09T06:27:07.944Z</updated>
+    
+    <content type="html"><![CDATA[<p><blockquote class="blockquote-center"></blockquote><br><a id="more"></a></p>
+<h3 id="简单的api请求代理"><a href="#简单的api请求代理" class="headerlink" title="简单的api请求代理"></a>简单的api请求代理</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">const result = await this.ctx.curl(</span><br><span class="line">    &apos;http://ip地址/api&apos;,</span><br><span class="line">    &#123;</span><br><span class="line">        headers: &#123;</span><br><span class="line">            ...ctx.req.headers,</span><br><span class="line">            &apos;x-forwarded-host&apos;: &apos;目标域名&apos;,</span><br><span class="line">            host: &apos;目标域名&apos;,</span><br><span class="line">        &#125;,</span><br><span class="line">        data: &#123;&#125;,</span><br><span class="line">        method: &apos;POST&apos;,</span><br><span class="line">        dataType: &apos;json&apos;,</span><br><span class="line">    &#125;,</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">&lt;!-- 设置返回头 --&gt;</span><br><span class="line">this.ctx.set(result.headers);</span><br><span class="line"></span><br><span class="line">&lt;!-- 修改返回体 --&gt;</span><br><span class="line">this.ctx.body = &#123;</span><br><span class="line">    status: &#123;&#125;,</span><br><span class="line">    data: result.data,</span><br><span class="line">&#125;;</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">### 修改代理的请求内容(based on http-proxy-middleware)</span><br><span class="line">```javascript</span><br><span class="line">onProxyReq: (proxyReq, req, res) =&gt; &#123;</span><br><span class="line">    const oPost =  JSON.stringify(&#123;</span><br><span class="line">        &apos;a&apos;: 1,</span><br><span class="line">        &apos;b&apos;: 2</span><br><span class="line">    &#125;);</span><br><span class="line">    proxyReq.setHeader(&apos;Content-Type&apos;,&apos;application/json&apos;);</span><br><span class="line">    proxyReq.setHeader(&apos;Content-Length&apos;, Buffer.byteLength(oPost));</span><br><span class="line">    proxyReq.write(oPost);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<h3 id="修改代理的返回结果-based-on-http-proxy-middleware"><a href="#修改代理的返回结果-based-on-http-proxy-middleware" class="headerlink" title="修改代理的返回结果 (based on http-proxy-middleware)"></a>修改代理的返回结果 (based on http-proxy-middleware)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//github.com/chimurai/http-proxy-middleware/issues/97#issuecomment-238431552</span></span><br></pre></td></tr></table></figure>
+<h3 id="代理页面报错，HPE-UNEXPECTED-CONTENT-LENGTH-based-on-http-proxy-middleware"><a href="#代理页面报错，HPE-UNEXPECTED-CONTENT-LENGTH-based-on-http-proxy-middleware" class="headerlink" title="代理页面报错，HPE_UNEXPECTED_CONTENT_LENGTH (based on http-proxy-middleware)"></a>代理页面报错，HPE_UNEXPECTED_CONTENT_LENGTH (based on http-proxy-middleware)</h3><p>原因：response同时包含Transfer-Encoding: chunked 和 Content-Length</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">onProxyRes: (proxyRes, req, res) =&gt; &#123;</span><br><span class="line">    res.removeHeader(<span class="string">'content-length'</span>);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;/blockquote&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="node.js" scheme="http://yoursite.com/categories/node-js/"/>
+    
+    
+      <category term="node.js" scheme="http://yoursite.com/tags/node-js/"/>
+    
+  </entry>
   
   <entry>
     <title>homebrew</title>
@@ -171,11 +221,11 @@ proxy_set_header Connection <span class="variable">$connection_upgrade</span>;
     <link href="http://yoursite.com/2018/07/26/vscode%E9%85%8D%E7%BD%AE/"/>
     <id>http://yoursite.com/2018/07/26/vscode配置/</id>
     <published>2018-07-26T13:22:31.000Z</published>
-    <updated>2019-09-16T14:23:34.587Z</updated>
+    <updated>2019-10-17T03:25:32.606Z</updated>
     
     <content type="html"><![CDATA[<p><blockquote class="blockquote-center"></blockquote><br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;workbench.colorTheme&quot;: &quot;Solarized Light&quot;,</span><br><span class="line">    &quot;window.zoomLevel&quot;: 1,</span><br><span class="line">    &quot;eslint.autoFixOnSave&quot;: true,</span><br><span class="line">    &quot;editor.formatOnSave&quot;: true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">匹配代码中的中文</span><br><span class="line">[^\x00-\xff]+</span><br></pre></td></tr></table></figure>
-<h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><p>auto close tag<br>eslint<br>es6 snippet<br>vetur<br>beautify<br>import-cost<br>Code Runner<br>Path Intellisense （路径）<br>Bracket Pair Colorizer (作用域)<br>Paste JSON as Code（<a href="https://marketplace.visualstudio.com/items?itemName=quicktype.quicktype）" target="_blank" rel="noopener">https://marketplace.visualstudio.com/items?itemName=quicktype.quicktype）</a><br>vscode-goto-node-modules(快速切换到node_modules，<a href="https://marketplace.visualstudio.com/items?itemName=mrluje.vscode-goto-node-modules" target="_blank" rel="noopener">https://marketplace.visualstudio.com/items?itemName=mrluje.vscode-goto-node-modules</a>)<br>tabnine(代码补全)<br>IntelliSense for CSS class names in HTML(html提示css class)<br>Quokka(运行结果预览)</p>
+<h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><p>eslint<br>es6 snippet<br>vetur<br>beautify<br>import-cost<br>Code Runner<br>Path Intellisense （路径）<br>Bracket Pair Colorizer (作用域)<br>Paste JSON as Code（<a href="https://marketplace.visualstudio.com/items?itemName=quicktype.quicktype）" target="_blank" rel="noopener">https://marketplace.visualstudio.com/items?itemName=quicktype.quicktype）</a><br>vscode-goto-node-modules(快速切换到node_modules，<a href="https://marketplace.visualstudio.com/items?itemName=mrluje.vscode-goto-node-modules" target="_blank" rel="noopener">https://marketplace.visualstudio.com/items?itemName=mrluje.vscode-goto-node-modules</a>)<br>tabnine(代码补全)<br>IntelliSense for CSS class names in HTML(html提示css class)<br>Quokka(运行结果预览)<br>Auto Rename Tag(自动重命名配对的HTML / XML标签)<br>auto close tag（自动关标签）<br>VSCode-Element-Helper（element-ui 标签提示）</p>
 ]]></content>
     
     <summary type="html">
@@ -216,6 +266,29 @@ proxy_set_header Connection <span class="variable">$connection_upgrade</span>;
   </entry>
   
   <entry>
+    <title>CryptoJS</title>
+    <link href="http://yoursite.com/2018/04/24/aes%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/"/>
+    <id>http://yoursite.com/2018/04/24/aes对称加密/</id>
+    <published>2018-04-23T16:48:47.000Z</published>
+    <updated>2019-09-16T14:23:34.574Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> sKey = CryptoJS.enc.Utf8.parse(<span class="string">'test'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 加密</span></span><br><span class="line">encryptedStr = CryptoJS.AES.encrypt(<span class="string">'text'</span>, sKey, &#123;</span><br><span class="line">    mode: CryptoJS.mode.ECB,</span><br><span class="line">    padding: CryptoJS.pad.Pkcs7</span><br><span class="line">&#125;).ciphertext.toString()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 解密</span></span><br><span class="line">CryptoJS.AES.decrypt(</span><br><span class="line">    CryptoJS.enc.Base64.stringify(CryptoJS.enc.Hex.parse(encryptedStr)),</span><br><span class="line">    sKey,</span><br><span class="line">    &#123;</span><br><span class="line">        mode: CryptoJS.mode.ECB,</span><br><span class="line">        padding: CryptoJS.pad.Pkcs7,</span><br><span class="line">    &#125;</span><br><span class="line">).toString(CryptoJS.enc.Utf8);</span><br></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span 
+    
+    </summary>
+    
+      <category term="js" scheme="http://yoursite.com/categories/js/"/>
+    
+    
+      <category term="CryptoJS" scheme="http://yoursite.com/tags/CryptoJS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>列出数组内所有可能的组合</title>
     <link href="http://yoursite.com/2018/04/24/echarts%E7%BB%8F%E9%AA%8C%E6%B1%87%E6%80%BB/"/>
     <id>http://yoursite.com/2018/04/24/echarts经验汇总/</id>
@@ -236,29 +309,6 @@ proxy_set_header Connection <span class="variable">$connection_upgrade</span>;
     
     
       <category term="echarts" scheme="http://yoursite.com/tags/echarts/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CryptoJS</title>
-    <link href="http://yoursite.com/2018/04/24/aes%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86/"/>
-    <id>http://yoursite.com/2018/04/24/aes对称加密/</id>
-    <published>2018-04-23T16:48:47.000Z</published>
-    <updated>2019-09-16T14:23:34.574Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> sKey = CryptoJS.enc.Utf8.parse(<span class="string">'test'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 加密</span></span><br><span class="line">encryptedStr = CryptoJS.AES.encrypt(<span class="string">'text'</span>, sKey, &#123;</span><br><span class="line">    mode: CryptoJS.mode.ECB,</span><br><span class="line">    padding: CryptoJS.pad.Pkcs7</span><br><span class="line">&#125;).ciphertext.toString()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 解密</span></span><br><span class="line">CryptoJS.AES.decrypt(</span><br><span class="line">    CryptoJS.enc.Base64.stringify(CryptoJS.enc.Hex.parse(encryptedStr)),</span><br><span class="line">    sKey,</span><br><span class="line">    &#123;</span><br><span class="line">        mode: CryptoJS.mode.ECB,</span><br><span class="line">        padding: CryptoJS.pad.Pkcs7,</span><br><span class="line">    &#125;</span><br><span class="line">).toString(CryptoJS.enc.Utf8);</span><br></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span 
-    
-    </summary>
-    
-      <category term="js" scheme="http://yoursite.com/categories/js/"/>
-    
-    
-      <category term="CryptoJS" scheme="http://yoursite.com/tags/CryptoJS/"/>
     
   </entry>
   
@@ -588,67 +638,6 @@ proxy_set_header Connection <span class="variable">$connection_upgrade</span>;
     
     
       <category term="js-utils" scheme="http://yoursite.com/tags/js-utils/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>命令行笔记</title>
-    <link href="http://yoursite.com/2016/08/11/%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%AC%94%E8%AE%B0/"/>
-    <id>http://yoursite.com/2016/08/11/命令行笔记/</id>
-    <published>2016-08-10T17:31:32.000Z</published>
-    <updated>2019-09-16T14:23:34.589Z</updated>
-    
-    <content type="html"><![CDATA[<p><blockquote class="blockquote-center">命令行笔记</blockquote><br><a id="more"></a></p>
-<h3 id="kill-process"><a href="#kill-process" class="headerlink" title="kill process"></a>kill process</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">kill</span> -9 xxx</span><br></pre></td></tr></table></figure>
-<h3 id="输出最后，一般用来看log"><a href="#输出最后，一般用来看log" class="headerlink" title="输出最后，一般用来看log"></a>输出最后，一般用来看log</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tail xxx.xx</span><br></pre></td></tr></table></figure>
-<h3 id="输出树形结构"><a href="#输出树形结构" class="headerlink" title="输出树形结构"></a>输出树形结构</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tree -L x (x为层级)</span><br></pre></td></tr></table></figure>
-<h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service xxxx start (xxxx一般指nginx，mongodb等)</span><br></pre></td></tr></table></figure>
-<h3 id="递归给权限"><a href="#递归给权限" class="headerlink" title="递归给权限"></a>递归给权限</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R xxx workspace (xxx指用户名，workspace指文件夹)</span><br></pre></td></tr></table></figure>
-<h3 id="递归创建目录"><a href="#递归创建目录" class="headerlink" title="递归创建目录"></a>递归创建目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p tomcat/xxx/xxx</span><br></pre></td></tr></table></figure>
-<h3 id="写入md5"><a href="#写入md5" class="headerlink" title="写入md5"></a>写入md5</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">md5sum node-v6.9.1-linux-x64.tar.gz &gt; md5sum.txt</span><br></pre></td></tr></table></figure>
-<h3 id="ssh免密码登录"><a href="#ssh免密码登录" class="headerlink" title="ssh免密码登录"></a>ssh免密码登录</h3><p>添加公匙到<code>.ssh/authorized_keys</code>，或<code>/home/admin/.ssh/authorized_keys</code>(管理权限)</p>
-<h3 id="使用端口进行请求"><a href="#使用端口进行请求" class="headerlink" title="使用端口进行请求"></a>使用端口进行请求</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc 100.100.100.2 8388</span><br></pre></td></tr></table></figure>
-<h3 id="创建文件（强制覆盖）"><a href="#创建文件（强制覆盖）" class="headerlink" title="创建文件（强制覆盖）"></a>创建文件（强制覆盖）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> &gt; xxxxx.js</span><br></pre></td></tr></table></figure>
-<h3 id="传入的参数export为环境变量"><a href="#传入的参数export为环境变量" class="headerlink" title="传入的参数export为环境变量"></a>传入的参数export为环境变量</h3><p>需要通过以下方式来执行脚本<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">. xx.sh arg1 arg2</span><br><span class="line"><span class="built_in">source</span> xx.sh arg1 arg2</span><br></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;命令行笔记&lt;/blockquote&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="command-line" scheme="http://yoursite.com/categories/command-line/"/>
-    
-    
-      <category term="command-line" scheme="http://yoursite.com/tags/command-line/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>angular filters</title>
-    <link href="http://yoursite.com/2016/08/11/angular-filters/"/>
-    <id>http://yoursite.com/2016/08/11/angular-filters/</id>
-    <published>2016-08-10T17:17:23.000Z</published>
-    <updated>2019-09-16T14:23:34.575Z</updated>
-    
-    <content type="html"><![CDATA[<p><blockquote class="blockquote-center">angular filters</blockquote><br><a id="more"></a></p>
-<h3 id="文件总类"><a href="#文件总类" class="headerlink" title="文件总类"></a>文件总类</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">.filter(<span class="string">'fileType'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">text</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> aType = text.split(<span class="string">'.'</span>),</span><br><span class="line">            sType = aType[aType.length - <span class="number">1</span>].toUpperCase();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">switch</span> (sType) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'MP3'</span>:</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'FLV'</span>:</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'RMVB'</span>:</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'WMV'</span>:</span><br><span class="line">                sType = <span class="string">'media'</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'PPT'</span>:</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'PDF'</span>:</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'DOC'</span>:</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'XLS'</span>:</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'MD'</span>:</span><br><span class="line">                sType = <span class="string">'doc'</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'TXT'</span>:</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'JS'</span>:</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'HTML'</span>:</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'XML'</span>:</span><br><span class="line">                sType = <span class="string">'plain'</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                sType = <span class="string">''</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> sType;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h3 id="文件类型"><a href="#文件类型" class="headerlink" title="文件类型"></a>文件类型</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.filter(<span class="string">'fileType'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">text</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> aType = text.split(<span class="string">'.'</span>);</span><br><span class="line">        <span class="keyword">return</span> aType[aType.length - <span class="number">1</span>].toUpperCase();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h3 id="文件大小"><a href="#文件大小" class="headerlink" title="文件大小"></a>文件大小</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">.filter(<span class="string">'descSize'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">text</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> str = <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (text &gt; <span class="number">1048576</span>) &#123;</span><br><span class="line">            str = (text/<span class="number">1048576</span>).toFixed(<span class="number">1</span>) + <span class="string">'MB'</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            str = (text/<span class="number">1024</span>).toFixed(<span class="number">1</span>) + <span class="string">'KB'</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> str;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h3 id="json格式化输出"><a href="#json格式化输出" class="headerlink" title="json格式化输出"></a>json格式化输出</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.filter(<span class="string">'beautifyJson'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">json</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> str = angular.copy(json);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">JSON</span>.stringify(str, <span class="literal">null</span>, <span class="number">4</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;angular filters&lt;/blockquote&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="angular" scheme="http://yoursite.com/categories/angular/"/>
-    
-    
-      <category term="angular" scheme="http://yoursite.com/tags/angular/"/>
     
   </entry>
   
