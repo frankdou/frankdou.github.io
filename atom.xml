@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-09T06:27:01.254Z</updated>
+  <updated>2019-11-14T06:09:55.686Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,15 +16,44 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>webpack笔记</title>
+    <link href="http://yoursite.com/2019/11/14/webpack%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2019/11/14/webpack笔记/</id>
+    <published>2019-11-14T05:57:22.000Z</published>
+    <updated>2019-11-14T06:09:55.686Z</updated>
+    
+    <content type="html"><![CDATA[<p><blockquote class="blockquote-center"></blockquote><br><a id="more"></a><br>webpack<br>webpack-cli<br>webpack-dec-server<br>webpack-merge</p>
+<p>loader 用于加载、转化某些资源<br>postcss-loader 前缀<br>css-loader 发布用<br>style-loader 开发用<br>mini-css-extract-plugin  loader + plugin<br>babel-loader<br>@babel/core<br>@babel/preset-env<br>file-loader 静态资源处理<br>image-webpack-loader 图片压缩</p>
+<p>plugin 用于扩展webpack的功能<br>clean-webpack-plugin 清理目录<br>ProvidePlugin<br>DefinePlugin 编译时配置全局变量<br>html-webpack-plugin 创建包含webpack编译资源(script、css、etc…)的html文件<br>purgecss-webpack-plugin 删除无用的css<br>add-asset-html-webpack-plugin 动态添加css、js链接到html + 保存相关文件到dist文件夹<br>webpack-cdn-plugin cdn资源加载</p>
+<p>tips:</p>
+<p>全局依赖，从输出的bundle中排除的办法<br>externals: {<br>    ‘jquery’: ‘$’,<br>}</p>
+<p>tree-shaking</p>
+<ul>
+<li>tree-shaking只支持静态导入 import { a } from “./lib”，不支持动态导入require(‘..’)</li>
+<li>配置sideEffects: true, 用于删除引入但没使用的代码</li>
+<li>配置sideEffects: [“<em>*/</em>.css”]，避免webpack认为css是副作用</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;/blockquote&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Node.js笔记</title>
     <link href="http://yoursite.com/2019/11/06/Node-js%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2019/11/06/Node-js笔记/</id>
     <published>2019-11-06T11:46:28.000Z</published>
-    <updated>2019-11-09T06:27:01.254Z</updated>
+    <updated>2019-11-12T11:49:22.480Z</updated>
     
     <content type="html"><![CDATA[<p><blockquote class="blockquote-center"></blockquote><br><a id="more"></a></p>
 <h3 id="dirname，filename，process-cwd-的区别"><a href="#dirname，filename，process-cwd-的区别" class="headerlink" title="dirname，filename，process.cwd()的区别"></a><strong>dirname，</strong>filename，process.cwd()的区别</h3><p><code>__dirname</code>: 被执行文件所在的文件夹路径<br><code>__filename</code>: 被执行文件的全路径<br><code>process.cwd()</code>: 当前命令执行的路径</p>
-]]></content>
+<h3 id="获取文件列表"><a href="#获取文件列表" class="headerlink" title="获取文件列表"></a>获取文件列表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const glob = require(&apos;glob&apos;);</span><br><span class="line">console.log(glob.sync(&apos;./source/*&apos;));</span><br><span class="line"></span><br><span class="line">&lt;!-- 不包含文件夹路径 --&gt;</span><br><span class="line">console.log(glob.sync(&apos;./source/*&apos;), &#123; nodir: true &#125;);</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -66,28 +95,6 @@
   </entry>
   
   <entry>
-    <title>homebrew</title>
-    <link href="http://yoursite.com/2019/09/09/homebrew/"/>
-    <id>http://yoursite.com/2019/09/09/homebrew/</id>
-    <published>2019-09-09T11:53:27.000Z</published>
-    <updated>2019-09-16T14:23:34.579Z</updated>
-    
-    <content type="html"><![CDATA[<p><blockquote class="blockquote-center"></blockquote><br><a id="more"></a></p>
-<p>Homebrew 镜像使用帮助<br>注:该镜像是 Homebrew 的 formula 索引的镜像（即 brew update 时所更新内容）。本镜像站同时提供 Homebrew 二进制预编译包的镜像，请参考 Homebrew bottles 镜像使用帮助。</p>
-<p>替换现有上游<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git -C <span class="string">"$(brew --repo)"</span> remote set-url origin https:<span class="comment">//mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git</span></span><br><span class="line"></span><br><span class="line">git -C <span class="string">"$(brew --repo homebrew/core)"</span> remote set-url origin https:<span class="comment">//mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git</span></span><br><span class="line"></span><br><span class="line">git -C <span class="string">"$(brew --repo homebrew/cask)"</span> remote set-url origin https:<span class="comment">//mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git</span></span><br><span class="line"></span><br><span class="line">brew update</span><br></pre></td></tr></table></figure></p>
-<p>复原<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git -C <span class="string">"$(brew --repo)"</span> remote set-url origin https:<span class="comment">//github.com/Homebrew/brew.git</span></span><br><span class="line"></span><br><span class="line">git -C <span class="string">"$(brew --repo homebrew/core)"</span> remote set-url origin https:<span class="comment">//github.com/Homebrew/homebrew-core.git</span></span><br><span class="line"></span><br><span class="line">git -C <span class="string">"$(brew --repo homebrew/cask)"</span> remote set-url origin https:<span class="comment">//github.com/Homebrew/homebrew-cask.git</span></span><br><span class="line"></span><br><span class="line">brew update</span><br></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;/blockquote&gt;&lt;br&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>nginx-tips</title>
     <link href="http://yoursite.com/2019/05/17/nginx-tips/"/>
     <id>http://yoursite.com/2019/05/17/nginx-tips/</id>
@@ -118,14 +125,24 @@ proxy_set_header Connection <span class="variable">$connection_upgrade</span>;
     <link href="http://yoursite.com/2019/01/21/vue-tips/"/>
     <id>http://yoursite.com/2019/01/21/vue-tips/</id>
     <published>2019-01-21T07:00:05.000Z</published>
-    <updated>2019-09-16T14:23:34.588Z</updated>
+    <updated>2020-03-14T02:05:57.839Z</updated>
     
     <content type="html"><![CDATA[<p><blockquote class="blockquote-center">vue-tips</blockquote><br><a id="more"></a></p>
 <h4 id="vue-iframe通信"><a href="#vue-iframe通信" class="headerlink" title="vue + iframe通信"></a>vue + iframe通信</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div /&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import $ from &apos;jquery&apos;;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">    data() &#123;</span><br><span class="line">        return &#123;</span><br><span class="line">            dIframe: null,</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">    computed: &#123;</span><br><span class="line">        sUrl() &#123;</span><br><span class="line">            return &apos;http://xxxxxx&apos;;</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    mounted() &#123;</span><br><span class="line">        this.init();</span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">        init() &#123;</span><br><span class="line">            this.dIframe = $(`&lt;iframe src=$&#123;this.sUrl&#125; class=&apos;iframe&apos; /&gt;`);</span><br><span class="line"></span><br><span class="line">            // iframe onload event</span><br><span class="line">            this.dIframe.on(&apos;load&apos;, this.onLoaded);</span><br><span class="line"></span><br><span class="line">            // append iframe</span><br><span class="line">            $(this.$el).append(this.dIframe);</span><br><span class="line">        &#125;,</span><br><span class="line">        onLoaded() &#123;</span><br><span class="line">            // send data to iframe</span><br><span class="line">            this.dIframe[0].contentWindow.postMessage(&apos;loaded&apos;, this.sUrl);</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">iframe文件</span><br><span class="line"></span><br><span class="line">window.addEventListener(&apos;message&apos;, (&#123; data &#125;) =&gt; &#123;</span><br><span class="line">    console.log(data, &apos;2222&apos;);</span><br><span class="line">&#125;, false);</span><br></pre></td></tr></table></figure>
-<h4 id="inheritAttrs（默认true）"><a href="#inheritAttrs（默认true）" class="headerlink" title="inheritAttrs（默认true）"></a>inheritAttrs（默认true）</h4><p>避免父组件传的props，未在子组件定义（使用），导致显示的附加在dom节点上</p>
-<h4 id="attrs"><a href="#attrs" class="headerlink" title="$attrs"></a>$attrs</h4><p>父组件传的props，未在子组件定义（使用），会归至$attrs，可通过v-bind=’$attrs’传至下级组件</p>
-]]></content>
+<h4 id="inheritAttrs（默认true）"><a href="#inheritAttrs（默认true）" class="headerlink" title="inheritAttrs（默认true）"></a>inheritAttrs（默认true）</h4><p>问题：父组件传来，但是未在props定义的属性，会显式的附加在dom节点上<br>设置inheritAttrs:false，这些默认行为将会被去掉</p>
+<h4 id="attrs"><a href="#attrs" class="headerlink" title="$attrs"></a>$attrs</h4><p>父组件传的属性，未在子组件props定义，会归至$attrs<br>可通v-bind=’$attrs’传至下级组件</p>
+<h4 id="v-model"><a href="#v-model" class="headerlink" title="v-model"></a>v-model</h4><p>语法糖<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;a-component v-model=&quot;obj.c&quot; /&gt;</span><br><span class="line"></span><br><span class="line">+ </span><br><span class="line"></span><br><span class="line">子组件触发</span><br><span class="line">$emit(&apos;input&apos;, &apos;xxxxx&apos;) input之类</span><br><span class="line">$emit(&apos;change&apos;, &apos;xxxxx&apos;) checkbox、radio、select之类</span><br><span class="line">================================================</span><br><span class="line"></span><br><span class="line">&lt;a-component</span><br><span class="line">    :label=&quot;obj.c&quot;</span><br><span class="line">    @eventName=&quot;obj.c = $event&quot;</span><br><span class="line">/&gt;</span><br><span class="line"></span><br><span class="line">+ </span><br><span class="line"></span><br><span class="line">子组件触发$emit(&apos;eventName&apos;, &apos;xxxxx&apos;)</span><br></pre></td></tr></table></figure></p>
+<p>省去了父组件绑定事件，更新数据的动作</p>
+<h4 id="sync"><a href="#sync" class="headerlink" title="sync"></a>sync</h4><p>语法糖<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;a-component :title.sync=&quot;obj.c&quot; /&gt;</span><br><span class="line"></span><br><span class="line">+ </span><br><span class="line"></span><br><span class="line">子组件触发$emit(&apos;update:title&apos;, &apos;xxxxx&apos;)</span><br><span class="line"></span><br><span class="line">======</span><br><span class="line"></span><br><span class="line">&lt;a-component</span><br><span class="line">  :title=&quot;obj.c&quot;</span><br><span class="line">  @update:title=&quot;obj.c = $event&quot;</span><br><span class="line">/&gt;</span><br><span class="line"></span><br><span class="line">+ </span><br><span class="line"></span><br><span class="line">子组件触发$emit(&apos;update:title&apos;, &apos;xxxxx&apos;)</span><br></pre></td></tr></table></figure></p>
+<p>同样省去了父组件绑定事件，更新数据的动作</p>
+<h4 id="v-bind-sync"><a href="#v-bind-sync" class="headerlink" title="v-bind.sync"></a>v-bind.sync</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">obj = &#123;</span><br><span class="line">    a: 1,</span><br><span class="line">    b: 2,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">--------------------------------</span><br><span class="line"></span><br><span class="line">&lt;a-component v-bind.sync=&quot;obj&quot; /&gt;</span><br><span class="line"></span><br><span class="line">+ </span><br><span class="line"></span><br><span class="line">子组件触发</span><br><span class="line">$emit(&apos;update:a&apos;, &apos;xxxxx&apos;)</span><br><span class="line">$emit(&apos;update:b&apos;, &apos;xxxxx&apos;)</span><br><span class="line">...</span><br><span class="line">================================</span><br><span class="line"></span><br><span class="line">&lt;a-component</span><br><span class="line">    :a=&apos;obj.a&apos;</span><br><span class="line">    :b=&apos;obj.b&apos;</span><br><span class="line">    @update:a=&apos;obj.a = $event&apos;</span><br><span class="line">    @update:c=&apos;obj.c = $event&apos;</span><br><span class="line">/&gt;</span><br><span class="line"></span><br><span class="line">+ </span><br><span class="line"></span><br><span class="line">子组件触发</span><br><span class="line">$emit(&apos;update:a&apos;, &apos;xxxxx&apos;)</span><br><span class="line">$emit(&apos;update:b&apos;, &apos;xxxxx&apos;)</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>同样省去了父组件绑定事件，更新数据的动作，但是有多少key的更新动作，就能省多少</p>
+<p>备注：</p>
+<ul>
+<li>一个元素不能绑定多个v-bind</li>
+</ul>
+<h4 id="阻止回车提交表单刷新的行为"><a href="#阻止回车提交表单刷新的行为" class="headerlink" title="阻止回车提交表单刷新的行为"></a>阻止回车提交表单刷新的行为</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@submit.prevent.native</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -221,11 +238,11 @@ proxy_set_header Connection <span class="variable">$connection_upgrade</span>;
     <link href="http://yoursite.com/2018/07/26/vscode%E9%85%8D%E7%BD%AE/"/>
     <id>http://yoursite.com/2018/07/26/vscode配置/</id>
     <published>2018-07-26T13:22:31.000Z</published>
-    <updated>2019-10-17T03:25:32.606Z</updated>
+    <updated>2020-03-14T04:40:18.345Z</updated>
     
     <content type="html"><![CDATA[<p><blockquote class="blockquote-center"></blockquote><br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;workbench.colorTheme&quot;: &quot;Solarized Light&quot;,</span><br><span class="line">    &quot;window.zoomLevel&quot;: 1,</span><br><span class="line">    &quot;eslint.autoFixOnSave&quot;: true,</span><br><span class="line">    &quot;editor.formatOnSave&quot;: true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">匹配代码中的中文</span><br><span class="line">[^\x00-\xff]+</span><br></pre></td></tr></table></figure>
-<h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><p>eslint<br>es6 snippet<br>vetur<br>beautify<br>import-cost<br>Code Runner<br>Path Intellisense （路径）<br>Bracket Pair Colorizer (作用域)<br>Paste JSON as Code（<a href="https://marketplace.visualstudio.com/items?itemName=quicktype.quicktype）" target="_blank" rel="noopener">https://marketplace.visualstudio.com/items?itemName=quicktype.quicktype）</a><br>vscode-goto-node-modules(快速切换到node_modules，<a href="https://marketplace.visualstudio.com/items?itemName=mrluje.vscode-goto-node-modules" target="_blank" rel="noopener">https://marketplace.visualstudio.com/items?itemName=mrluje.vscode-goto-node-modules</a>)<br>tabnine(代码补全)<br>IntelliSense for CSS class names in HTML(html提示css class)<br>Quokka(运行结果预览)<br>Auto Rename Tag(自动重命名配对的HTML / XML标签)<br>auto close tag（自动关标签）<br>VSCode-Element-Helper（element-ui 标签提示）</p>
+<h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><p>eslint<br>es6 snippet<br>vetur<br>beautify<br>import-cost<br>Code Runner<br>Path Intellisense （路径）<br>Bracket Pair Colorizer (作用域)<br>Paste JSON as Code（<a href="https://marketplace.visualstudio.com/items?itemName=quicktype.quicktype）" target="_blank" rel="noopener">https://marketplace.visualstudio.com/items?itemName=quicktype.quicktype）</a><br>vscode-goto-node-modules(快速切换到node_modules，<a href="https://marketplace.visualstudio.com/items?itemName=mrluje.vscode-goto-node-modules" target="_blank" rel="noopener">https://marketplace.visualstudio.com/items?itemName=mrluje.vscode-goto-node-modules</a>)<br>tabnine(代码补全)<br>IntelliSense for CSS class names in HTML(html提示css class)<br>Quokka(运行结果预览)<br>Auto Rename Tag(自动重命名配对的HTML / XML标签)<br>auto close tag（自动关标签）<br>VSCode-Element-Helper（element-ui 标签提示）<br>any-rule(常用正则)<br>Settings Sync (配置同步)</p>
 ]]></content>
     
     <summary type="html">
@@ -366,48 +383,6 @@ proxy_set_header Connection <span class="variable">$connection_upgrade</span>;
   </entry>
   
   <entry>
-    <title>java-with-spa</title>
-    <link href="http://yoursite.com/2016/10/02/java%E5%8D%95%E9%A1%B5%E5%BC%80%E5%8F%91/"/>
-    <id>http://yoursite.com/2016/10/02/java单页开发/</id>
-    <published>2016-10-02T14:31:38.000Z</published>
-    <updated>2019-09-16T14:23:34.581Z</updated>
-    
-    <content type="html"><![CDATA[<p><blockquote class="blockquote-center">java单页开发</blockquote><br><a id="more"></a><br>通常，有两种方式：</p>
-<h2 id="偏前端方式"><a href="#偏前端方式" class="headerlink" title="偏前端方式"></a>偏前端方式</h2><ul>
-<li>前后端纯粹的分开，nginx给前端静态资源起服务，api反向代理，避免跨域问题。登录状态，前端根据http的异常来判断。页面所有的跳转都由前端来进行控制。</li>
-<li>后端专注api层面，通过http状态码，抛出错误异常给前端。</li>
-</ul>
-<p>nginx配置大致如下:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line"></span><br><span class="line">    listen  80;</span><br><span class="line"></span><br><span class="line">    server_name www.xxx.com;</span><br><span class="line"></span><br><span class="line">    root /xxxxxx/dist/;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        try_files <span class="variable">$uri</span> <span class="variable">$uri</span>.html;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    location /api &#123;</span><br><span class="line">        proxy_pass http://xx.xxx.xx.xx:8080;</span><br><span class="line">        proxy_set_header Host <span class="variable">$http_host</span>;</span><br><span class="line">        proxy_set_header X-Real-IP <span class="variable">$remote_addr</span>;</span><br><span class="line">        proxy_set_header X-Forwarded-For <span class="variable">$proxy_add_x_forwarded_for</span>;</span><br><span class="line">        proxy_intercept_errors on;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    location ~.*(js|css|png|gif|jpg|mp3|ogg|ttf|woff|woff2|html)$ &#123;</span><br><span class="line">        //expires 30d;</span><br><span class="line">        expires off;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="偏后端方式"><a href="#偏后端方式" class="headerlink" title="偏后端方式"></a>偏后端方式</h2><ul>
-<li>前端服务由tomcat起, 用户初始的登录状态由后端判断并跳转</li>
-<li>后期因为都是ajax，需要前端重定向。</li>
-</ul>
-<p>这种方式下，前端”编译”、刷新频繁，但都为静态文件，不需要java的重新编译，为方便开发，需做以下设置：</p>
-<h3 id="设置要被检测变化的前端源码地址"><a href="#设置要被检测变化的前端源码地址" class="headerlink" title="设置要被检测变化的前端源码地址"></a>设置要被检测变化的前端源码地址</h3><p><code>/usr/local/Cellar/tomcat/8.5.4/libexec/conf/Catalina/localhost/host-manager.xml</code> </p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">Context</span> <span class="attr">reloadable</span>=<span class="string">"true"</span> <span class="attr">antiResourceLocking</span>=<span class="string">"false"</span> <span class="attr">privileged</span>=<span class="string">"true"</span> <span class="attr">useHttpOnly</span>=<span class="string">"true"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">WatchedResource</span>&gt;</span>前端dist文件夹地址<span class="tag">&lt;/<span class="name">WatchedResource</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Context</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="添加如下代码，设置为开发模式，并设定检查周期"><a href="#添加如下代码，设置为开发模式，并设定检查周期" class="headerlink" title="添加如下代码，设置为开发模式，并设定检查周期"></a>添加如下代码，设置为开发模式，并设定检查周期</h3><p><code>/usr/local/Cellar/tomcat/8.5.4/libexec/conf/web.xml</code></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">init-param</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>development<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>true<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">init-param</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">init-param</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>checkInterval<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>1<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">init-param</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="添加如下代码，允许软连接"><a href="#添加如下代码，允许软连接" class="headerlink" title="添加如下代码，允许软连接"></a>添加如下代码，允许软连接</h3><p><code>/usr/local/Cellar/tomcat/8.5.4/libexec/conf/context.xml</code> </p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Resources</span> <span class="attr">allowLinking</span>=<span class="string">"true"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="删除tomcat-gt-war包里的静态资源，并设置软链到自己的前端源码地址"><a href="#删除tomcat-gt-war包里的静态资源，并设置软链到自己的前端源码地址" class="headerlink" title="删除tomcat &gt; war包里的静态资源，并设置软链到自己的前端源码地址"></a>删除tomcat &gt; war包里的静态资源，并设置软链到自己的前端源码地址</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf war包静态资源地址 &amp;&amp; ln <span class="_">-s</span> 前端源码地址 war包静态资源地址</span><br></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;java单页开发&lt;/blockquote&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="mac" scheme="http://yoursite.com/categories/mac/"/>
-    
-    
-      <category term="mac" scheme="http://yoursite.com/tags/mac/"/>
-    
-      <category term="java" scheme="http://yoursite.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
     <title>docker-tips</title>
     <link href="http://yoursite.com/2016/10/02/docker-tips/"/>
     <id>http://yoursite.com/2016/10/02/docker-tips/</id>
@@ -450,7 +425,7 @@ proxy_set_header Connection <span class="variable">$connection_upgrade</span>;
     <link href="http://yoursite.com/2016/10/02/java-tips/"/>
     <id>http://yoursite.com/2016/10/02/java-tips/</id>
     <published>2016-10-02T11:58:35.000Z</published>
-    <updated>2019-09-16T14:23:34.580Z</updated>
+    <updated>2020-03-14T04:42:08.769Z</updated>
     
     <content type="html"><![CDATA[<p><blockquote class="blockquote-center">mac-java-tips</blockquote><br><a id="more"></a></p>
 <h3 id="获得tomcat路径"><a href="#获得tomcat路径" class="headerlink" title="获得tomcat路径"></a>获得tomcat路径</h3><p>运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">catalina --help</span><br></pre></td></tr></table></figure></p>
@@ -638,6 +613,40 @@ proxy_set_header Connection <span class="variable">$connection_upgrade</span>;
     
     
       <category term="js-utils" scheme="http://yoursite.com/tags/js-utils/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>命令行笔记</title>
+    <link href="http://yoursite.com/2016/08/11/%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2016/08/11/命令行笔记/</id>
+    <published>2016-08-10T17:31:32.000Z</published>
+    <updated>2019-09-16T14:23:34.589Z</updated>
+    
+    <content type="html"><![CDATA[<p><blockquote class="blockquote-center">命令行笔记</blockquote><br><a id="more"></a></p>
+<h3 id="kill-process"><a href="#kill-process" class="headerlink" title="kill process"></a>kill process</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">kill</span> -9 xxx</span><br></pre></td></tr></table></figure>
+<h3 id="输出最后，一般用来看log"><a href="#输出最后，一般用来看log" class="headerlink" title="输出最后，一般用来看log"></a>输出最后，一般用来看log</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tail xxx.xx</span><br></pre></td></tr></table></figure>
+<h3 id="输出树形结构"><a href="#输出树形结构" class="headerlink" title="输出树形结构"></a>输出树形结构</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tree -L x (x为层级)</span><br></pre></td></tr></table></figure>
+<h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service xxxx start (xxxx一般指nginx，mongodb等)</span><br></pre></td></tr></table></figure>
+<h3 id="递归给权限"><a href="#递归给权限" class="headerlink" title="递归给权限"></a>递归给权限</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R xxx workspace (xxx指用户名，workspace指文件夹)</span><br></pre></td></tr></table></figure>
+<h3 id="递归创建目录"><a href="#递归创建目录" class="headerlink" title="递归创建目录"></a>递归创建目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p tomcat/xxx/xxx</span><br></pre></td></tr></table></figure>
+<h3 id="写入md5"><a href="#写入md5" class="headerlink" title="写入md5"></a>写入md5</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">md5sum node-v6.9.1-linux-x64.tar.gz &gt; md5sum.txt</span><br></pre></td></tr></table></figure>
+<h3 id="ssh免密码登录"><a href="#ssh免密码登录" class="headerlink" title="ssh免密码登录"></a>ssh免密码登录</h3><p>添加公匙到<code>.ssh/authorized_keys</code>，或<code>/home/admin/.ssh/authorized_keys</code>(管理权限)</p>
+<h3 id="使用端口进行请求"><a href="#使用端口进行请求" class="headerlink" title="使用端口进行请求"></a>使用端口进行请求</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc 100.100.100.2 8388</span><br></pre></td></tr></table></figure>
+<h3 id="创建文件（强制覆盖）"><a href="#创建文件（强制覆盖）" class="headerlink" title="创建文件（强制覆盖）"></a>创建文件（强制覆盖）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> &gt; xxxxx.js</span><br></pre></td></tr></table></figure>
+<h3 id="传入的参数export为环境变量"><a href="#传入的参数export为环境变量" class="headerlink" title="传入的参数export为环境变量"></a>传入的参数export为环境变量</h3><p>需要通过以下方式来执行脚本<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">. xx.sh arg1 arg2</span><br><span class="line"><span class="built_in">source</span> xx.sh arg1 arg2</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;命令行笔记&lt;/blockquote&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="command-line" scheme="http://yoursite.com/categories/command-line/"/>
+    
+    
+      <category term="command-line" scheme="http://yoursite.com/tags/command-line/"/>
     
   </entry>
   
