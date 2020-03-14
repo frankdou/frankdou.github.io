@@ -36,3 +36,5 @@ Quokka(运行结果预览)
 Auto Rename Tag(自动重命名配对的HTML / XML标签)
 auto close tag（自动关标签）
 VSCode-Element-Helper（element-ui 标签提示）
+any-rule(常用正则)
+Settings Sync (配置同步)

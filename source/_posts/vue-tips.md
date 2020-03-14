@@ -58,7 +58,101 @@ window.addEventListener('message', ({ data }) => {
 ```
 
 #### inheritAttrs（默认true）
-避免父组件传的props，未在子组件定义（使用），导致显示的附加在dom节点上
+问题：父组件传来，但是未在props定义的属性，会显式的附加在dom节点上
+设置inheritAttrs:false，这些默认行为将会被去掉
 
 #### $attrs
-父组件传的props，未在子组件定义（使用），会归至$attrs，可通过v-bind='$attrs'传至下级组件
+父组件传的属性，未在子组件props定义，会归至$attrs
+可通v-bind='$attrs'传至下级组件
+
+#### v-model
+语法糖
+```
+<a-component v-model="obj.c" />
+
++ 
+
+子组件触发
+$emit('input', 'xxxxx') input之类
+$emit('change', 'xxxxx') checkbox、radio、select之类
+================================================
+
+<a-component
+    :label="obj.c"
+    @eventName="obj.c = $event"
+/>
+
++ 
+
+子组件触发$emit('eventName', 'xxxxx')
+```
+
+省去了父组件绑定事件，更新数据的动作
+
+#### sync
+语法糖
+```
+<a-component :title.sync="obj.c" />
+
++ 
+
+子组件触发$emit('update:title', 'xxxxx')
+
+======
+
+<a-component
+  :title="obj.c"
+  @update:title="obj.c = $event"
+/>
+
++ 
+
+子组件触发$emit('update:title', 'xxxxx')
+```
+
+同样省去了父组件绑定事件，更新数据的动作
+
+#### v-bind.sync
+
+```
+obj = {
+    a: 1,
+    b: 2,
+}
+
+--------------------------------
+
+<a-component v-bind.sync="obj" />
+
++ 
+
+子组件触发
+$emit('update:a', 'xxxxx')
+$emit('update:b', 'xxxxx')
+...
+================================
+
+<a-component
+    :a='obj.a'
+    :b='obj.b'
+    @update:a='obj.a = $event'
+    @update:c='obj.c = $event'
+/>
+
++ 
+
+子组件触发
+$emit('update:a', 'xxxxx')
+$emit('update:b', 'xxxxx')
+...
+```
+
+同样省去了父组件绑定事件，更新数据的动作，但是有多少key的更新动作，就能省多少
+
+备注：
+* 一个元素不能绑定多个v-bind
+
+#### 阻止回车提交表单刷新的行为
+```
+@submit.prevent.native
+```

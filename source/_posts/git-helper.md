@@ -13,9 +13,18 @@ tags:
 ```
 git config --global credential.helper osxkeychain
 ```
-#### 使用默认diff工具
+#### 使用vscode做为mergetool
+1、通过vscode，进行PATH设置
+2、~/.gitconfig， 添加mergetool的配置
 ```
-git config --global merge.tool opendiff
+[merge]
+tool = vscode
+[mergetool "vscode"]
+cmd = code --wait $MERGED
+[diff]
+tool = vscode
+[difftool "vscode"]
+cmd = code --wait --diff $LOCAL $REMOTE
 ```
 #### 查看已有配置信息
 ```

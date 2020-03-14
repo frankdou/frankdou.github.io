@@ -11,3 +11,12 @@ tags:
 `__dirname`: 被执行文件所在的文件夹路径
 `__filename`: 被执行文件的全路径
 `process.cwd()`: 当前命令执行的路径
+
+### 获取文件列表
+```
+const glob = require('glob');
+console.log(glob.sync('./source/*'));
+
+<!-- 不包含文件夹路径 -->
+console.log(glob.sync('./source/*'), { nodir: true });
+```
