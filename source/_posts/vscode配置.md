@@ -38,3 +38,4 @@ auto close tag（自动关标签）
 VSCode-Element-Helper（element-ui 标签提示）
 any-rule(常用正则)
 Settings Sync (配置同步)
+REST Client（http请求）

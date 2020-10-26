@@ -15,7 +15,7 @@ tags:
 * Clipy
 * CheatSheet（快捷键提示工具）
 * cheat (命令行helper)
-* mpv
+* iina（https://github.com/iina/iina，播放器）
 * The Unarchiver
 * Xcode
 * Chrome
@@ -24,10 +24,17 @@ tags:
 * EasyFind
 * Irvue(壁纸)
 * typora(markdown editor)
+* Notion
+* glance(https://github.com/samuelmeuli/glance) All-in-one Quick Look plugin
 * 滴答清单
 * 幕布
 * 有道词典
 * 搜狗输入法
+* magnetW（磁力链接聚合搜索，https://github.com/xiandanin/magnetW）
+* freedownloadmanager (下载管理器，https://www.freedownloadmanager.org/zh/)
+* sequel-ace（MySql客户端软件，https://github.com/Sequel-Ace/Sequel-Ace/）
+* ishot（截图工具）
+* rectangle（mac屏幕管理工具）
 
 ### git diff工具设置
 ```
