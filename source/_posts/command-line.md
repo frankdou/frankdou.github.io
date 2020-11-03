@@ -60,3 +60,10 @@ echo > xxxxx.js
 . xx.sh arg1 arg2
 source xx.sh arg1 arg2
 ```
+
+### 批量替换文件后缀
+```bash
+for file in **/**/*.scss; do mv "$file" "${file%.*}".less; done
+```
+https://gist.github.com/larshaendler/723d2ec447c3c694b71dc6e3bc3aadc9
+https://stackoverflow.com/questions/965053/extract-filename-and-extension-in-bash

@@ -156,3 +156,26 @@ $emit('update:b', 'xxxxx')
 ```
 @submit.prevent.native
 ```
+
+#### computed方式，使用、更新props
+```
+computed: {
+    project: {
+        get() {
+            return this.$attrs.project;
+        },
+        set(value) {
+            this.$emit('update:project', value);
+        }
+    },
+    namespace: {
+        get() {
+            return this.$attrs.namespace;
+        },
+        set(value) {
+            this.$emit('update:namespace', value);
+        }
+    },
+}
+```
+

@@ -34,3 +34,10 @@ Host git.coding.net
 ```
 
 3.添加公共key到相关网站
+
+
+### 不同路径走不同的配置
+[includeIf "gitdir:~/Workspace/"]
+    path = ~/.gitconfig-workspace
+[includeIf "gitdir:~/Home/"]
+    path = ~/.gitconfig-home

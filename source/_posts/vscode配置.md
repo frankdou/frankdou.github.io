@@ -5,20 +5,7 @@ categories:
 tags:
 ---
 <blockquote class="blockquote-center"></blockquote>
-<!-- more -->
-```
-{
-    "workbench.colorTheme": "Solarized Light",
-    "window.zoomLevel": 1,
-    "eslint.autoFixOnSave": true,
-    "editor.formatOnSave": true
-}
-```
 
-```
-匹配代码中的中文
-[^\x00-\xff]+
-```
 ### 插件
 eslint
 es6 snippet
@@ -39,3 +26,4 @@ VSCode-Element-Helper（element-ui 标签提示）
 any-rule(常用正则)
 Settings Sync (配置同步)
 REST Client（http请求）
+drawio

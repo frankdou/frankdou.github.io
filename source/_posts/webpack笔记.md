@@ -32,6 +32,8 @@ html-webpack-plugin 创建包含webpack编译资源(script、css、etc...)的htm
 purgecss-webpack-plugin 删除无用的css
 add-asset-html-webpack-plugin 动态添加css、js链接到html + 保存相关文件到dist文件夹
 webpack-cdn-plugin cdn资源加载
+hard-source-webpack-plugin 编译速度速度优化
+
 
 tips:
 
