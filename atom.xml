@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-14T06:09:55.686Z</updated>
+  <updated>2020-11-03T07:53:48.485Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,15 +16,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>flex</title>
+    <link href="http://yoursite.com/2020/10/26/css-flex/"/>
+    <id>http://yoursite.com/2020/10/26/css-flex/</id>
+    <published>2020-10-26T03:55:53.000Z</published>
+    <updated>2020-11-03T07:53:48.485Z</updated>
+    
+    <content type="html"><![CDATA[<p><blockquote class="blockquote-center"></blockquote><br><a id="more"></a></p>
+<h4 id="flex布局：固定头部-自适应部分内部滚动"><a href="#flex布局：固定头部-自适应部分内部滚动" class="headerlink" title="flex布局：固定头部 + 自适应部分内部滚动"></a>flex布局：固定头部 + 自适应部分内部滚动</h4><p><a href="https://codepen.io/sulfurious/pen/eWPBjY?editors=1100" target="_blank" rel="noopener">https://codepen.io/sulfurious/pen/eWPBjY?editors=1100</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;/blockquote&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="css" scheme="http://yoursite.com/categories/css/"/>
+    
+    
+      <category term="flex" scheme="http://yoursite.com/tags/flex/"/>
+    
+  </entry>
+  
+  <entry>
     <title>webpack笔记</title>
     <link href="http://yoursite.com/2019/11/14/webpack%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2019/11/14/webpack笔记/</id>
     <published>2019-11-14T05:57:22.000Z</published>
-    <updated>2019-11-14T06:09:55.686Z</updated>
+    <updated>2020-10-26T03:34:18.183Z</updated>
     
     <content type="html"><![CDATA[<p><blockquote class="blockquote-center"></blockquote><br><a id="more"></a><br>webpack<br>webpack-cli<br>webpack-dec-server<br>webpack-merge</p>
 <p>loader 用于加载、转化某些资源<br>postcss-loader 前缀<br>css-loader 发布用<br>style-loader 开发用<br>mini-css-extract-plugin  loader + plugin<br>babel-loader<br>@babel/core<br>@babel/preset-env<br>file-loader 静态资源处理<br>image-webpack-loader 图片压缩</p>
-<p>plugin 用于扩展webpack的功能<br>clean-webpack-plugin 清理目录<br>ProvidePlugin<br>DefinePlugin 编译时配置全局变量<br>html-webpack-plugin 创建包含webpack编译资源(script、css、etc…)的html文件<br>purgecss-webpack-plugin 删除无用的css<br>add-asset-html-webpack-plugin 动态添加css、js链接到html + 保存相关文件到dist文件夹<br>webpack-cdn-plugin cdn资源加载</p>
+<p>plugin 用于扩展webpack的功能<br>clean-webpack-plugin 清理目录<br>ProvidePlugin<br>DefinePlugin 编译时配置全局变量<br>html-webpack-plugin 创建包含webpack编译资源(script、css、etc…)的html文件<br>purgecss-webpack-plugin 删除无用的css<br>add-asset-html-webpack-plugin 动态添加css、js链接到html + 保存相关文件到dist文件夹<br>webpack-cdn-plugin cdn资源加载<br>hard-source-webpack-plugin 编译速度速度优化</p>
 <p>tips:</p>
 <p>全局依赖，从输出的bundle中排除的办法<br>externals: {<br>    ‘jquery’: ‘$’,<br>}</p>
 <p>tree-shaking</p>
@@ -125,7 +149,7 @@ proxy_set_header Connection <span class="variable">$connection_upgrade</span>;
     <link href="http://yoursite.com/2019/01/21/vue-tips/"/>
     <id>http://yoursite.com/2019/01/21/vue-tips/</id>
     <published>2019-01-21T07:00:05.000Z</published>
-    <updated>2020-03-14T02:05:57.839Z</updated>
+    <updated>2020-10-26T03:51:50.887Z</updated>
     
     <content type="html"><![CDATA[<p><blockquote class="blockquote-center">vue-tips</blockquote><br><a id="more"></a></p>
 <h4 id="vue-iframe通信"><a href="#vue-iframe通信" class="headerlink" title="vue + iframe通信"></a>vue + iframe通信</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div /&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import $ from &apos;jquery&apos;;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">    data() &#123;</span><br><span class="line">        return &#123;</span><br><span class="line">            dIframe: null,</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">    computed: &#123;</span><br><span class="line">        sUrl() &#123;</span><br><span class="line">            return &apos;http://xxxxxx&apos;;</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    mounted() &#123;</span><br><span class="line">        this.init();</span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">        init() &#123;</span><br><span class="line">            this.dIframe = $(`&lt;iframe src=$&#123;this.sUrl&#125; class=&apos;iframe&apos; /&gt;`);</span><br><span class="line"></span><br><span class="line">            // iframe onload event</span><br><span class="line">            this.dIframe.on(&apos;load&apos;, this.onLoaded);</span><br><span class="line"></span><br><span class="line">            // append iframe</span><br><span class="line">            $(this.$el).append(this.dIframe);</span><br><span class="line">        &#125;,</span><br><span class="line">        onLoaded() &#123;</span><br><span class="line">            // send data to iframe</span><br><span class="line">            this.dIframe[0].contentWindow.postMessage(&apos;loaded&apos;, this.sUrl);</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
@@ -142,7 +166,9 @@ proxy_set_header Connection <span class="variable">$connection_upgrade</span>;
 <ul>
 <li>一个元素不能绑定多个v-bind</li>
 </ul>
-<h4 id="阻止回车提交表单刷新的行为"><a href="#阻止回车提交表单刷新的行为" class="headerlink" title="阻止回车提交表单刷新的行为"></a>阻止回车提交表单刷新的行为</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@submit.prevent.native</span><br></pre></td></tr></table></figure>]]></content>
+<h4 id="阻止回车提交表单刷新的行为"><a href="#阻止回车提交表单刷新的行为" class="headerlink" title="阻止回车提交表单刷新的行为"></a>阻止回车提交表单刷新的行为</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@submit.prevent.native</span><br></pre></td></tr></table></figure>
+<h4 id="computed方式，使用、更新props"><a href="#computed方式，使用、更新props" class="headerlink" title="computed方式，使用、更新props"></a>computed方式，使用、更新props</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">computed: &#123;</span><br><span class="line">    project: &#123;</span><br><span class="line">        get() &#123;</span><br><span class="line">            return this.$attrs.project;</span><br><span class="line">        &#125;,</span><br><span class="line">        set(value) &#123;</span><br><span class="line">            this.$emit(&apos;update:project&apos;, value);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    namespace: &#123;</span><br><span class="line">        get() &#123;</span><br><span class="line">            return this.$attrs.namespace;</span><br><span class="line">        &#125;,</span><br><span class="line">        set(value) &#123;</span><br><span class="line">            this.$emit(&apos;update:namespace&apos;, value);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
     
     <summary type="html">
     
@@ -238,16 +264,18 @@ proxy_set_header Connection <span class="variable">$connection_upgrade</span>;
     <link href="http://yoursite.com/2018/07/26/vscode%E9%85%8D%E7%BD%AE/"/>
     <id>http://yoursite.com/2018/07/26/vscode配置/</id>
     <published>2018-07-26T13:22:31.000Z</published>
-    <updated>2020-10-26T03:08:57.841Z</updated>
+    <updated>2020-10-26T03:31:20.339Z</updated>
     
-    <content type="html"><![CDATA[<p><blockquote class="blockquote-center"></blockquote><br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;workbench.colorTheme&quot;: &quot;Solarized Light&quot;,</span><br><span class="line">    &quot;window.zoomLevel&quot;: 1,</span><br><span class="line">    &quot;eslint.autoFixOnSave&quot;: true,</span><br><span class="line">    &quot;editor.formatOnSave&quot;: true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">匹配代码中的中文</span><br><span class="line">[^\x00-\xff]+</span><br></pre></td></tr></table></figure>
-<h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><p>eslint<br>es6 snippet<br>vetur<br>beautify<br>import-cost<br>Code Runner<br>Path Intellisense （路径）<br>Bracket Pair Colorizer (作用域)<br>Paste JSON as Code（<a href="https://marketplace.visualstudio.com/items?itemName=quicktype.quicktype）" target="_blank" rel="noopener">https://marketplace.visualstudio.com/items?itemName=quicktype.quicktype）</a><br>vscode-goto-node-modules(快速切换到node_modules，<a href="https://marketplace.visualstudio.com/items?itemName=mrluje.vscode-goto-node-modules" target="_blank" rel="noopener">https://marketplace.visualstudio.com/items?itemName=mrluje.vscode-goto-node-modules</a>)<br>tabnine(代码补全)<br>IntelliSense for CSS class names in HTML(html提示css class)<br>Quokka(运行结果预览)<br>Auto Rename Tag(自动重命名配对的HTML / XML标签)<br>auto close tag（自动关标签）<br>VSCode-Element-Helper（element-ui 标签提示）<br>any-rule(常用正则)<br>Settings Sync (配置同步)<br>REST Client（http请求）</p>
+    <content type="html"><![CDATA[<blockquote class="blockquote-center"></blockquote>
+
+<h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><p>eslint<br>es6 snippet<br>vetur<br>beautify<br>import-cost<br>Code Runner<br>Path Intellisense （路径）<br>Bracket Pair Colorizer (作用域)<br>Paste JSON as Code（<a href="https://marketplace.visualstudio.com/items?itemName=quicktype.quicktype）" target="_blank" rel="noopener">https://marketplace.visualstudio.com/items?itemName=quicktype.quicktype）</a><br>vscode-goto-node-modules(快速切换到node_modules，<a href="https://marketplace.visualstudio.com/items?itemName=mrluje.vscode-goto-node-modules" target="_blank" rel="noopener">https://marketplace.visualstudio.com/items?itemName=mrluje.vscode-goto-node-modules</a>)<br>tabnine(代码补全)<br>IntelliSense for CSS class names in HTML(html提示css class)<br>Quokka(运行结果预览)<br>Auto Rename Tag(自动重命名配对的HTML / XML标签)<br>auto close tag（自动关标签）<br>VSCode-Element-Helper（element-ui 标签提示）<br>any-rule(常用正则)<br>Settings Sync (配置同步)<br>REST Client（http请求）<br>drawio</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;/blockquote&gt;&lt;br&gt;
+      &lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;插件&quot;&gt;&lt;a href=&quot;#插件&quot; class=&quot;headerlink&quot; title=&quot;插件&quot;&gt;&lt;/a&gt;插件&lt;/h3&gt;&lt;p&gt;eslint&lt;br&gt;es6 sni
     
     </summary>
     
@@ -544,10 +572,10 @@ proxy_set_header Connection <span class="variable">$connection_upgrade</span>;
   
   <entry>
     <title>命令行笔记</title>
-    <link href="http://yoursite.com/2016/08/11/%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%AC%94%E8%AE%B0/"/>
-    <id>http://yoursite.com/2016/08/11/命令行笔记/</id>
+    <link href="http://yoursite.com/2016/08/11/command-line/"/>
+    <id>http://yoursite.com/2016/08/11/command-line/</id>
     <published>2016-08-10T17:31:32.000Z</published>
-    <updated>2019-09-16T14:23:34.589Z</updated>
+    <updated>2020-11-03T07:54:00.678Z</updated>
     
     <content type="html"><![CDATA[<p><blockquote class="blockquote-center">命令行笔记</blockquote><br><a id="more"></a></p>
 <h3 id="kill-process"><a href="#kill-process" class="headerlink" title="kill process"></a>kill process</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">kill</span> -9 xxx</span><br></pre></td></tr></table></figure>
@@ -561,6 +589,8 @@ proxy_set_header Connection <span class="variable">$connection_upgrade</span>;
 <h3 id="使用端口进行请求"><a href="#使用端口进行请求" class="headerlink" title="使用端口进行请求"></a>使用端口进行请求</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc 100.100.100.2 8388</span><br></pre></td></tr></table></figure>
 <h3 id="创建文件（强制覆盖）"><a href="#创建文件（强制覆盖）" class="headerlink" title="创建文件（强制覆盖）"></a>创建文件（强制覆盖）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> &gt; xxxxx.js</span><br></pre></td></tr></table></figure>
 <h3 id="传入的参数export为环境变量"><a href="#传入的参数export为环境变量" class="headerlink" title="传入的参数export为环境变量"></a>传入的参数export为环境变量</h3><p>需要通过以下方式来执行脚本<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">. xx.sh arg1 arg2</span><br><span class="line"><span class="built_in">source</span> xx.sh arg1 arg2</span><br></pre></td></tr></table></figure></p>
+<h3 id="批量替换文件后缀"><a href="#批量替换文件后缀" class="headerlink" title="批量替换文件后缀"></a>批量替换文件后缀</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> **/**/*.scss; <span class="keyword">do</span> mv <span class="string">"<span class="variable">$file</span>"</span> <span class="string">"<span class="variable">$&#123;file%.*&#125;</span>"</span>.less; <span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://gist.github.com/larshaendler/723d2ec447c3c694b71dc6e3bc3aadc9" target="_blank" rel="noopener">https://gist.github.com/larshaendler/723d2ec447c3c694b71dc6e3bc3aadc9</a><br><a href="https://stackoverflow.com/questions/965053/extract-filename-and-extension-in-bash" target="_blank" rel="noopener">https://stackoverflow.com/questions/965053/extract-filename-and-extension-in-bash</a></p>
 ]]></content>
     
     <summary type="html">
@@ -573,33 +603,6 @@ proxy_set_header Connection <span class="variable">$connection_upgrade</span>;
     
     
       <category term="command-line" scheme="http://yoursite.com/tags/command-line/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>angular filters</title>
-    <link href="http://yoursite.com/2016/08/11/angular-filters/"/>
-    <id>http://yoursite.com/2016/08/11/angular-filters/</id>
-    <published>2016-08-10T17:17:23.000Z</published>
-    <updated>2019-09-16T14:23:34.575Z</updated>
-    
-    <content type="html"><![CDATA[<p><blockquote class="blockquote-center">angular filters</blockquote><br><a id="more"></a></p>
-<h3 id="文件总类"><a href="#文件总类" class="headerlink" title="文件总类"></a>文件总类</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">.filter(<span class="string">'fileType'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">text</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> aType = text.split(<span class="string">'.'</span>),</span><br><span class="line">            sType = aType[aType.length - <span class="number">1</span>].toUpperCase();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">switch</span> (sType) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'MP3'</span>:</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'FLV'</span>:</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'RMVB'</span>:</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'WMV'</span>:</span><br><span class="line">                sType = <span class="string">'media'</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'PPT'</span>:</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'PDF'</span>:</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'DOC'</span>:</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'XLS'</span>:</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'MD'</span>:</span><br><span class="line">                sType = <span class="string">'doc'</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'TXT'</span>:</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'JS'</span>:</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'HTML'</span>:</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'XML'</span>:</span><br><span class="line">                sType = <span class="string">'plain'</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                sType = <span class="string">''</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> sType;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h3 id="文件类型"><a href="#文件类型" class="headerlink" title="文件类型"></a>文件类型</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.filter(<span class="string">'fileType'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">text</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> aType = text.split(<span class="string">'.'</span>);</span><br><span class="line">        <span class="keyword">return</span> aType[aType.length - <span class="number">1</span>].toUpperCase();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h3 id="文件大小"><a href="#文件大小" class="headerlink" title="文件大小"></a>文件大小</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">.filter(<span class="string">'descSize'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">text</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> str = <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (text &gt; <span class="number">1048576</span>) &#123;</span><br><span class="line">            str = (text/<span class="number">1048576</span>).toFixed(<span class="number">1</span>) + <span class="string">'MB'</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            str = (text/<span class="number">1024</span>).toFixed(<span class="number">1</span>) + <span class="string">'KB'</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> str;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h3 id="json格式化输出"><a href="#json格式化输出" class="headerlink" title="json格式化输出"></a>json格式化输出</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.filter(<span class="string">'beautifyJson'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">json</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> str = angular.copy(json);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">JSON</span>.stringify(str, <span class="literal">null</span>, <span class="number">4</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;angular filters&lt;/blockquote&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="angular" scheme="http://yoursite.com/categories/angular/"/>
-    
-    
-      <category term="angular" scheme="http://yoursite.com/tags/angular/"/>
     
   </entry>
   

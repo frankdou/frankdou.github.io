@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="FrankDou">
 <meta property="og:description" content="通过ssh方式操作git">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-16T14:23:34.578Z">
+<meta property="og:updated_time" content="2020-11-03T08:38:34.102Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git+ssh">
 <meta name="twitter:description" content="通过ssh方式操作git">
@@ -339,6 +339,7 @@
 <p>t代表type，f代表文件名，C代表注释</p>
 <p>2.配置~/.ssh/config文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">###########</span></span><br><span class="line"><span class="comment">###GIHUB###</span></span><br><span class="line"><span class="comment">###########</span></span><br><span class="line">Host github.com</span><br><span class="line">    HostName github.com</span><br><span class="line">    User xxxx@xxx.com</span><br><span class="line">    IdentityFile ~/.ssh/github</span><br><span class="line"></span><br><span class="line"><span class="comment">###########</span></span><br><span class="line"><span class="comment">###CODING##</span></span><br><span class="line"><span class="comment">###########</span></span><br><span class="line">Host git.coding.net</span><br><span class="line">    HostName git.coding.net</span><br><span class="line">    User xxx@xxx.com</span><br><span class="line">    IdentityFile ~/.ssh/coding</span><br></pre></td></tr></table></figure></p>
 <p>3.添加公共key到相关网站</p>
+<h3 id="不同路径走不同的配置"><a href="#不同路径走不同的配置" class="headerlink" title="不同路径走不同的配置"></a>不同路径走不同的配置</h3><p>[includeIf “gitdir:~/Workspace/“]<br>    path = ~/.gitconfig-workspace<br>[includeIf “gitdir:~/Home/“]<br>    path = ~/.gitconfig-home</p>
 
       
     </div>
@@ -461,7 +462,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">35</span>
+              <span class="site-state-item-count">36</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -469,7 +470,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -478,7 +479,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-count">23</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -525,7 +526,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#需要在-ssh文件夹下操作"><span class="nav-number">1.</span> <span class="nav-text">需要在~/.ssh文件夹下操作</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#需要在-ssh文件夹下操作"><span class="nav-number">1.</span> <span class="nav-text">需要在~/.ssh文件夹下操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不同路径走不同的配置"><span class="nav-number">2.</span> <span class="nav-text">不同路径走不同的配置</span></a></li></ol></div>
             
           </div>
         </section>

@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="FrankDou">
 <meta property="og:description" content="vue-tips">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-03-14T02:05:57.839Z">
+<meta property="og:updated_time" content="2020-10-26T03:51:50.887Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue-tips">
 <meta name="twitter:description" content="vue-tips">
@@ -331,6 +331,8 @@
 <li>一个元素不能绑定多个v-bind</li>
 </ul>
 <h4 id="阻止回车提交表单刷新的行为"><a href="#阻止回车提交表单刷新的行为" class="headerlink" title="阻止回车提交表单刷新的行为"></a>阻止回车提交表单刷新的行为</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@submit.prevent.native</span><br></pre></td></tr></table></figure>
+<h4 id="computed方式，使用、更新props"><a href="#computed方式，使用、更新props" class="headerlink" title="computed方式，使用、更新props"></a>computed方式，使用、更新props</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">computed: &#123;</span><br><span class="line">    project: &#123;</span><br><span class="line">        get() &#123;</span><br><span class="line">            return this.$attrs.project;</span><br><span class="line">        &#125;,</span><br><span class="line">        set(value) &#123;</span><br><span class="line">            this.$emit(&apos;update:project&apos;, value);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    namespace: &#123;</span><br><span class="line">        get() &#123;</span><br><span class="line">            return this.$attrs.namespace;</span><br><span class="line">        &#125;,</span><br><span class="line">        set(value) &#123;</span><br><span class="line">            this.$emit(&apos;update:namespace&apos;, value);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -456,7 +458,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">35</span>
+              <span class="site-state-item-count">36</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -464,7 +466,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -473,7 +475,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-count">23</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -520,7 +522,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#vue-iframe通信"><span class="nav-number">1.</span> <span class="nav-text">vue + iframe通信</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#inheritAttrs（默认true）"><span class="nav-number">2.</span> <span class="nav-text">inheritAttrs（默认true）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#attrs"><span class="nav-number">3.</span> <span class="nav-text">$attrs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-model"><span class="nav-number">4.</span> <span class="nav-text">v-model</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sync"><span class="nav-number">5.</span> <span class="nav-text">sync</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-bind-sync"><span class="nav-number">6.</span> <span class="nav-text">v-bind.sync</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#阻止回车提交表单刷新的行为"><span class="nav-number">7.</span> <span class="nav-text">阻止回车提交表单刷新的行为</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#vue-iframe通信"><span class="nav-number">1.</span> <span class="nav-text">vue + iframe通信</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#inheritAttrs（默认true）"><span class="nav-number">2.</span> <span class="nav-text">inheritAttrs（默认true）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#attrs"><span class="nav-number">3.</span> <span class="nav-text">$attrs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-model"><span class="nav-number">4.</span> <span class="nav-text">v-model</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sync"><span class="nav-number">5.</span> <span class="nav-text">sync</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-bind-sync"><span class="nav-number">6.</span> <span class="nav-text">v-bind.sync</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#阻止回车提交表单刷新的行为"><span class="nav-number">7.</span> <span class="nav-text">阻止回车提交表单刷新的行为</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#computed方式，使用、更新props"><span class="nav-number">8.</span> <span class="nav-text">computed方式，使用、更新props</span></a></li></ol></div>
             
           </div>
         </section>
