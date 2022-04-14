@@ -8,6 +8,6 @@ module.exports = withNextra({
   reactStrictMode: true,
   images: {
     loader: 'imgix',
-    path: 'https://github.com/frankdou/frankdou.github.io/tree/gh-pages/',
+    path: 'https://frankdou.github.io',
   },
 })

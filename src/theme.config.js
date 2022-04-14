@@ -17,5 +17,6 @@ export default {
       <meta name="apple-mobile-web-app-title" content="前端笔记" />
     </>
   ),
-  footerEditLink: false
+  footerEditLink: false,
+  floatTOC: true
 }
