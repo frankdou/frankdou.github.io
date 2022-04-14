@@ -1,0 +1,11 @@
+{
+    "2823b4fd3e8faabc558faf3ad4364cb1": "Class",
+    "c9eaefb66ffa375873c22adbb07f9283": "Intl",
+    "b68426908abef2874244dd30b04745cd": "Map",
+    "8b270936f64a7af816e8c8dc85094499": "Proxy",
+    "90ff5d638834485e5e4b8aea5cbbfbcb": "Reflect",
+    "4f540728e03dc0233796343aba96abc9": "Set",
+    "3c8df72baa382230ddcef3a887df41ad": "Symbol",
+    "5ee236ebc636d6def006688ee528f257": "WeakMap",
+    "89b36c03e258040615295fd957a47776": "WeakSet"
+}
