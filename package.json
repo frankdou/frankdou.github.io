@@ -28,5 +28,10 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "overrides": {
+    "commitizen@4.2.4": {
+      "minimist": "1.2.6"
+    }
   }
 }
