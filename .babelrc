@@ -1,4 +1,0 @@
-{
-  // https://nextjs.org/docs/messages/failed-loading-swc
-  "presets": ["next/babel"]
-}
