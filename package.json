@@ -2,7 +2,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build && next export",
-    "start": "next start"
+    "start": "next start",
+    "cleanup": "zx scripts/cleanup.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.2",
@@ -22,7 +23,8 @@
   "devDependencies": {
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "8.13.0",
-    "eslint-config-next": "12.1.5"
+    "eslint-config-next": "12.1.5",
+    "zx": "^6.1.0"
   },
   "config": {
     "commitizen": {
