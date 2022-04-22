@@ -1,9 +1,9 @@
 ---
 title: 数组分组
 date: 2022-04-14T12:00:22.555Z
-size: 542
+size: 560
 ---
-for循环
+##### for循环
 
 ```javascript
 const chunk = (data, chunkSize) => {
@@ -20,7 +20,7 @@ const chunk = (data, chunkSize) => {
 chunk([1,2,3,4,5,6,7,8], 3)
 ```
 
-while
+##### while方式
 
 性能更优
 
