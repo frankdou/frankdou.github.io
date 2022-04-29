@@ -1,11 +1,11 @@
 {
+    "9c2387354dd48c953973b56c7cee57ca": "__dirname、__filename、process.cwd()",
     "a13849937686a139161e6a0826d04a52": "buffer",
     "46ff94440dc28c4c22f7d1d15a57783e": "cpu（profiler）问题排查",
     "4a7f2fa3f6a142bb896b86079fef8bfb": "egg.js",
     "1809483e94007c30aa9136c4dc71d127": "fnm",
     "cc3ed09450be4850c580a6c908332f23": "process、child_process",
     "af0f265c767030c42e5d83862f2af54e": "rpc",
-    "0d527260cc1ddc9d6a2c731fcaa0e16d": "tips",
     "f40e3ce07c1399cc675d8a344ec2770f": "代码调试",
     "be5c3945a8fcd7ee87631487bac69347": "内存泄漏",
     "895d93b7fcc240817e49215c3d2a9760": "动态创建软链接",
