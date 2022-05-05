@@ -1,7 +1,7 @@
 ---
 title: useEffect
 date: 2022-04-14T12:00:22.529Z
-size: 6962
+size: 6987
 ---
 ##### Why
 
@@ -12,9 +12,9 @@ size: 6962
 - 执行一段和当前执行结果无关的代码
   - 修改函数外的某个变量
   - 发起一个请求，等等
-- 在全部渲染完毕后才会执行，所以不会阻塞浏览器渲染进程
+- 在全部渲染完毕后才会执行，所以不会阻塞浏览器渲染进程（浏览器重绘之后异步执行）
   - useLayoutEffect
-    - 浏览器 layout 之后，painting 之前执行
+    - 浏览器重绘之前同步执行
 
 ```jsx
 import React, { useState, useEffect } from 'react';
