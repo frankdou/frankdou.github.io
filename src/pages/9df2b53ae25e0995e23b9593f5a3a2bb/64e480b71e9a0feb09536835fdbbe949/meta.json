@@ -1,10 +1,12 @@
 {
     "af1bbbe30ee6a61e5a80be3ff76d40c6": "external",
+    "1dd6ff28bdce617f1056f67ca3fd9ef4": "lib库打包",
     "55f385def6efdd3beefccd0484541ec7": "sourcemap",
     "73593e155408d66ca6b88caede5b4219": "tree-shaking",
     "2cb56c5e3379be80bd0bcfda5471b2a2": "优化",
     "44f89550559f17b0b0cf048968b0361b": "基础",
     "59ce12e00f37f2a868724e7e7e83f2b6": "打包原理",
+    "438f7ae7555650574d80ce67ced76891": "文件变化监听",
     "f0d4d06535a5970c43f3bc3a18c1cd2a": "文件指纹策略",
     "0908800fa5fdcb0ad940cbd5716e09a7": "最佳实践",
     "ac64bf3716c1eab95361be27a007087f": "热更新"

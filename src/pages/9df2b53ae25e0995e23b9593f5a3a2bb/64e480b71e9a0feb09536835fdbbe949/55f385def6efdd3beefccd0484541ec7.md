@@ -1,7 +1,7 @@
 ---
 title: sourcemap
-date: 2022-04-14T12:00:22.557Z
-size: 707
+date: 2022-05-12T12:27:37.880Z
+size: 902
 ---
 ##### eval
 
@@ -23,6 +23,17 @@ eval包裹代码块
 
 包含loader相关信息
 
+##### 开发模式，推荐使用
+```
+devtool: "eval-source-map"
+```
+##### 忽略node_modules的sourcemap引用
+```js
+new webpack.EvalSourceMapDevToolPlugin({
+	exclude: [/node_modules/],
+}),
+```
+
 ##### 反解析
 
 ```javascript
@@ -35,7 +46,6 @@ const result = consumer.originalPositionFor({
 //获取对应的原始文件内容，todo：根据行号信息，进行截取
 result.sourcesContent = consumer.sourceContentFor(result.source);
 ```
-
 
 
 refs:
