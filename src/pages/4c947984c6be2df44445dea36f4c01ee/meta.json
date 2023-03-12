@@ -1,5 +1,5 @@
 {
-    "d3ba9b2b0872e329aeb6aa9865be776a": "Clickjacking",
+    "cf1c9264be0a97a129db583dac1861b2": "ClickJacking",
     "2fb04e07d5f204b3d0c71e4545fc7e6b": "csrf",
     "e7be999ceaa0fb2f0414b8d94014692f": "xss",
     "6a04932d39bf3e2078c47611152431b8": "中间人攻击",
