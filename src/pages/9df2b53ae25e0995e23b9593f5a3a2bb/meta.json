@@ -1,5 +1,6 @@
 {
     "ce555741b7f56b3d82cc02ff4784dd66": "babel",
+    "424f61544d1285f4c71eeedf0b613b44": "esbuild",
     "eb63eef46a3c644bdf90192ae2266076": "swc",
     "a26872fc1d22577170da74eaf66840f8": "vite",
     "64e480b71e9a0feb09536835fdbbe949": "webpack",

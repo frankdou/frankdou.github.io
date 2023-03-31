@@ -4,6 +4,7 @@
     "72231f1c3be762a36b6a685ea634dc61": "VirtualDom",
     "a8196d8cfe71252fd771875832820074": "ajax、fetch",
     "dbda96454843959d6135a70d3c96f1c9": "apply、call、bind",
+    "22692bbceb5aeb6fa56c7d279ea048ac": "axios请求取消",
     "da0f774c716b170b03c606a2112e3d7f": "for... in与for... of",
     "e9227532b7301454ed5af1645a305263": "for与forEach",
     "43c1eafc09ac2794e46633370342203e": "js垃圾回收机制",

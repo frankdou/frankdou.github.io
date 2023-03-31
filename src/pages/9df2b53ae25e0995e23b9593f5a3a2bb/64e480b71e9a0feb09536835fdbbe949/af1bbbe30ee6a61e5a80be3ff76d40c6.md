@@ -1,7 +1,7 @@
 ---
 title: external
 date: 2022-05-12T12:27:37.000Z
-size: 1293
+size: 881
 ---
 ##### 组件库
 
@@ -14,38 +14,38 @@ size: 1293
 
 ```javascript
 config.externals = {
-            uuid: 'uuid',
-            echarts: 'echarts',
-            vue: {
-                commonjs: "vue", 
-                commonjs2: "vue", 
-                amd: "vue",
-                root: "Vue",
-            },
-            lodash : {
-                commonjs: "lodash", 
-                commonjs2: "lodash", 
-                amd: "lodash",
-                root: "_",
-            },
-            'async-validator': {
-                commonjs: "async-validator", 
-                commonjs2: "async-validator", 
-                amd: "async-validator",
-                root: 'Schema',
-            },
-            'fuse.js': {
-                commonjs: "fuse.js",
-                commonjs2: "fuse.js", 
-                amd: "fuse.js",
-                root: "Fuse", 
-            },
-            'resize-observer-polyfill': {
-                commonjs: "resize-observer-polyfill",
-                commonjs2: "resize-observer-polyfill", 
-                amd: "resize-observer-polyfill",
-                root: "ResizeObserver", 
-            },
+	uuid: 'uuid',
+	echarts: 'echarts',
+	vue: {
+		commonjs: "vue", 
+		commonjs2: "vue", 
+		amd: "vue",
+		root: "Vue",
+	},
+	lodash : {
+		commonjs: "lodash", 
+		commonjs2: "lodash", 
+		amd: "lodash",
+		root: "_",
+	},
+	'async-validator': {
+		commonjs: "async-validator", 
+		commonjs2: "async-validator", 
+		amd: "async-validator",
+		root: 'Schema',
+	},
+	'fuse.js': {
+		commonjs: "fuse.js",
+		commonjs2: "fuse.js", 
+		amd: "fuse.js",
+		root: "Fuse", 
+	},
+	'resize-observer-polyfill': {
+		commonjs: "resize-observer-polyfill",
+		commonjs2: "resize-observer-polyfill", 
+		amd: "resize-observer-polyfill",
+		root: "ResizeObserver", 
+	},
 }
 ```
 
