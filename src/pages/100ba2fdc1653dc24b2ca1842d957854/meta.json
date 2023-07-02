@@ -1,4 +1,5 @@
 {
+    "7d1411b4cdb8b1ded709f02c50efbaa6": "BroadcastChannel",
     "e1475f9b92893046b26b1e446b3fcc63": "Date",
     "825f48373d35731037c4f527c33fdc15": "ServiceWorker",
     "72231f1c3be762a36b6a685ea634dc61": "VirtualDom",
@@ -16,6 +17,7 @@
     "1d0e4f1eb3047e845717d7b9daf83539": "原型链",
     "143426284eb255878a7030ea8028fe14": "变量声明提升",
     "fb48e1a770d3fc530143f32b4f1e581a": "基础",
+    "80e58612fd849e553b1d7395b593b53f": "文件分片下载",
     "6572d13104974cb59d6989b450b2e4f8": "栈内存、堆内存",
     "bde47a79b61180e6a6cd72d2f71d62d2": "类型转换",
     "fbc37935ff2d5eaf091d03ec7096214a": "继承",

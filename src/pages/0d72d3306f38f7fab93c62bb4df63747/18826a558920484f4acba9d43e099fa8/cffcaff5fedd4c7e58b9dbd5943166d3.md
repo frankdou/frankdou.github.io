@@ -1,6 +1,6 @@
 ---
 title: Object.defineProperty
-date: 2022-05-12T12:27:37.000Z
+date: 2023-07-02T10:04:15.309Z
 size: 2239
 ---
 `Object.defineProperty()` 方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性，并返回此对象
