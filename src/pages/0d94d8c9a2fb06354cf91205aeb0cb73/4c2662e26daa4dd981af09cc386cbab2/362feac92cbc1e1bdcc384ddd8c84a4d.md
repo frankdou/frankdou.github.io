@@ -1,6 +1,5 @@
 ---
 title: useEffect
-date: 2023-07-02T14:17:19.143Z
 size: 6987
 ---
 ##### Why

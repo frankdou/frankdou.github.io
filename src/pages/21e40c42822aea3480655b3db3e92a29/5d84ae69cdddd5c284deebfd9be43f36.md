@@ -1,6 +1,5 @@
 ---
 title: tips
-date: 2023-07-02T14:17:19.137Z
 size: 1382
 ---
 #### 获得tomcat路径
