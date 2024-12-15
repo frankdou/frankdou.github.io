@@ -1,17 +1,22 @@
 ---
 title: 加速下载
-size: 958
+size: 1130
 ---
 ###### 只clone部分文件夹
 ```shell
+// 下载空仓库
 git clone --depth=1 --filter=blob:none --no-checkout https://github.com/grpc/grpc.git
 
+// 进入仓库文件夹
 cd grpc
 
+// 初始化 sparse checkout 模式
 git sparse-checkout init --cone
 
+// 将需要下载的目录添加到配置文件里面
 echo "examples/node/*" >> .git/info/sparse-checkout
 
+// 下载指定的文件夹到本地
 git checkout
 ```
 -   `--depth=1`: 只克隆最新的一次提交和相关的文件，不克隆历史记录
