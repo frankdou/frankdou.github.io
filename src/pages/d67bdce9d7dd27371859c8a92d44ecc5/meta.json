@@ -2,5 +2,6 @@
     "8602bf1012d894a4e9b195dc5c41b5f6": "pdf预览",
     "f4afd7b30ce562f7ddeb746f4fe8c34b": "url参数获取",
     "36ddd2ef60fe34a591e11db4a80ac432": "按序定期数据获取",
-    "13cf75637c49a74b9fcfedbaf9a66689": "文件分片下载"
+    "13cf75637c49a74b9fcfedbaf9a66689": "文件分片下载",
+    "bfbfca822998409a56ef4b34bd135570": "检测仓库变化，自动提交"
 }
