@@ -1,45 +1,7 @@
 ---
 title: tips
-size: 2132
+size: 2263
 ---
-使用`electron-builder`打包
-```json
-package.json
-{
-	...
-	"main": "src/electron.js",
-	"scripts": {
-		"start": "electron .",
-		"build": "electron-builder",
-		"build:win": "electron-builder --win --x64",
-	},
-	"build": {
-        "appId": "com.electron.demo",
-        // 应用名
-        "productName": "ElectronApp",
-        // 应用文件名
-        "artifactName": "${productName}-${version}.${ext}",
-        // 应用图标
-        "icon": "./build/icon.png",
-        "files": [
-            "src/**/*",
-            "package.json",
-            ...
-        ],
-        "directories": {
-            "output": "dist"
-        },
-        "mac": {
-            "target": "dmg"
-        },
-        "win": {
-            "target": "nsis"
-        }
-    },
-	...
-}
-```
-
 打开多个窗口
 ```js
 const { app, BrowserWindow } = require("electron/main")
@@ -87,6 +49,43 @@ electron环境判断
 process.versions['electron']
 或
 window?.process?.type
+```
+
+
+通过默认浏览器打开页面
+```js
+
+//main.js
+const { BrowserWindow, shell } = require('electron');
+
+// ... (创建 BrowserWindow 的代码) ...
+
+mainWindow.webContents.setWindowOpenHandler((details) => {
+  // 检查 URL 是否是外部链接 (以 http 或 https 开头)
+  if (details.url.startsWith('http')) {
+    // 使用系统的默认浏览器打开 URL
+    shell.openExternal(details.url);
+  }
+  // 阻止 Electron 窗口打开这个链接
+  return { action: 'deny' };
+})
+
+// index.html
+<a href="https://www.google.com" target="_blank">在浏览器中打开 Google</a>
+```
+
+日志
+```js
+const log = require('electron-log')
+const path = require("path")
+
+// Configure log file location
+log.transports.file.resolvePathFn = () => path.join(app.getPath('userData'), 'logs/main.log')
+
+// Use it
+log.info('Hello, log')
+log.warn('Some problem appears')
+log.error('Very bad news')
 ```
 
 windows平台，调用语音播放接口window.speechSynthesis，不能按照设定的语言播放，但网页播放正常。原因在于，相关的语言包缺失，需要手动安装
