@@ -2,6 +2,7 @@
     "7068441cf6f15a1652f38fa270c80f3b": "3d轮播",
     "98cfd0f26e495acc6b0ab60086595c9d": "aes对称加密",
     "6bb30c382cf438a765157044b849cfe3": "canvas抠图",
+    "018e80af3d131dd17d488d1c765b78bc": "canvas获取文字所占尺寸",
     "af63c975c196f055807c660aeb770e65": "dayjs",
     "f7683b94e3114e6b78b98645f3d18b3c": "grafana-proxy",
     "f2595c7c80938efacc767c34186d7cd2": "node-dockerfile",

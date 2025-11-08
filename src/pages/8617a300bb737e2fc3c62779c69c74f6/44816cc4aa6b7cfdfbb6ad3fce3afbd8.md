@@ -1,6 +1,6 @@
 ---
 title: tips
-size: 2263
+size: 2699
 ---
 打开多个窗口
 ```js
@@ -78,9 +78,16 @@ mainWindow.webContents.setWindowOpenHandler((details) => {
 ```js
 const log = require('electron-log')
 const path = require("path")
+const { app } = require("electron/main")
 
-// Configure log file location
+// 存放位置
 log.transports.file.resolvePathFn = () => path.join(app.getPath('userData'), 'logs/main.log')
+
+// 日志分割，默认为1mb，超过后现有的日志文件变为main.old.log
+log.transports.file.maxSize = 5 * 1024 * 1024; // 5 MB
+
+// 自定义分割
+log.transports.file.archiveLogFn = xxx
 
 // Use it
 log.info('Hello, log')
@@ -88,7 +95,10 @@ log.warn('Some problem appears')
 log.error('Very bad news')
 ```
 
-windows平台，调用语音播放接口window.speechSynthesis，不能按照设定的语言播放，但网页播放正常。原因在于，相关的语言包缺失，需要手动安装
+windows平台，调用语音播放接口window.speechSynthesis，不能按照设定的语言播放，但网页播放正常。原因在于，相关的语言包缺失，需要手动安装。
+
+window.speechSynthesis，报错not-allowed，这个错误表示语音合成操作被浏览器或设备阻止了，
+这通常是出于安全和用户体验的考虑，没有用户交互就尝试播放语音。
 
 ref
 - https://github.com/electron/electron/issues/2288
